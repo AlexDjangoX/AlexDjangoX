@@ -1,15 +1,6 @@
 
 
-
-<div id="header" align="center">
-  <img src="https://media4.giphy.com/media/4H3Ii5eLChYul9p7NL/200w.webp?cid=ecf05e47pk511sl0781gtb6kc4x8gs5pzz3ibp8v48h251yv&rid=200w.webp&ct=g" width="100"/>
-  <img src="https://media4.giphy.com/media/4H3Ii5eLChYul9p7NL/200w.webp?cid=ecf05e47pk511sl0781gtb6kc4x8gs5pzz3ibp8v48h251yv&rid=200w.webp&ct=g" width="100"/>
-  <img src="https://media4.giphy.com/media/4H3Ii5eLChYul9p7NL/200w.webp?cid=ecf05e47pk511sl0781gtb6kc4x8gs5pzz3ibp8v48h251yv&rid=200w.webp&ct=g" width="100"/>
-  <img src="https://media4.giphy.com/media/4H3Ii5eLChYul9p7NL/200w.webp?cid=ecf05e47pk511sl0781gtb6kc4x8gs5pzz3ibp8v48h251yv&rid=200w.webp&ct=g" width="100"/>
-  <img src="https://media4.giphy.com/media/4H3Ii5eLChYul9p7NL/200w.webp?cid=ecf05e47pk511sl0781gtb6kc4x8gs5pzz3ibp8v48h251yv&rid=200w.webp&ct=g" width="100"/>
-</div>
-
-  
+ 
 <div align="center">
   <h3>
   <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp&nbsp&nbsp&nbsp;
@@ -32,7 +23,8 @@
   
 - As well as ↪️ React.js, Node.js, Express.js, Prisma, postgreSQL, Rest API, Jasmine, Git
  
-- In my free time, I study Polish  🇵🇱 Language and Grammar, and keep sane with meditation practice.
+- I have combined my passion for coding with my enthusiasm for the study of the Polish labguage into a fullstack application which was engineered to solve many niche problems I encountered in my studies. The application is in daily use by myself and fellow students. Follow this link to see the application 🇵🇱 [Polish Conjugator](https://polish-conjugator.herokuapp.com/)
+
 
 <div id="badges" align="center"><a href="https://www.linkedin.com/in/alexander-mclachlan-/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge" /></div> 
 
