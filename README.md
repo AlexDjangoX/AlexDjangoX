@@ -26,7 +26,15 @@
 - I have combined my passion for coding with my enthusiasm for the study of the Polish labguage into a fullstack application which was engineered to solve many niche problems I encountered in my studies. The application is in daily use by myself and fellow students. Follow this link to see the application 🇵🇱 [Polish Conjugator](https://polish-conjugator.herokuapp.com/)
 
 
-<div id="badges" align="center"><a href="https://www.linkedin.com/in/alexander-mclachlan-/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge" /></div> 
+<div align="center" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 85px; justify-content: center;">
+  <img src="https://raw.githubusercontent.com/AlexDjangoX/polish-tutor-client/main/public/images/polish-conjugator.png" style="width: 450px; height: 250px;">
+  <img src="https://raw.githubusercontent.com/AlexDjangoX/polish-tutor-client/main/public/images/polish-conjugator-verbs.png" style="width: 450px; height: 250px;">
+  <img src="https://raw.githubusercontent.com/AlexDjangoX/polish-tutor-client/main/public/images/polish-conjugator-notes.png" style="width: 450px; height: 250px;">
+  <img src="https://raw.githubusercontent.com/AlexDjangoX/polish-tutor-client/main/public/images/polish-conjugator-nouns.png" style="width: 450px; height: 250px;">
+</div>
+
+
+<div id="badges" align="left" ><a href="https://www.linkedin.com/in/alexander-mclachlan-/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge" /></div> 
 
   [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=AlexDjangoX&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
  
