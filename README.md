@@ -23,7 +23,7 @@
   
 - As well as ↪️ React.js, Node.js, Express.js, Prisma, postgreSQL, Rest API, Jasmine, Git
  
-- I have combined my passion for coding with my enthusiasm for the study of the Polish labguage into a fullstack application which was engineered to solve many niche problems I encountered in my studies. The application is in daily use by myself and fellow students. Follow this link to see the application 🇵🇱 [Polish Conjugator](https://polish-conjugator.herokuapp.com/)
+- I have combined my passion for coding with my enthusiasm for the study of the Polish language into a full-stack application which was engineered to solve many niche problems I encountered in my studies. The application is in daily use by myself and fellow students. Follow this link to see the application 🇵🇱 [Polish Conjugator](https://conjugate-server.vercel.app/kanban)
 
 
 <!-- <div align="center" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 85px; justify-content: center;">
