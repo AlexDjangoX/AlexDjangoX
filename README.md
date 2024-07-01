@@ -45,14 +45,18 @@
 
 
 <div align="center">
+  <!-- LinkedIn Badge -->
   <a href="https://www.linkedin.com/in/alexander-mclachlan-" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge" />
   </a>
   <br /><br /> <!-- Adjust spacing as needed -->
+
+  <!-- GitHub Stats -->
   <a href="https://github.com/anuraghazra/github-readme-stats">
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AlexDjangoX&layout=compact&theme=vision-friendly-dark" alt="Top Languages" />
   </a>
 </div>
+
 
 
  
