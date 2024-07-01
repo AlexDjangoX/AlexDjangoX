@@ -25,11 +25,11 @@
 </div>
 
 
-### 🧍‍♂️ Who am I ?
+###  A Brief Introduction
   
  - I am a Full Stack Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> working in the Next JS ecosystem.
 
-  - I am a Boolean UK graduate, however, that only got me so far. JS MASTERY got me to where I am today, I graduated from their kick-ass Master Class in February 2024.
+  - I am a Boolean UK graduate, however, that only got me so far. JS Mastery got me to where I am today, I graduated from their kick-ass Master Class in February 2024.
   
 - I am most comfortable with relational databases, Prisma ORM, Next JS, Tailwind CSS and ShadCN.
  
