@@ -31,7 +31,7 @@
 
   - I am a Boolean UK graduate, however, that only got me so far. JS Mastery got me to where I am today, I graduated from their kick-ass Master Class in February 2024.
   
-- I am most comfortable with relational databases, Prisma ORM, Next JS, Tailwind CSS and ShadCN.
+- I am most comfortable with relational databases, Prisma ORM, Next JS, Typescript, Tailwind CSS and ShadCN - but have used many other technologies.
  
 - I have combined my coding adventure with my enthusiasm for the study of the Polish language and have created an awesome full-stack, AI-powered application. The application is in daily use by myself and fellow students. Follow this link to see version 1.0.0 🇵🇱 [Polish Conjugator](https://conjugate-server.vercel.app/). To see the latest incarnation, version 2.0.0. AI-powered, motoring with Stream video-chat 🇵🇱 [Polish Conjugator](https://lexical-live-editor.vercel.app/). A testament to my progress and gritty tenacity.
 
@@ -44,6 +44,7 @@
 </div> -->
 
 
+<!-- LinkedIn Badge and GitHub Stats Section -->
 <div align="center">
   <!-- LinkedIn Badge -->
   <a href="https://www.linkedin.com/in/alexander-mclachlan-" target="_blank">
@@ -52,10 +53,10 @@
   <br /><br /> <!-- Adjust spacing as needed -->
 
   <!-- GitHub Stats -->
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AlexDjangoX&layout=compact&theme=vision-friendly-dark" alt="Top Languages" />
-  </a>
+  <!-- Replace 'AlexDjangoX' with your GitHub username -->
+  <img src="https://github-readme-stats.vercel.app/api?username=AlexDjangoX&show_icons=true&theme=vision-friendly-dark" alt="GitHub Stats" />
 </div>
+
 
 
 
