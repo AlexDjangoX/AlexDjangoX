@@ -3,9 +3,8 @@
  
 <div align="center">
   <h3>
-    <img src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original-wordmark.svg"
-         title="NextJS" alt="NextJS" width="40" height="40" color="white"
-         style="color: 'white'"
+    <img src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original.svg"
+         title="NextJS" alt="NextJS" width="40" height="40"
     />&nbsp;&nbsp;&nbsp;
     <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg"
          title="React" alt="React" width="40" height="40"
