@@ -18,8 +18,8 @@
     <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"
          title="CSS3" alt="CSS" width="40" height="40"
     />&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/devicons/devicon/blob/master/icons/materialui/materialui-original.svg"
-         title="Material UI" alt="Material UI" width="40" height="40"
+    <img src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-original.svg"
+         title="Tailwind CSS" alt="Tailwind CSS" width="40" height="40"
     />&nbsp;&nbsp;&nbsp;
   </h3>
 </div>
