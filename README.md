@@ -4,8 +4,8 @@
 <div align="center">
   <h3>
     <img src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original-wordmark.svg"
-         title="NextJS" alt="NextJS" width="40" height="40"
-         style="filter: invert(1);"
+         title="NextJS" alt="NextJS" width="40" height="40" color="white"
+         style="color: 'white'"
     />&nbsp;&nbsp;&nbsp;
     <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg"
          title="React" alt="React" width="40" height="40"
