@@ -44,7 +44,20 @@
 </div> -->
 
 
-<div id="badges" align="left" ><a href="https://www.linkedin.com/in/alexander-mclachlan-/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge" /></div> 
+<div style="display: grid; gap: 2rem; grid-template-columns: auto 1fr; align-items: center;">
+  <!-- LinkedIn Badge -->
+  <div>
+    <a href="https://www.linkedin.com/in/alexander-mclachlan-/" target="_blank">
+      <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge" />
+    </a>
+  </div>
 
-  [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=AlexDjangoX&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
+  <!-- GitHub Stats -->
+  <div>
+    <a href="https://github.com/anuraghazra/github-readme-stats">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AlexDjangoX&layout=compact&theme=vision-friendly-dark" alt="Top Languages" />
+    </a>
+  </div>
+</div>
+
  
