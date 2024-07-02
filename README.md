@@ -33,7 +33,7 @@
   
 - I am most comfortable with relational databases, Prisma ORM, Next JS, Typescript, Tailwind CSS and ShadCN - but have used many other technologies.
  
-- I have combined my coding adventure with my enthusiasm for the study of the Polish language and have created an awesome full-stack, AI-powered application. The application is in daily use by myself and fellow students. Follow this link to see version 1.0.0 🇵🇱 [Polish Conjugator version 1.0.0](https://conjugate-server.vercel.app/). To see the latest incarnation, version 2.0.0. AI-powered, motoring with Stream video-chat 🇵🇱 [Polish Conjugator version 2.0.0](https://lexical-live-editor.vercel.app/). A testament to my progress and gritty tenacity.
+- I have combined my coding adventure with my enthusiasm for the study of the Polish language and have created an awesome full-stack, AI-powered application. The application is in daily use by myself and fellow students. Follow the lonk 🇵🇱 [Polish Conjugator VERSION 1.0.0](https://conjugate-server.vercel.app/). To see the latest incarnation, version 2.0.0. AI-powered, motoring with Stream video-chat 🇵🇱 [Polish Conjugator VERSION 2.0.0](https://lexical-live-editor.vercel.app/). A testament to my progress and gritty tenacity.
 
 
 <!-- <div align="center" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 85px; justify-content: center;">
