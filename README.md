@@ -27,13 +27,13 @@
 
 ###  A Brief Introduction
   
- - I am a Full Stack Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> working in the Next JS ecosystem.
+ - I am a Full Stack Developer working in the Next JS ecosystem.
 
   - I am a Boolean UK graduate, however, that only got me so far. JS Mastery got me to where I am today, I graduated from their kick-ass Master Class in February 2024.
   
 - I am most comfortable with relational databases, Prisma ORM, Next JS, Typescript, Tailwind CSS and ShadCN - but have used many other technologies.
  
-- I have combined my coding adventure with my enthusiasm for the study of the Polish language and have created an awesome full-stack, AI-powered application. The application is in daily use by myself and fellow students. Follow this link to see version 1.0.0 🇵🇱 [Polish Conjugator](https://conjugate-server.vercel.app/). To see the latest incarnation, version 2.0.0. AI-powered, motoring with Stream video-chat 🇵🇱 [Polish Conjugator](https://lexical-live-editor.vercel.app/). A testament to my progress and gritty tenacity.
+- I have combined my coding adventure with my enthusiasm for the study of the Polish language and have created an awesome full-stack, AI-powered application. The application is in daily use by myself and fellow students. Follow this link to see version 1.0.0 🇵🇱 [Polish Conjugator version 1.0.0](https://conjugate-server.vercel.app/). To see the latest incarnation, version 2.0.0. AI-powered, motoring with Stream video-chat 🇵🇱 [Polish Conjugator version 2.0.0](https://lexical-live-editor.vercel.app/). A testament to my progress and gritty tenacity.
 
 
 <!-- <div align="center" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 85px; justify-content: center;">
@@ -46,15 +46,11 @@
 
 <!-- LinkedIn Badge and GitHub Stats Section -->
 <div align="center">
-  <!-- LinkedIn Badge -->
-  <a href="https://www.linkedin.com/in/alexander-mclachlan-" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge" />
-  </a>
-  <br /><br /> <!-- Adjust spacing as needed -->
+   
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=AlexDjangoX&show_icons=true&theme=tokyonight)
 
-  <!-- GitHub Stats -->
-  <!-- Replace 'AlexDjangoX' with your GitHub username -->
-  <img src="https://github-readme-stats.vercel.app/api?username=AlexDjangoX&show_icons=true&theme=vision-friendly-dark" alt="GitHub Stats" />
+<!--![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=AlexDjangoX&theme=tokyonight)-->
+
 </div>
 
 
