@@ -46,36 +46,24 @@
 </div>
 
 --- ## 🚀 Senior Full-Stack Developer | Enterprise AI Solutions **Building
-sophisticated, multi-tenant applications with cutting-edge AI integration** ###
-🎯 Current Focus **PoliLex** - Enterprise-grade Polish language learning
-platform serving **10k+ active learners** and **500+ teachers** across multiple
-organizations. Built with Next.js 14, TypeScript, and OpenAI GPT-4 integration.
-### 🏗️ Architecture & Technologies **Frontend Stack:** - **Next.js 14** with App
-Router & Server Components - **React 18** with advanced hooks and state
-management - **TypeScript** for type-safe development - **Tailwind CSS** +
-**ShadCN/UI** for modern design system - **Lexical Editor** for rich text
-editing capabilities - **Framer Motion** for smooth animations **Backend &
-Database:** - **Prisma ORM** with PostgreSQL for type-safe database operations -
-**Supabase** for real-time features and authentication - **Clerk** for
-enterprise authentication & user management - **Zuplo** as API gateway for
-secure, scalable API management - **Redis** for caching and session management
-**AI & Integrations:** - **OpenAI GPT-4** for conversational AI and content
-generation - **OpenAI Realtime API** for live streaming responses - **Stream
-Chat** for real-time messaging and collaboration - **Stripe** for payment
-processing and subscriptions **DevOps & Testing:** - **Jest** + **React Testing
-Library** for comprehensive testing - **Playwright** for end-to-end testing -
-**ESLint** + **Prettier** for code quality - **Vercel** for deployment and edge
-functions ### 🌟 Key Achievements - **Multi-tenant Architecture**: Built
-scalable company-based portals with isolated data and custom branding -
-**AI-Powered Learning**: Integrated GPT-4 for personalized language instruction
-and real-time conversation - **Enterprise Security**: Implemented role-based
-access control, data isolation, and secure API management - **Real-time
-Features**: Live collaboration, instant messaging, and streaming AI responses -
-**Performance Optimization**: Server-side rendering, edge caching, and optimized
-database queries ### 🎓 Background - **JS Mastery Graduate** (February 2024) -
-Advanced React & Next.js Masterclass - **Boolean UK Graduate** - Full-stack
-development fundamentals - **Self-taught Polish language enthusiast** - Combined
-technical expertise with language learning passion ### 🔗 Connect & Explore
+sophisticated, multi-tenant applications with cutting-edge AI integration** ---
+### 🎯 **Current Project: PoliLex** **Enterprise-grade Polish language learning
+platform** - **10k+ active learners** • **500+ teachers** • **Multi-tenant
+architecture** - **Next.js 14** • **TypeScript** • **OpenAI GPT-4** • **Zuplo
+API Gateway** --- ### 🏗️ **Tech Stack** | **Frontend** | **Backend** | **AI &
+Integrations** | |--------------|-------------|----------------------| | Next.js
+14 + App Router | Prisma ORM + PostgreSQL | OpenAI GPT-4 | | React 18 +
+TypeScript | Supabase + Clerk Auth | OpenAI Realtime API | | Tailwind CSS +
+ShadCN | Zuplo API Gateway | Stream Chat | | Lexical Editor | Redis + Vercel |
+Stripe Payments | --- ### 🌟 **Key Achievements** - **Multi-tenant
+Architecture** - Scalable company portals with isolated data - **AI-Powered
+Learning** - GPT-4 integration for personalized instruction - **Enterprise
+Security** - Role-based access control & secure API management - **Real-time
+Features** - Live collaboration & streaming AI responses - **Performance
+Optimized** - SSR, edge caching, optimized queries --- ### 🎓 **Background** -
+**JS Mastery Graduate** (Feb 2024) - Advanced React & Next.js Masterclass -
+**Boolean UK Graduate** - Full-stack development fundamentals - **Polish
+Language Enthusiast** - Combined technical expertise with language learning ---
 
 <div align="center">
   <a href="https://linkedin.com/in/your-profile" target="_blank">
@@ -109,7 +97,5 @@ technical expertise with language learning passion ### 🔗 Connect & Explore
     integration and enterprise-scale applications.</sub
   >
 </div>
-
-
 
  
