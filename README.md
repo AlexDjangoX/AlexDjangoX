@@ -1,48 +1,46 @@
 <div align="center">
-  <h3>
-    <img
-      src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original.svg"
-      title="Next.js 14"
-      alt="Next.js"
-      width="40"
-      height="40"
-    />&nbsp;&nbsp;&nbsp;
-    <img
-      src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg"
-      title="React 18"
-      alt="React"
-      width="40"
-      height="40"
-    />&nbsp;&nbsp;&nbsp;
-    <img
-      src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg"
-      title="TypeScript"
-      alt="TypeScript"
-      width="40"
-      height="40"
-    />&nbsp;&nbsp;&nbsp;
-    <img
-      src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-original.svg"
-      title="Tailwind CSS"
-      alt="Tailwind CSS"
-      width="40"
-      height="40"
-    />&nbsp;&nbsp;&nbsp;
-    <img
-      src="https://github.com/devicons/devicon/blob/master/icons/prisma/prisma-original.svg"
-      title="Prisma ORM"
-      alt="Prisma"
-      width="40"
-      height="40"
-    />&nbsp;&nbsp;&nbsp;
-    <img
-      src="https://github.com/devicons/devicon/blob/master/icons/openai/openai-original.svg"
-      title="OpenAI GPT-4"
-      alt="OpenAI"
-      width="40"
-      height="40"
-    />
-  </h3>
+  <img
+    src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original.svg"
+    title="Next.js 14"
+    alt="Next.js"
+    width="40"
+    height="40"
+  />
+  <img
+    src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg"
+    title="React 18"
+    alt="React"
+    width="40"
+    height="40"
+  />
+  <img
+    src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg"
+    title="TypeScript"
+    alt="TypeScript"
+    width="40"
+    height="40"
+  />
+  <img
+    src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-original.svg"
+    title="Tailwind CSS"
+    alt="Tailwind CSS"
+    width="40"
+    height="40"
+  />
+  <img
+    src="https://github.com/devicons/devicon/blob/master/icons/prisma/prisma-original.svg"
+    title="Prisma ORM"
+    alt="Prisma"
+    width="40"
+    height="40"
+  />
+  <img
+    src="https://github.com/devicons/devicon/blob/master/icons/openai/openai-original.svg"
+    title="OpenAI GPT-4"
+    alt="OpenAI"
+    width="40"
+    height="40"
+  />
 </div>
 
 --- ## 🚀 Senior Full-Stack Developer | Enterprise AI Solutions **Building
@@ -98,4 +96,3 @@ Language Enthusiast** - Combined technical expertise with language learning ---
   >
 </div>
 
- 
