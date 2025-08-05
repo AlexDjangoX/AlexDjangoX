@@ -9,6 +9,7 @@
     <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Zuplo-API_Mgmt-FF00BD?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI0ZGMDBDRCIgZD0iTTEyIDJMMiA3djEwbDEwIDUgMTAtNVY3bC0xMC01em0wIDJsOCA0djhsLTggNC04LTQtOC00IDgtNHoiLz48L3N2Zz4=" alt="Zuplo API Management" style="margin: 0 5px;" />
   </div>
 </div>
 
@@ -48,7 +49,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 <div align="center">
 
-[![PoliLex Platform](https://img.shields.io/badge/PoliLex-AI%20Enhanced%20Polish%20Learning-red?style=for-the-badge&logo=language&logoColor=white)](https://lexical-verb.vercel.app/)
+[![PoliLex Platform](https://img.shields.io/badge/PoliLex-AI%20Enhanced%20Polish%20Learning-red?style=for-the-badge&logo=language&logoColor=white)](https://lexical-live-editor.vercel.app)
 
 **Polish language learning platform with sophisticated full-stack architecture**
 
