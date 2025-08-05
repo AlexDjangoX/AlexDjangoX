@@ -49,7 +49,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 <div align="center">
 
-[![PoliLex Platform](https://img.shields.io/badge/PoliLex-AI%20Enhanced%20Polish%20Learning-red?style=for-the-badge&logo=language&logoColor=white)](https://lexical-live-editor.vercel.app)
+[![PoliLex Platform](https://img.shields.io/badge/PoliLex-AI%20Enhanced%20Polish%20Learning-red?style=for-the-badge&logo=language&logoColor=white)](https://lexical-verb.vercel.app/)
 
 **Polish language learning platform with sophisticated full-stack architecture**
 
