@@ -1,41 +1,48 @@
 <div align="center">
+  <h1>🚀 Alex Django</h1>
+  <h3>Senior Full-Stack Developer | Enterprise AI Solutions</h3>
+  <p><strong>Building sophisticated multi-tenant applications with cutting-edge AI integration</strong></p>
+</div>
+
+---
+
+<div align="center">
+  <h2>🎯 Current Project: PoliLex</h2>
+  <p><strong>Enterprise-grade Polish language learning platform</strong></p>
+  
+  <div style="display: flex; justify-content: center; gap: 20px; margin: 20px 0;">
+    <div style="text-align: center;">
+      <h3>10,000+</h3>
+      <p>Active Learners</p>
+    </div>
+    <div style="text-align: center;">
+      <h3>500+</h3>
+      <p>Teachers</p>
+    </div>
+    <div style="text-align: center;">
+      <h3>Multi-Tenant</h3>
+      <p>Architecture</p>
+    </div>
+  </div>
+</div>
+
+---
+
+## 🏗️ Tech Stack
+
+<div align="center">
   <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js 14" />
   <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 18" />
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <br />
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
   <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma" />
   <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" />
 </div>
 
-<br />
-
-<div align="center">
-  <h1>🚀 Senior Full-Stack Developer</h1>
-  <h3>Enterprise AI Solutions & Multi-Tenant Applications</h3>
-</div>
-
 ---
 
-## 🎯 **Current Project: PoliLex**
-
-> **Enterprise-grade Polish language learning platform serving 10,000+ active learners**
-
-**Key Technologies:** Next.js 14 • TypeScript • OpenAI GPT-4 • Zuplo API Gateway
-
----
-
-## 🏗️ **Tech Stack**
-
-| **Frontend**            | **Backend**             | **AI & Integrations** |
-| :---------------------- | :---------------------- | :-------------------- |
-| Next.js 14 + App Router | Prisma ORM + PostgreSQL | OpenAI GPT-4          |
-| React 18 + TypeScript   | Supabase + Clerk Auth   | OpenAI Realtime API   |
-| Tailwind CSS + ShadCN   | Zuplo API Gateway       | Stream Chat           |
-| Lexical Editor          | Redis + Vercel          | Stripe Payments       |
-
----
-
-## 🌟 **Key Achievements**
+## 🌟 Key Achievements
 
 - **Multi-tenant Architecture** - Scalable company portals with isolated data
 - **AI-Powered Learning** - GPT-4 integration for personalized instruction
@@ -45,7 +52,7 @@
 
 ---
 
-## 🎓 **Background**
+## 🎓 Background
 
 - **JS Mastery Graduate** (Feb 2024) - Advanced React & Next.js Masterclass
 - **Boolean UK Graduate** - Full-stack development fundamentals
@@ -75,3 +82,4 @@
 <div align="center">
   <sub>💡 Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications.</sub>
 </div>
+
