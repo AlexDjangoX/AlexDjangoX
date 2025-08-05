@@ -1,33 +1,33 @@
 <div align="center">
-  <img src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original.svg" title="Next.js 14" alt="Next.js" width="40" height="40" />
-  <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React 18" alt="React" width="40" height="40" />
-  <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="TypeScript" alt="TypeScript" width="40" height="40" />
-  <img src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-original.svg" title="Tailwind CSS" alt="Tailwind CSS" width="40" height="40" />
-  <img src="https://github.com/devicons/devicon/blob/master/icons/prisma/prisma-original.svg" title="Prisma ORM" alt="Prisma" width="40" height="40" />
-  <img src="https://github.com/devicons/devicon/blob/master/icons/openai/openai-original.svg" title="OpenAI GPT-4" alt="OpenAI" width="40" height="40" />
+  <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js 14" />
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 18" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma" />
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" />
+</div>
+
+<br />
+
+<div align="center">
+  <h1>🚀 Senior Full-Stack Developer</h1>
+  <h3>Enterprise AI Solutions & Multi-Tenant Applications</h3>
 </div>
 
 ---
 
-## 🚀 Senior Full-Stack Developer | Enterprise AI Solutions
+## 🎯 **Current Project: PoliLex**
 
-**Building sophisticated, multi-tenant applications with cutting-edge AI integration**
+> **Enterprise-grade Polish language learning platform serving 10,000+ active learners**
 
----
-
-### 🎯 **Current Project: PoliLex**
-
-**Enterprise-grade Polish language learning platform**
-
-- **10k+ active learners** • **500+ teachers** • **Multi-tenant architecture**
-- **Next.js 14** • **TypeScript** • **OpenAI GPT-4** • **Zuplo API Gateway**
+**Key Technologies:** Next.js 14 • TypeScript • OpenAI GPT-4 • Zuplo API Gateway
 
 ---
 
-### 🏗️ **Tech Stack**
+## 🏗️ **Tech Stack**
 
 | **Frontend**            | **Backend**             | **AI & Integrations** |
-| ----------------------- | ----------------------- | --------------------- |
+| :---------------------- | :---------------------- | :-------------------- |
 | Next.js 14 + App Router | Prisma ORM + PostgreSQL | OpenAI GPT-4          |
 | React 18 + TypeScript   | Supabase + Clerk Auth   | OpenAI Realtime API   |
 | Tailwind CSS + ShadCN   | Zuplo API Gateway       | Stream Chat           |
@@ -35,7 +35,7 @@
 
 ---
 
-### 🌟 **Key Achievements**
+## 🌟 **Key Achievements**
 
 - **Multi-tenant Architecture** - Scalable company portals with isolated data
 - **AI-Powered Learning** - GPT-4 integration for personalized instruction
@@ -45,7 +45,7 @@
 
 ---
 
-### 🎓 **Background**
+## 🎓 **Background**
 
 - **JS Mastery Graduate** (Feb 2024) - Advanced React & Next.js Masterclass
 - **Boolean UK Graduate** - Full-stack development fundamentals
@@ -75,4 +75,3 @@
 <div align="center">
   <sub>💡 Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications.</sub>
 </div>
-
