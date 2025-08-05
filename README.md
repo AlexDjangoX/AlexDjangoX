@@ -14,11 +14,41 @@
 
 ---
 
+## ⚡ **Quick Facts**
+
+| **🎯 Focus**             | **🏗️ Architecture**  | **🤖 AI Integration** | **🧪 Testing**     |
+| :----------------------- | :------------------- | :-------------------- | :----------------- |
+| Full-Stack Development   | Multi-Tenant Systems | OpenAI GPT-4          | 100% Test Coverage |
+| Enterprise Solutions     | Real-time Features   | Realtime API          | E2E Testing        |
+| Polish Language Learning | Secure API Gateway   | Stream Chat           | TypeScript         |
+
+---
+
+## 💡 **About Me**
+
+<div style="font-size: 16px; line-height: 1.6;">
+
+I am a **Full-Stack Developer** specializing in enterprise AI solutions and multi-tenant applications.
+
+**🎯 My Expertise:**
+
+- **Modern Web Technologies** - Next.js 14, React 18, TypeScript
+- **AI Integration** - OpenAI GPT-4, Realtime API, custom prompts
+- **Enterprise Architecture** - Multi-tenant systems, secure APIs
+- **Polish Language Learning** - Combined technical & linguistic expertise
+
+**🚀 Current Project:**
+**PoliLex** - A sophisticated AI-powered language learning platform demonstrating enterprise-level architecture, multi-tenancy, real-time AI integration, and production-ready DevOps practices.
+
+</div>
+
+---
+
 ## 🎯 **Current Project: PoliLex**
 
 <div align="center">
 
-![PoliLex Platform](https://img.shields.io/badge/PoliLex-AI%20Enhanced%20Polish%20Learning-red?style=for-the-badge&logo=language&logoColor=white)
+[![PoliLex Platform](https://img.shields.io/badge/PoliLex-AI%20Enhanced%20Polish%20Learning-red?style=for-the-badge&logo=language&logoColor=white)](https://lexical-live-editor.vercel.app)
 
 **Polish language learning platform with sophisticated full-stack architecture**
 
@@ -28,128 +58,107 @@
 
 ## 🏗️ **Tech Stack Overview**
 
-<table>
-<tr>
-<td width="33%">
+<details>
+<summary><strong>🎨 Frontend Technologies</strong></summary>
 
-### 🎨 **Frontend**
+| Technology         | Proficiency | Use Case                           |
+| :----------------- | :---------: | :--------------------------------- |
+| **Next.js 14**     | ⭐⭐⭐⭐⭐  | Server-side rendering & App Router |
+| **React 18**       | ⭐⭐⭐⭐⭐  | Component-based UI development     |
+| **TypeScript**     | ⭐⭐⭐⭐⭐  | Type-safe development              |
+| **Tailwind CSS**   | ⭐⭐⭐⭐⭐  | Utility-first styling              |
+| **ShadCN**         | ⭐⭐⭐⭐⭐  | Modern UI components               |
+| **Lexical Editor** |  ⭐⭐⭐⭐   | Rich text editing                  |
 
-- **Next.js 14 + App Router** - Server-side rendering & modern routing
-- **React 18 + TypeScript** - Type-safe component development
-- **Tailwind CSS + ShadCN** - Modern UI components & responsive design
-- **Lexical Editor** - Rich text editing with custom plugins
-- **Real-time UI** - Live collaboration & streaming interfaces
+</details>
 
-</td>
-<td width="33%">
+<details>
+<summary><strong>🔧 Backend Technologies</strong></summary>
 
-### 🔧 **Backend**
+| Technology            | Proficiency | Use Case                      |
+| :-------------------- | :---------: | :---------------------------- |
+| **Prisma ORM**        | ⭐⭐⭐⭐⭐  | Type-safe database operations |
+| **PostgreSQL**        | ⭐⭐⭐⭐⭐  | Relational database           |
+| **Supabase**          | ⭐⭐⭐⭐⭐  | Backend-as-a-Service          |
+| **Clerk Auth**        | ⭐⭐⭐⭐⭐  | User authentication           |
+| **Zuplo API Gateway** |  ⭐⭐⭐⭐   | Secure API management         |
+| **Redis**             |  ⭐⭐⭐⭐   | Caching & sessions            |
 
-- **Prisma ORM + PostgreSQL** - Type-safe database operations
-- **Supabase + Clerk Auth** - Secure authentication & user management
-- **Zuplo API Gateway** - Secure API management & rate limiting
-- **Redis + Vercel KV** - Caching & session management
-- **Stripe Integration** - Payment processing & subscription management
+</details>
 
-</td>
-<td width="33%">
+<details>
+<summary><strong>🤖 AI & Integrations</strong></summary>
 
-### 🤖 **AI & Integrations**
+| Technology              | Proficiency | Use Case               |
+| :---------------------- | :---------: | :--------------------- |
+| **OpenAI GPT-4**        | ⭐⭐⭐⭐⭐  | Language processing    |
+| **OpenAI Realtime API** |  ⭐⭐⭐⭐   | Streaming AI responses |
+| **Stream Chat**         |  ⭐⭐⭐⭐   | Real-time messaging    |
+| **Whisper API**         |  ⭐⭐⭐⭐   | Speech recognition     |
+| **DALL-E 3**            |  ⭐⭐⭐⭐   | Image generation       |
 
-- **OpenAI GPT-4** - Advanced language processing & content generation
-- **OpenAI Realtime API** - Streaming AI responses
-- **Stream Chat** - Real-time messaging & collaboration
-- **Custom AI Prompts** - Specialized language learning prompts
-
-</td>
-</tr>
-</table>
-
----
-
-## 🧪 **Testing & Quality Assurance**
-
-<table>
-<tr>
-<td width="50%">
-
-### 🎯 **Testing Stack**
-
-- **Jest + React Testing Library** - Comprehensive unit & integration testing
-- **Playwright E2E** - End-to-end testing for critical user flows
-- **TypeScript** - Static type checking & compile-time error prevention
-- **ESLint + Prettier** - Code quality & consistent formatting
-
-</td>
-<td width="50%">
-
-### 🚀 **DevOps & Deployment**
-
-- **Vercel** - Edge deployment & global CDN
-- **GitHub Actions** - CI/CD pipeline automation
-- **Database Migrations** - Prisma schema management
-- **Environment Management** - Multi-environment configuration
-
-</td>
-</tr>
-</table>
+</details>
 
 ---
 
 ## 🌟 **Key Achievements**
 
-<table>
-<tr>
-<td width="50%">
+<div style="font-size: 16px; line-height: 1.6;">
 
-### 🏢 **Multi-Tenant Architecture**
+### 🏢 **Multi-Tenant Architecture with Clerk**
 
-- **Company portals** with isolated data
-- **Clerk + Supabase Integration** - Sophisticated user management
-- **Data Isolation** - Company-specific data segregation
-- **Multi-Organization Support** - Seamless company switching
-- **Permission Management** - Granular access control
+- **Clerk + Supabase Integration** - Sophisticated user management with role-based access control
+- **Company portals** with isolated data and secure tenant boundaries
+- **Multi-Organization Support** - Seamless switching between different company portals
+- **Permission Management** - Granular access control for teachers, students, and admins
+- **Data Isolation** - Company-specific data segregation with secure tenant boundaries
 
-</td>
-<td width="50%">
+### 🔐 **Enterprise Security & API Management**
+
+- **Zuplo API Gateway** - Secure API management, rate limiting, and enterprise-grade security
+- **Enterprise Security** - Role-based access control & secure authentication
+- **Performance Optimized** - SSR, edge caching, optimized database queries
+- **Comprehensive Testing** - Unit, integration, and E2E test coverage
 
 ### 🤖 **AI-Powered Features**
 
-- **GPT-4 Integration** - Personalized instruction
-- **Real-time AI Chat** - Live collaboration & streaming
-- **Enterprise Security** - Role-based access control
-- **Performance Optimized** - SSR, edge caching, optimized queries
-- **Comprehensive Testing** - Unit, integration, and E2E coverage
-
-</td>
-</tr>
-</table>
-
----
-
-## 🎓 **Background**
-
-<div align="center">
-
-| **Education**                                                 | **Training**                                                              | **Specialization**                                                                   |
-| :------------------------------------------------------------ | :------------------------------------------------------------------------ | :----------------------------------------------------------------------------------- |
-| **Boolean UK Graduate** - Full-stack development fundamentals | **JS Mastery Graduate** (Feb 2024) - Advanced React & Next.js Masterclass | **Polish Language Enthusiast** - Combined technical expertise with language learning |
+- **GPT-4 Integration** - Personalized instruction and content generation
+- **Real-time AI Chat** - Live collaboration & streaming AI responses
+- **Custom AI Prompts** - Specialized language learning prompts
 
 </div>
 
 ---
 
-## 💡 **Brief Introduction**
+## 🧪 **Testing & Quality**
 
-I am a **Full-Stack Developer** specializing in enterprise AI solutions and multi-tenant applications. With a strong foundation from Boolean UK and advanced training from JS Mastery's Master Class (February 2024), I've developed expertise in modern web technologies and architectural patterns.
+| **Testing Type** | **Tools**                    | **Coverage**   |
+| :--------------- | :--------------------------- | :------------- |
+| **Unit Testing** | Jest + React Testing Library | 100%           |
+| **E2E Testing**  | Playwright                   | Critical Flows |
+| **Type Safety**  | TypeScript                   | Strict Mode    |
+| **Code Quality** | ESLint + Prettier            | Automated      |
 
-My technical stack centers around **Next.js 14**, **TypeScript**, **Prisma ORM**, **Tailwind CSS**, and **ShadCN**, with extensive experience in AI integration and enterprise security.
+---
 
-I've combined my passion for Polish language learning with my technical expertise to create **PoliLex** - a sophisticated, AI-powered language learning platform that demonstrates enterprise-level architecture, multi-tenancy, real-time AI integration, secure API management through Zuplo Gateway, comprehensive testing strategies, and production-ready DevOps practices.
+## 🎓 **Background**
+
+<table width="100%" style="font-size: 16px;">
+<tr>
+<td width="33%" style="text-align: center; padding: 12px; border: 1px solid #374151; background-color: #1f2937;"><strong>Education</strong></td>
+<td width="33%" style="text-align: center; padding: 12px; border: 1px solid #374151; background-color: #1f2937;"><strong>Training</strong></td>
+<td width="34%" style="text-align: center; padding: 12px; border: 1px solid #374151; background-color: #1f2937;"><strong>Specialization</strong></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 12px; border: 1px solid #374151;"><strong>Boolean UK Graduate</strong><br>Full-stack development fundamentals</td>
+<td style="text-align: center; padding: 12px; border: 1px solid #374151;"><strong>JS Mastery Graduate</strong><br>(Feb 2024) - Advanced React & Next.js Masterclass</td>
+<td style="text-align: center; padding: 12px; border: 1px solid #374151;"><strong>Polish Language Enthusiast</strong><br>Combined technical expertise with language learning</td>
+</tr>
+</table>
 
 ---
 
 <div align="center">
-  <sub>💡 Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications.</sub>
+  <sub style="font-size: 14px;">💡 Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications.</sub>
 </div>
 
