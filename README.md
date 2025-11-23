@@ -3,13 +3,13 @@
   <h3>Full-Stack Developer | AI Solutions</h3>
   
   <div style="margin: 20px 0;">
-    <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js 14" style="margin: 0 5px;" />
-    <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 18" style="margin: 0 5px;" />
-    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" style="margin: 0 5px;" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" style="margin: 0 5px;" />
-    <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js 16" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/TypeScript-5.9-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript 5.9" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS 4.1" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Prisma-7-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma 7" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" style="margin: 0 5px;" />
-    <img src="https://img.shields.io/badge/Zuplo-API_Mgmt-FF00BD?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI0ZGMDBDRCIgZD0iTTEyIDJMMiA3djEwbDEwIDUgMTAtNVY3bC0xMC01em0wIDJsOCA0djhsLTggNC04LTQtOC00IDgtNHoiLz48L3N2Zz4=" alt="Zuplo API Management" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white" alt="Stripe" style="margin: 0 5px;" />
   </div>
 </div>
 
@@ -33,10 +33,10 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 **🎯 My Expertise:**
 
-- **Modern Web Technologies** - Next.js 14, React 18, TypeScript
-- **AI Integration** - OpenAI GPT-4, Realtime API, custom prompts
-- **Enterprise Architecture** - Multi-tenant systems, secure APIs
-- **Polish Language Learning** - Combined technical & linguistic expertise
+- **Modern Web Technologies** - Next.js 16, React 19, TypeScript 5.9
+- **AI Integration** - OpenAI GPT-4, Realtime API, Whisper, TTS, custom prompts
+- **Enterprise Architecture** - Multi-tenant systems, secure APIs, payment processing
+- **Polish Language Learning** - Combined technical & linguistic expertise with 20+ interactive learning modules
 
 **🚀 Current Project:**
 **PoliLex** - A sophisticated AI-powered language learning platform demonstrating enterprise-level architecture, multi-tenancy, real-time AI integration, and production-ready DevOps practices.
@@ -64,39 +64,42 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 | Technology         | Proficiency | Use Case                           |
 | :----------------- | :---------: | :--------------------------------- |
-| **Next.js 14**     | ⭐⭐⭐⭐⭐  | Server-side rendering & App Router |
-| **React 18**       | ⭐⭐⭐⭐⭐  | Component-based UI development     |
-| **TypeScript**     | ⭐⭐⭐⭐⭐  | Type-safe development              |
-| **Tailwind CSS**   | ⭐⭐⭐⭐⭐  | Utility-first styling              |
+| **Next.js 16**     | ⭐⭐⭐⭐⭐  | Server-side rendering & App Router |
+| **React 19**       | ⭐⭐⭐⭐⭐  | Component-based UI development     |
+| **TypeScript 5.9** | ⭐⭐⭐⭐⭐  | Type-safe development              |
+| **Tailwind CSS 4** | ⭐⭐⭐⭐⭐  | Utility-first styling              |
 | **ShadCN**         | ⭐⭐⭐⭐⭐  | Modern UI components               |
 | **Lexical Editor** |  ⭐⭐⭐⭐   | Rich text editing                  |
+| **Framer Motion**  |  ⭐⭐⭐⭐   | Animations & transitions           |
 
 </details>
 
 <details>
 <summary><strong>🔧 Backend Technologies</strong></summary>
 
-| Technology            | Proficiency | Use Case                      |
-| :-------------------- | :---------: | :---------------------------- |
-| **Prisma ORM**        | ⭐⭐⭐⭐⭐  | Type-safe database operations |
-| **PostgreSQL**        | ⭐⭐⭐⭐⭐  | Relational database           |
-| **Supabase**          | ⭐⭐⭐⭐⭐  | Backend-as-a-Service          |
-| **Clerk Auth**        | ⭐⭐⭐⭐⭐  | User authentication           |
-| **Zuplo API Gateway** |  ⭐⭐⭐⭐   | Secure API management         |
-| **Redis**             |  ⭐⭐⭐⭐   | Caching & sessions            |
+| Technology      | Proficiency | Use Case                      |
+| :-------------- | :---------: | :---------------------------- |
+| **Prisma 7**    | ⭐⭐⭐⭐⭐  | Type-safe database operations |
+| **PostgreSQL**  | ⭐⭐⭐⭐⭐  | Relational database           |
+| **Supabase**    | ⭐⭐⭐⭐⭐  | Backend-as-a-Service          |
+| **Clerk Auth**  | ⭐⭐⭐⭐⭐  | User authentication           |
+| **Stripe**      | ⭐⭐⭐⭐⭐  | Payment processing            |
+| **Stream Chat** | ⭐⭐⭐⭐⭐  | Real-time messaging           |
+| **Redis**       |  ⭐⭐⭐⭐   | Caching & sessions            |
 
 </details>
 
 <details>
 <summary><strong>🤖 AI & Integrations</strong></summary>
 
-| Technology              | Proficiency | Use Case               |
-| :---------------------- | :---------: | :--------------------- |
-| **OpenAI GPT-4**        | ⭐⭐⭐⭐⭐  | Language processing    |
-| **OpenAI Realtime API** |  ⭐⭐⭐⭐   | Streaming AI responses |
-| **Stream Chat**         |  ⭐⭐⭐⭐   | Real-time messaging    |
-| **Whisper API**         |  ⭐⭐⭐⭐   | Speech recognition     |
-| **DALL-E 3**            |  ⭐⭐⭐⭐   | Image generation       |
+| Technology              | Proficiency | Use Case                        |
+| :---------------------- | :---------: | :------------------------------ |
+| **OpenAI GPT-4**        | ⭐⭐⭐⭐⭐  | Language processing             |
+| **OpenAI Realtime API** | ⭐⭐⭐⭐⭐  | Voice conversations & streaming |
+| **Whisper API**         | ⭐⭐⭐⭐⭐  | Speech-to-text transcription    |
+| **OpenAI TTS**          | ⭐⭐⭐⭐⭐  | Text-to-speech synthesis        |
+| **Stream Chat**         | ⭐⭐⭐⭐⭐  | Real-time messaging             |
+| **DALL-E 3**            |  ⭐⭐⭐⭐   | Image generation                |
 
 </details>
 
@@ -124,8 +127,98 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 ### 🤖 **AI-Powered Features**
 
 - **GPT-4 Integration** - Personalized instruction and content generation
-- **Real-time AI Chat** - Live collaboration & streaming AI responses
-- **Custom AI Prompts** - Specialized language learning prompts
+- **OpenAI Realtime API** - Voice conversations with real-time streaming responses
+- **Whisper API** - Audio transcription for podcasts and video content
+- **Text-to-Speech (TTS)** - AI-generated audio pronunciation
+- **Stream Chat** - Real-time messaging with AI assistance
+- **Custom AI Prompts** - Specialized language learning prompts and instructions
+
+### 📚 **Comprehensive Learning Modules**
+
+**Grammar Labs:**
+
+- **Aspect Master** - Verb aspect practice with quizzes, challenges, and timeline visualization
+- **Reflexive Lab** - Reflexive verb journeys with categories and templates
+- **Preposition Lab** - Interactive preposition challenges with case governance
+- **Motion Lab** - Verbs of motion (unidirectional/multidirectional pairs)
+- **Verb Prefixes** - Perfective prefix forms and transformations
+- **Conjugator** - Interactive Kanban board for verb conjugation practice
+
+**Vocabulary & Practice:**
+
+- **Counting** - Grammatical cases through counting 1-21 with contextual examples
+- **Adjectives** - Comparative forms and interactive exercises
+- **Adverbs** - Comparative and superlative forms practice
+- **Nouns** - Auto-generated flashcards with translations
+- **Occupations** - 5 interactive games (Flashcards, Quiz, Memory, Drag & Drop, Sentence Builder)
+- **Word Wizard** - AI-assisted vocabulary building with audio pronunciation
+- **Flashcards** - Customizable flashcards with example sentences
+- **Cases** - Grammatical case mastery through fill-in-the-blank exercises
+- **Days & Months** - Temporal vocabulary practice
+- **Genealogy** - Interactive family tree drag-and-drop game
+
+**Interactive Content:**
+
+- **Lexical Editor** - Rich text editing with collaborative features
+- **PDF Processing** - Document processing and annotation
+- **Portable Documents** - PDF viewer with highlighting capabilities
+- **Podcasts** - Audio content with transcription
+- **Videos** - Video learning with interactive features
+- **Audio Transcript** - Speech-to-text processing
+
+**Community & Social:**
+
+- **Real-time Chat** - Stream Chat integration for user communication
+- **Memory Games** - Polish language memory recall activities
+- **Jira Integration** - Project management and task tracking
+- **Company Portals** - Multi-tenant learning environments with blogs, videos, and PDFs
+
+### 💳 **Payment & Monetization**
+
+- **Stripe Integration** - Secure payment processing for credits
+- **Credit System** - Flexible credit-based access to premium features
+- **Transaction Management** - Complete payment history and tracking
+- **Webhook Processing** - Reliable payment event handling
+
+### ✍️ **Custom Lexical Editor with Media Integration**
+
+- **Rich Text Editing** - Full-featured Lexical editor with markdown support, tables, lists, and formatting
+- **YouTube Integration** - Embed YouTube videos directly in editor content with resizable player controls
+- **Audio/Podcast Integration** - Seamless audio embedding with Supabase storage integration
+  - Audio playback controls with custom player interface
+  - Podcast image support with signed URL generation
+  - Audio transcription workflow integration
+- **Video Content Creation** - Link videos to editor content for bilingual text generation
+- **Speech-to-Text** - Built-in speech recognition plugin for voice input
+- **Auto-Embed Plugin** - Automatic detection and embedding of YouTube URLs
+- **Collaborative Features** - Real-time editing capabilities with history tracking
+- **Export Capabilities** - Export editor content to blog posts and learning materials
+
+### 👨‍🏫 **Teacher/Tutor Portal (Company System)**
+
+- **Dedicated Company Portals** - Isolated multi-tenant environments for each teaching organization
+- **Blog Management System** - Full-featured blog with Lexical editor integration
+  - Rich text blog posts with embedded media
+  - Tag-based categorization and filtering
+  - Comments and reactions system
+  - Nested comment threads with real-time updates
+  - Author profiles and post attribution
+  - Draft and published post status management
+- **Video Library Management** - Comprehensive video content system
+  - YouTube video integration with metadata
+  - Difficulty level categorization (A1-C2)
+  - Category organization (Grammar, Vocabulary, Pronunciation, etc.)
+  - Bilingual text support (Polish/English)
+  - Video transcription and summaries
+  - Thumbnail and duration tracking
+  - Publishing workflow
+- **Resource Management** - Centralized content hub
+  - PDF document management
+  - Resource organization by company
+  - Access control and permissions
+- **Dashboard Analytics** - Company-specific insights and user management
+- **Multi-User Support** - Role-based access for teachers, admins, and students
+- **Tenant Isolation** - Secure data segregation between different companies
 
 </div>
 
