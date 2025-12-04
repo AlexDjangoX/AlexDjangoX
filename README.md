@@ -59,49 +59,22 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 ## 🏗️ **Tech Stack Overview**
 
-<details>
-<summary><strong>🎨 Frontend Technologies</strong></summary>
-
-| Technology         | Proficiency | Use Case                           |
-| :----------------- | :---------: | :--------------------------------- |
-| **Next.js 16**     | ⭐⭐⭐⭐⭐  | Server-side rendering & App Router |
-| **React 19**       | ⭐⭐⭐⭐⭐  | Component-based UI development     |
-| **TypeScript 5.9** | ⭐⭐⭐⭐⭐  | Type-safe development              |
-| **Tailwind CSS 4** | ⭐⭐⭐⭐⭐  | Utility-first styling              |
-| **ShadCN**         | ⭐⭐⭐⭐⭐  | Modern UI components               |
-| **Lexical Editor** |  ⭐⭐⭐⭐   | Rich text editing                  |
-| **Framer Motion**  |  ⭐⭐⭐⭐   | Animations & transitions           |
-
-</details>
-
-<details>
-<summary><strong>🔧 Backend Technologies</strong></summary>
-
-| Technology      | Proficiency | Use Case                      |
-| :-------------- | :---------: | :---------------------------- |
-| **Prisma 7**    | ⭐⭐⭐⭐⭐  | Type-safe database operations |
-| **PostgreSQL**  | ⭐⭐⭐⭐⭐  | Relational database           |
-| **Supabase**    | ⭐⭐⭐⭐⭐  | Backend-as-a-Service          |
-| **Clerk Auth**  | ⭐⭐⭐⭐⭐  | User authentication           |
-| **Stripe**      | ⭐⭐⭐⭐⭐  | Payment processing            |
-| **Stream Chat** | ⭐⭐⭐⭐⭐  | Real-time messaging           |
-| **Redis**       |  ⭐⭐⭐⭐   | Caching & sessions            |
-
-</details>
-
-<details>
-<summary><strong>🤖 AI & Integrations</strong></summary>
-
-| Technology              | Proficiency | Use Case                        |
-| :---------------------- | :---------: | :------------------------------ |
-| **OpenAI GPT-4**        | ⭐⭐⭐⭐⭐  | Language processing             |
-| **OpenAI Realtime API** | ⭐⭐⭐⭐⭐  | Voice conversations & streaming |
-| **Whisper API**         | ⭐⭐⭐⭐⭐  | Speech-to-text transcription    |
-| **OpenAI TTS**          | ⭐⭐⭐⭐⭐  | Text-to-speech synthesis        |
-| **Stream Chat**         | ⭐⭐⭐⭐⭐  | Real-time messaging             |
-| **DALL-E 3**            |  ⭐⭐⭐⭐   | Image generation                |
-
-</details>
+| **Category**                 | **Technology / Tools**                               | **Purpose**                                          |
+| :--------------------------- | :--------------------------------------------------- | :--------------------------------------------------- |
+| **Frontend**                 | Next.js 16, React 19                                 | Core application shell and interactive UI            |
+|                              | TypeScript 5.9                                       | Type-safe client-side development                    |
+|                              | Tailwind CSS 4, ShadCN                               | Design system, layout, and reusable UI components    |
+|                              | Lexical Editor, Framer Motion                        | Rich authoring experience and high-quality motion    |
+| **Backend & Infrastructure** | Prisma 7, PostgreSQL, Supabase                       | Type-safe data access and relational persistence     |
+|                              | Clerk Auth, Stripe, Stream Chat, Redis               | Authentication, payments, real-time messaging, cache |
+| **Testing & Quality**        | Jest, React Testing Library                          | Unit and integration coverage for components & logic |
+|                              | Playwright                                           | End-to-end browser regression on critical journeys   |
+|                              | k6, Artillery                                        | Load and performance validation for APIs and flows   |
+|                              | TypeScript (strict), Prisma, Zod, @t3-oss/env-nextjs | Static typing and schema validation across the stack |
+|                              | ESLint, Prettier, import-sorting plugins             | Automated linting, formatting, and code consistency  |
+| **AI & Integrations**        | OpenAI GPT-4, DALL-E 3                               | Language processing and image generation             |
+|                              | OpenAI Realtime API, Whisper API, OpenAI TTS         | Real-time voice, speech-to-text, and text-to-speech  |
+|                              | Stream Chat                                          | Real-time chat and collaboration                     |
 
 ---
 
@@ -226,12 +199,14 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 ## 🧪 **Testing & Quality**
 
-| **Testing Type** | **Tools**                    | **Coverage**   |
-| :--------------- | :--------------------------- | :------------- |
-| **Unit Testing** | Jest + React Testing Library | 100%           |
-| **E2E Testing**  | Playwright                   | Critical Flows |
-| **Type Safety**  | TypeScript                   | Strict Mode    |
-| **Code Quality** | ESLint + Prettier            | Automated      |
+PoliLex is validated with a **full testing pipeline** that combines automated tests, static analysis, and load testing.  
+Every change is validated through:
+
+- **Automated unit and integration suites** using **Jest** and **React Testing Library** for components and business logic
+- **End-to-end regression tests** with **Playwright** for critical user journeys in the browser
+- **Load and performance exercises** with **k6** and **Artillery** focused on core APIs, server actions, and caching behavior
+- **Strict static typing and schema validation** with **TypeScript (strict mode)**, **Prisma**, **Zod**, and **@t3-oss/env-nextjs** for data, inputs, and configuration
+- **Automated linting and formatting** with **ESLint**, **Prettier**, and import-sorting to enforce consistent, production-grade code quality
 
 ---
 
@@ -255,4 +230,3 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 <div align="center">
   <sub style="font-size: 14px;">💡 Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications.</sub>
 </div>
-
