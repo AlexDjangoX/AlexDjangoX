@@ -82,9 +82,9 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 <div style="font-size: 16px; line-height: 1.6;">
 
-### 🏢 **Multi-Tenant Architecture with Clerk**
+### 🏢 **Multi-Tenant Architecture**
 
-- **Clerk + Supabase Integration** - Sophisticated user management with role-based access control
+- **Authentication & Database Integration** - Sophisticated user management with role-based access control
 - **Company portals** with isolated data and secure tenant boundaries
 - **Multi-Organization Support** - Seamless switching between different company portals
 - **Permission Management** - Granular access control for teachers, students, and admins
@@ -153,6 +153,24 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **Transaction Management** - Complete payment history and tracking
 - **Webhook Processing** - Reliable payment event handling
 
+### 💰 **OpenAI Pricing Strategy**
+
+**Source of Truth:**
+
+- **Database-Driven Pricing** - Centralized database table serves as the single source of truth for all OpenAI model costs
+- **Manual Admin Management** - Pricing is manually updated by administrators through a secure admin interface (no automated scraping or external API dependencies)
+- **Performance Optimization** - Server-side pricing cached with configurable TTL for optimal performance, with immediate cache invalidation after updates
+- **Resilience** - Fallback pricing values available if database is temporarily unavailable (with appropriate logging and warnings)
+
+**Security Practices:**
+
+- **Defense in Depth** - Multi-layer security approach combining application-level authorization checks with database-level access controls
+- **Row-Level Security** - Database policies enforce role-based access control, ensuring only authorized administrators can modify pricing data
+- **Read Access** - Authenticated users can read active pricing information required for cost calculations
+- **Write Access** - Strictly limited to authorized administrators through verified authentication mechanisms
+- **Secure Initialization** - Seed scripts use secure service-level connections for initial data population
+- **Token-Based Authorization** - Admin privileges verified through secure token claims validated at both application and database layers
+
 ### ✍️ **Custom Lexical Editor with Media Integration**
 
 - **Rich Text Editing** - Full-featured Lexical editor with markdown support, tables, lists, and formatting
@@ -204,7 +222,7 @@ Every change is validated through:
 
 - **Automated unit and integration suites** using **Jest** and **React Testing Library** for components and business logic
 - **End-to-end regression tests** with **Playwright** for critical user journeys in the browser
-- **Load and performance exercises** with **k6** and **Artillery** focused on core APIs, server actions, and caching behavior
+- **Load and performance exercises** with **k6** and **Artillery** focused on core APIs, server-side operations, and caching behavior
 - **Strict static typing and schema validation** with **TypeScript (strict mode)**, **Prisma**, **Zod**, and **@t3-oss/env-nextjs** for data, inputs, and configuration
 - **Automated linting and formatting** with **ESLint**, **Prettier**, and import-sorting to enforce consistent, production-grade code quality
 
@@ -230,3 +248,4 @@ Every change is validated through:
 <div align="center">
   <sub style="font-size: 14px;">💡 Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications.</sub>
 </div>
+
