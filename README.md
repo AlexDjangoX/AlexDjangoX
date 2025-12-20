@@ -10,6 +10,8 @@
     <img src="https://img.shields.io/badge/Prisma-7-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma 7" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white" alt="Stripe" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Zuplo-FF00BD?style=for-the-badge&logo=zuplo&logoColor=white" alt="Zuplo" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Lexical-0668E1?style=for-the-badge&logo=meta&logoColor=white" alt="Lexical Editor" style="margin: 0 5px;" />
   </div>
 </div>
 
@@ -69,14 +71,14 @@ A payment system engineered for correctness, security, and reliability—where m
 
 ### Architecture Overview
 
-| **Component**            | **Responsibility**                              | **Design Pattern**                |
-| :----------------------- | :---------------------------------------------- | :-------------------------------- |
-| Stripe Client Singleton  | Centralized SDK configuration                   | Singleton with API version pinning |
-| Error Handling Layer     | Standardized error classification               | Custom error types with user-safe messages |
-| Retry Logic              | Transient failure recovery                      | Exponential backoff with jitter   |
-| Idempotency Service      | Duplicate operation prevention                  | Deterministic key generation      |
-| Webhook Handler          | Asynchronous event processing                   | Event-driven with idempotency     |
-| Token Balance Calculator | Subscription credit management                  | Pure function with state preservation |
+| **Component**            | **Responsibility**                | **Design Pattern**                         |
+| :----------------------- | :-------------------------------- | :----------------------------------------- |
+| Stripe Client Singleton  | Centralized SDK configuration     | Singleton with API version pinning         |
+| Error Handling Layer     | Standardized error classification | Custom error types with user-safe messages |
+| Retry Logic              | Transient failure recovery        | Exponential backoff with jitter            |
+| Idempotency Service      | Duplicate operation prevention    | Deterministic key generation               |
+| Webhook Handler          | Asynchronous event processing     | Event-driven with idempotency              |
+| Token Balance Calculator | Subscription credit management    | Pure function with state preservation      |
 
 ### 🔧 Core Engineering Principles
 
@@ -110,14 +112,14 @@ A payment system engineered for correctness, security, and reliability—where m
 
 ### 🎯 Webhook Event Processing
 
-| **Event Type**                     | **Handler Action**                                       |
-| :--------------------------------- | :------------------------------------------------------- |
-| `customer.subscription.created`    | Allocate tier credits, set plan ID, sync Clerk metadata  |
-| `customer.subscription.updated`    | Recalculate balance preserving top-ups, update tier      |
-| `customer.subscription.deleted`    | Downgrade to free tier, clear subscription fields        |
-| `invoice.payment_succeeded`        | Reset subscription credits on renewal, preserve top-ups  |
-| `invoice.payment_failed`           | Update payment failure status, manage grace period       |
-| `checkout.session.completed`       | Process one-time top-up purchases, increment balance     |
+| **Event Type**                  | **Handler Action**                                      |
+| :------------------------------ | :------------------------------------------------------ |
+| `customer.subscription.created` | Allocate tier credits, set plan ID, sync Clerk metadata |
+| `customer.subscription.updated` | Recalculate balance preserving top-ups, update tier     |
+| `customer.subscription.deleted` | Downgrade to free tier, clear subscription fields       |
+| `invoice.payment_succeeded`     | Reset subscription credits on renewal, preserve top-ups |
+| `invoice.payment_failed`        | Update payment failure status, manage grace period      |
+| `checkout.session.completed`    | Process one-time top-up purchases, increment balance    |
 
 ### 🧪 Testing Philosophy
 
@@ -319,4 +321,3 @@ Every change is validated through:
 <div align="center">
   <sub style="font-size: 14px;">💡 Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications.</sub>
 </div>
-
