@@ -57,6 +57,84 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 ---
 
+## 🛡️ **Battle-Tested Payment Infrastructure**
+
+<div align="center">
+<em>Production-grade Stripe integration built with financial software engineering standards</em>
+</div>
+
+<br/>
+
+A payment system engineered for correctness, security, and reliability—where money is involved, there's zero tolerance for bugs.
+
+### Architecture Overview
+
+| **Component**            | **Responsibility**                              | **Design Pattern**                |
+| :----------------------- | :---------------------------------------------- | :-------------------------------- |
+| Stripe Client Singleton  | Centralized SDK configuration                   | Singleton with API version pinning |
+| Error Handling Layer     | Standardized error classification               | Custom error types with user-safe messages |
+| Retry Logic              | Transient failure recovery                      | Exponential backoff with jitter   |
+| Idempotency Service      | Duplicate operation prevention                  | Deterministic key generation      |
+| Webhook Handler          | Asynchronous event processing                   | Event-driven with idempotency     |
+| Token Balance Calculator | Subscription credit management                  | Pure function with state preservation |
+
+### 🔧 Core Engineering Principles
+
+- **Idempotency Guarantees** — All Stripe API calls use deterministic idempotency keys (SHA-256 hashed from operation type, user ID, and relevant data) ensuring safe retries without duplicate charges
+- **Webhook Idempotency** — Dual-layer event deduplication using in-memory cache (O(1) lookup) with database persistence for cross-restart consistency
+- **Fail-Open Design** — Idempotency database checks fail-open to prevent blocking legitimate transactions during transient DB issues
+- **Token Balance Preservation** — Subscription changes preserve top-up tokens using pure calculation: `newBalance = newCredits + max(0, currentBalance - oldCredits)`
+
+### 🔐 Security Implementation
+
+- **Signature Verification** — All webhook payloads verified against HMAC signatures before processing
+- **Price ID Validation** — Two-layer validation: Zod schema format check + business logic allowlist verification
+- **User Authentication** — Server actions enforce Clerk authentication with automatic sign-in redirects
+- **No Internal Secrets Exposed** — User-facing error messages sanitized through dedicated `getUserErrorMessage()` function
+
+### 📈 Retry & Error Strategy
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  Retry Strategy: Exponential Backoff with Jitter            │
+├─────────────────────────────────────────────────────────────┤
+│  Attempt 0: baseDelay × 2⁰ = 1000ms + jitter (0-10%)        │
+│  Attempt 1: baseDelay × 2¹ = 2000ms + jitter (0-10%)        │
+│  Attempt 2: baseDelay × 2² = 4000ms + jitter (0-10%)        │
+│  Max Delay: Capped at configurable ceiling                  │
+├─────────────────────────────────────────────────────────────┤
+│  Retryable: 5xx errors, 429 rate limits, network timeouts   │
+│  Non-Retryable: 4xx client errors (card declined, invalid)  │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 🎯 Webhook Event Processing
+
+| **Event Type**                     | **Handler Action**                                       |
+| :--------------------------------- | :------------------------------------------------------- |
+| `customer.subscription.created`    | Allocate tier credits, set plan ID, sync Clerk metadata  |
+| `customer.subscription.updated`    | Recalculate balance preserving top-ups, update tier      |
+| `customer.subscription.deleted`    | Downgrade to free tier, clear subscription fields        |
+| `invoice.payment_succeeded`        | Reset subscription credits on renewal, preserve top-ups  |
+| `invoice.payment_failed`           | Update payment failure status, manage grace period       |
+| `checkout.session.completed`       | Process one-time top-up purchases, increment balance     |
+
+### 🧪 Testing Philosophy
+
+- **100% Test Coverage** — 177 tests covering all Stripe-related code paths
+- **External API Mocking Only** — Tests mock Stripe SDK, Prisma, and Clerk, but execute all internal business logic with real implementations
+- **Financial Software Standards** — Zero tolerance for test failures; all edge cases and error paths verified
+- **Concurrent Processing Tests** — Race condition and duplicate event handling validated
+
+### 💎 Credit System Architecture
+
+- **Single Source of Truth** — `tokenBalance` field is authoritative; no derived calculations in business logic
+- **Tier-Based Allocation** — Credits mapped from price IDs via environment-configured lookup table
+- **Top-Up Preservation** — One-time purchases survive subscription changes through stateless balance calculation
+- **Transaction Audit Trail** — All balance mutations recorded with Stripe event IDs for reconciliation
+
+---
+
 ## 🏗️ **Tech Stack Overview**
 
 | **Category**                 | **Technology / Tools**                               | **Purpose**                                          |
@@ -145,13 +223,6 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **Memory Games** - Polish language memory recall activities
 - **Jira Integration** - Project management and task tracking
 - **Company Portals** - Multi-tenant learning environments with blogs, videos, and PDFs
-
-### 💳 **Payment & Monetization**
-
-- **Stripe Integration** - Secure payment processing for credits
-- **Credit System** - Flexible credit-based access to premium features
-- **Transaction Management** - Complete payment history and tracking
-- **Webhook Processing** - Reliable payment event handling
 
 ### 💰 **OpenAI Pricing Strategy**
 
