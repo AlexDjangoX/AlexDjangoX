@@ -61,18 +61,9 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 ## 🔗 **Resources & Links**
 
-<div align="center" style="margin: 30px 0;">
+<div align="center">
 
-<div style="display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center; align-items: center; padding: 20px; background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%); border-radius: 12px; border: 1px solid rgba(239, 68, 68, 0.1);">
-
-<a href="https://www.youtube.com/watch?v=1Q7oyvCVanE" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 8px; text-decoration: none; color: #ef4444; font-weight: 500; transition: all 0.2s;">
-  <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 4px;">
-    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-  </svg>
-  Watch Demo
-</a>
-
-</div>
+[![Watch Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=1Q7oyvCVanE)
 
 </div>
 
