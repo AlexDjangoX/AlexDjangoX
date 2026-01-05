@@ -59,94 +59,6 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 ---
 
-## 🔗 **Resources & Links**
-
-<div align="center">
-
-[![Watch Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=1Q7oyvCVanE)
-
-</div>
-
----
-
-## 🛡️ **Battle-Tested Payment Infrastructure**
-
-<div align="center">
-<em>Production-grade Stripe integration built with financial software engineering standards</em>
-</div>
-
-<br/>
-
-A payment system engineered for correctness, security, and reliability—where money is involved, there's zero tolerance for bugs.
-
-### Architecture Overview
-
-| **Component**            | **Responsibility**                | **Design Pattern**                         |
-| :----------------------- | :-------------------------------- | :----------------------------------------- |
-| Stripe Client Singleton  | Centralized SDK configuration     | Singleton with API version pinning         |
-| Error Handling Layer     | Standardized error classification | Custom error types with user-safe messages |
-| Retry Logic              | Transient failure recovery        | Exponential backoff with jitter            |
-| Idempotency Service      | Duplicate operation prevention    | Deterministic key generation               |
-| Webhook Handler          | Asynchronous event processing     | Event-driven with idempotency              |
-| Token Balance Calculator | Subscription credit management    | Pure function with state preservation      |
-
-### 🔧 Core Engineering Principles
-
-- **Idempotency Guarantees** — All Stripe API calls use deterministic idempotency keys (SHA-256 hashed from operation type, user ID, and relevant data) ensuring safe retries without duplicate charges
-- **Webhook Idempotency** — Dual-layer event deduplication using in-memory cache (O(1) lookup) with database persistence for cross-restart consistency
-- **Fail-Open Design** — Idempotency database checks fail-open to prevent blocking legitimate transactions during transient DB issues
-- **Token Balance Preservation** — Subscription changes preserve top-up tokens using pure calculation: `newBalance = newCredits + max(0, currentBalance - oldCredits)`
-
-### 🔐 Security Implementation
-
-- **Signature Verification** — All webhook payloads verified against HMAC signatures before processing
-- **Price ID Validation** — Two-layer validation: Zod schema format check + business logic allowlist verification
-- **User Authentication** — Server actions enforce Clerk authentication with automatic sign-in redirects
-- **No Internal Secrets Exposed** — User-facing error messages sanitized through dedicated `getUserErrorMessage()` function
-
-### 📈 Retry & Error Strategy
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│  Retry Strategy: Exponential Backoff with Jitter            │
-├─────────────────────────────────────────────────────────────┤
-│  Attempt 0: baseDelay × 2⁰ = 1000ms + jitter (0-10%)        │
-│  Attempt 1: baseDelay × 2¹ = 2000ms + jitter (0-10%)        │
-│  Attempt 2: baseDelay × 2² = 4000ms + jitter (0-10%)        │
-│  Max Delay: Capped at configurable ceiling                  │
-├─────────────────────────────────────────────────────────────┤
-│  Retryable: 5xx errors, 429 rate limits, network timeouts   │
-│  Non-Retryable: 4xx client errors (card declined, invalid)  │
-└─────────────────────────────────────────────────────────────┘
-```
-
-### 🎯 Webhook Event Processing
-
-| **Event Type**                  | **Handler Action**                                      |
-| :------------------------------ | :------------------------------------------------------ |
-| `customer.subscription.created` | Allocate tier credits, set plan ID, sync Clerk metadata |
-| `customer.subscription.updated` | Recalculate balance preserving top-ups, update tier     |
-| `customer.subscription.deleted` | Downgrade to free tier, clear subscription fields       |
-| `invoice.payment_succeeded`     | Reset subscription credits on renewal, preserve top-ups |
-| `invoice.payment_failed`        | Update payment failure status, manage grace period      |
-| `checkout.session.completed`    | Process one-time top-up purchases, increment balance    |
-
-### 🧪 Testing Philosophy
-
-- **100% Test Coverage** — 177 tests covering all Stripe-related code paths
-- **External API Mocking Only** — Tests mock Stripe SDK, Prisma, and Clerk, but execute all internal business logic with real implementations
-- **Financial Software Standards** — Zero tolerance for test failures; all edge cases and error paths verified
-- **Concurrent Processing Tests** — Race condition and duplicate event handling validated
-
-### 💎 Credit System Architecture
-
-- **Single Source of Truth** — `tokenBalance` field is authoritative; no derived calculations in business logic
-- **Tier-Based Allocation** — Credits mapped from price IDs via environment-configured lookup table
-- **Top-Up Preservation** — One-time purchases survive subscription changes through stateless balance calculation
-- **Transaction Audit Trail** — All balance mutations recorded with Stripe event IDs for reconciliation
-
----
-
 ## 🏗️ **Tech Stack Overview**
 
 | **Category**                 | **Technology / Tools**                               | **Purpose**                                          |
@@ -298,6 +210,178 @@ A payment system engineered for correctness, security, and reliability—where m
 
 ---
 
+## 🛡️ **Battle-Tested Payment Infrastructure**
+
+<div align="center">
+<em>Production-grade Stripe integration built with financial software engineering standards</em>
+</div>
+
+<br/>
+
+A payment system engineered for correctness, security, and reliability—where money is involved, there's zero tolerance for bugs.
+
+### Architecture Overview
+
+| **Component**            | **Responsibility**                | **Design Pattern**                         |
+| :----------------------- | :-------------------------------- | :----------------------------------------- |
+| Stripe Client Singleton  | Centralized SDK configuration     | Singleton with API version pinning         |
+| Error Handling Layer     | Standardized error classification | Custom error types with user-safe messages |
+| Retry Logic              | Transient failure recovery        | Exponential backoff with jitter            |
+| Idempotency Service      | Duplicate operation prevention    | Deterministic key generation               |
+| Webhook Handler          | Asynchronous event processing     | Event-driven with idempotency              |
+| Token Balance Calculator | Subscription credit management    | Pure function with state preservation      |
+
+### 🔧 Core Engineering Principles
+
+- **Idempotency Guarantees** — All Stripe API calls use deterministic idempotency keys (SHA-256 hashed from operation type, user ID, and relevant data) ensuring safe retries without duplicate charges
+- **Webhook Idempotency** — Dual-layer event deduplication using in-memory cache (O(1) lookup) with database persistence for cross-restart consistency
+- **Fail-Open Design** — Idempotency database checks fail-open to prevent blocking legitimate transactions during transient DB issues
+- **Token Balance Preservation** — Subscription changes preserve top-up tokens using pure calculation: `newBalance = newCredits + max(0, currentBalance - oldCredits)`
+
+### 🔐 Security Implementation
+
+- **Signature Verification** — All webhook payloads verified against HMAC signatures before processing
+- **Price ID Validation** — Two-layer validation: Zod schema format check + business logic allowlist verification
+- **User Authentication** — Server actions enforce Clerk authentication with automatic sign-in redirects
+- **No Internal Secrets Exposed** — User-facing error messages sanitized through dedicated `getUserErrorMessage()` function
+- **Client-Side Security** — Safe error logging (type-only, no sensitive data), race condition guards, and secure toast notifications
+
+### 📈 Retry & Error Strategy
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  Retry Strategy: Exponential Backoff with Jitter            │
+├─────────────────────────────────────────────────────────────┤
+│  Attempt 0: baseDelay × 2⁰ = 1000ms + jitter (0-10%)        │
+│  Attempt 1: baseDelay × 2¹ = 2000ms + jitter (0-10%)        │
+│  Attempt 2: baseDelay × 2² = 4000ms + jitter (0-10%)        │
+│  Max Delay: Capped at configurable ceiling                  │
+├─────────────────────────────────────────────────────────────┤
+│  Retryable: 5xx errors, 429 rate limits, network timeouts   │
+│  Non-Retryable: 4xx client errors (card declined, invalid)  │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 🎯 Webhook Event Processing
+
+| **Event Type**                  | **Handler Action**                                      |
+| :------------------------------ | :------------------------------------------------------ |
+| `customer.subscription.created` | Allocate tier credits, set plan ID, sync Clerk metadata |
+| `customer.subscription.updated` | Recalculate balance preserving top-ups, update tier     |
+| `customer.subscription.deleted` | Downgrade to free tier, clear subscription fields       |
+| `invoice.payment_succeeded`     | Reset subscription credits on renewal, preserve top-ups |
+| `invoice.payment_failed`        | Update payment failure status, manage grace period      |
+| `checkout.session.completed`    | Process one-time top-up purchases, increment balance    |
+
+### 🧪 Testing Philosophy
+
+- **100% Test Coverage** — 177+ tests covering all Stripe-related code paths
+- **External API Mocking Only** — Tests mock Stripe SDK, Prisma, and Clerk, but execute all internal business logic with real implementations
+- **Financial Software Standards** — Zero tolerance for test failures; all edge cases and error paths verified
+- **Concurrent Processing Tests** — Race condition and duplicate event handling validated
+- **Payment Page Security** — Safe error logging, race condition prevention, and comprehensive edge case testing for credits and top-up pages
+
+### 💎 Credit System Architecture
+
+- **Single Source of Truth** — `tokenBalance` field is authoritative; no derived calculations in business logic
+- **Tier-Based Allocation** — Credits mapped from price IDs via environment-configured lookup table
+- **Top-Up Preservation** — One-time purchases survive subscription changes through stateless balance calculation
+- **Transaction Audit Trail** — All balance mutations recorded with Stripe event IDs for reconciliation
+
+---
+
+## ⚡ **React 19 Form Architecture**
+
+<div align="center">
+<em>Progressive enhancement meets type-safe server actions</em>
+</div>
+
+<br/>
+
+Modern form architecture leveraging React 19 hooks and Next.js 16 server actions for optimal DX and performance.
+
+### Architecture Overview
+
+| **Component**        | **Responsibility**                 | **Pattern**                                   |
+| :------------------- | :--------------------------------- | :-------------------------------------------- |
+| Client-Side State    | Form validation & user interaction | React Hook Form with Zod resolver             |
+| Server Actions       | Data mutations & persistence       | Next.js 16 `action` prop with `FormData` API  |
+| State Management     | Server response handling           | `useActionState` for declarative state        |
+| Event Handlers       | Stable callbacks without deps      | `useEffectEvent` for effect event handlers    |
+| Field Watching       | Reactive form updates              | `useWatch` for optimized re-renders           |
+| Context Architecture | Complex form state sharing         | Provider pattern with memoized context values |
+
+### 🔧 Core Patterns
+
+- **Progressive Enhancement** — Forms work without JavaScript using native `FormData` submission, enhanced with client-side validation when available
+- **Type-Safe Validation** — Dual-layer Zod schema validation (client-side React Hook Form + server-side `safeParse`) ensures data integrity at every boundary
+- **Optimized Re-renders** — `useWatch` replaces `form.watch()` for granular field subscriptions, eliminating unnecessary component updates
+- **Stable Event Handlers** — React 19's `useEffectEvent` provides dependency-free callbacks for effect handlers, removing dependency array confusion
+- **Data-Driven Rendering** — Configuration objects with `map()` eliminate JSX repetition while maintaining type safety and readability
+
+### 📋 Server Action Flow
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  1. User submits form → <form action={formAction}>          │
+├─────────────────────────────────────────────────────────────┤
+│  2. Client-side validation → React Hook Form + Zod          │
+├─────────────────────────────────────────────────────────────┤
+│  3. FormData serialization → Native browser behavior        │
+├─────────────────────────────────────────────────────────────┤
+│  4. Server action invoked → useActionState manages pending  │
+├─────────────────────────────────────────────────────────────┤
+│  5. Server-side validation → Zod safeParse with structured  │
+│     error responses                                          │
+├─────────────────────────────────────────────────────────────┤
+│  6. Database mutation → Prisma with RLS policies            │
+├─────────────────────────────────────────────────────────────┤
+│  7. Response handling → useEffectEvent for success/error    │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 🎯 Implementation Highlights
+
+- **Context-Based Complex Forms** — `VerbAttributesForm` uses provider pattern to share state across nested components without prop drilling
+- **Field-Level Subscriptions** — Single `useWatch` call for multiple fields, maintaining React Hook Form's optimization benefits
+- **Structured Error Handling** — Server actions return typed `ActionState<T>` with success/error/data discriminated unions
+- **Test Coverage** — Forms tested with `data-testid` attributes (never text content), ensuring reliable test stability across i18n and content changes
+
+### 💎 Example Architecture
+
+```typescript
+// Server Action with safeParse validation
+export async function submitFormAction(
+  prevState: ActionState<DataType>,
+  formData: FormData,
+): Promise<ActionState<DataType>> {
+  const result = schema.safeParse(Object.fromEntries(formData));
+  if (!result.success) {
+    return { success: false, errors: result.error.flatten().fieldErrors };
+  }
+  // ... database mutation
+  return { success: true, data: createdRecord };
+}
+
+// Client Component
+const [actionState, formAction, isPending] = useActionState(
+  submitFormAction,
+  initialState,
+);
+const watched = useWatch({ control: form.control }); // Single subscription
+
+const handleSuccess = useEffectEvent(() => {
+  toast({ title: 'Success!' });
+  onSuccess?.();
+}); // No dependency array needed!
+
+useEffect(() => {
+  if (actionState.success) handleSuccess();
+}, [actionState.success]);
+```
+
+---
+
 ## 🧪 **Testing & Quality**
 
 PoliLex is validated with a **full testing pipeline** that combines automated tests, static analysis, and load testing.  
@@ -308,6 +392,16 @@ Every change is validated through:
 - **Load and performance exercises** with **k6** and **Artillery** focused on core APIs, server-side operations, and caching behavior
 - **Strict static typing and schema validation** with **TypeScript (strict mode)**, **Prisma**, **Zod**, and **@t3-oss/env-nextjs** for data, inputs, and configuration
 - **Automated linting and formatting** with **ESLint**, **Prettier**, and import-sorting to enforce consistent, production-grade code quality
+
+---
+
+## 🔗 **Resources & Links**
+
+<div align="center">
+
+[![Watch Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=1Q7oyvCVanE)
+
+</div>
 
 ---
 
