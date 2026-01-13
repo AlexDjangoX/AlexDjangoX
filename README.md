@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS 4.1" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Prisma-7-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma 7" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" style="margin: 0 5px;" />
-    <img src="https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white" alt="Stripe" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Polar-0062FF?style=for-the-badge&logo=polar&logoColor=white" alt="Polar" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Zuplo-FF00BD?style=for-the-badge&logo=zuplo&logoColor=white" alt="Zuplo" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Lexical-0668E1?style=for-the-badge&logo=meta&logoColor=white" alt="Lexical Editor" style="margin: 0 5px;" />
   </div>
@@ -68,7 +68,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 |                              | Tailwind CSS 4, ShadCN                               | Design system, layout, and reusable UI components    |
 |                              | Lexical Editor, Framer Motion                        | Rich authoring experience and high-quality motion    |
 | **Backend & Infrastructure** | Prisma 7, PostgreSQL, Supabase                       | Type-safe data access and relational persistence     |
-|                              | Clerk Auth, Stripe, Stream Chat, Redis               | Authentication, payments, real-time messaging, cache |
+|                              | Clerk Auth, Polar, Stream Chat, Redis                | Authentication, payments, real-time messaging, cache |
 | **Testing & Quality**        | Jest, React Testing Library                          | Unit and integration coverage for components & logic |
 |                              | Playwright                                           | End-to-end browser regression on critical journeys   |
 |                              | k6, Artillery                                        | Load and performance validation for APIs and flows   |
@@ -213,18 +213,28 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 ## 🛡️ **Battle-Tested Payment Infrastructure**
 
 <div align="center">
-<em>Production-grade Stripe integration built with financial software engineering standards</em>
+<em>Production-grade Polar integration built with financial software engineering standards</em>
 </div>
 
 <br/>
 
-A payment system engineered for correctness, security, and reliability—where money is involved, there's zero tolerance for bugs.
+### 🔄 Migration: Stripe → Polar
+
+We migrated from Stripe to **Polar** for a critical business reason: **International Tax Compliance**.
+
+Polar acts as the Merchant of Record (MoR), handling all international tax obligations including VAT, GST, and sales tax across 100+ countries. This removes the significant operational burden of tax compliance that Stripe leaves to merchants—a gap that can expose businesses to legal and financial risk when selling internationally.
+
+**Why Polar?**
+- ✅ **Automatic Tax Compliance** — Polar calculates, collects, and remits taxes globally
+- ✅ **Merchant of Record** — Polar is the legal seller, assuming tax liability
+- ✅ **No Tax Registration Required** — Sell globally without registering in each jurisdiction
+- ✅ **Simplified Operations** — One integration, worldwide coverage
 
 ### Architecture Overview
 
 | **Component**            | **Responsibility**                | **Design Pattern**                         |
 | :----------------------- | :-------------------------------- | :----------------------------------------- |
-| Stripe Client Singleton  | Centralized SDK configuration     | Singleton with API version pinning         |
+| Polar Client Singleton   | Centralized SDK configuration     | Singleton with server environment config   |
 | Error Handling Layer     | Standardized error classification | Custom error types with user-safe messages |
 | Retry Logic              | Transient failure recovery        | Exponential backoff with jitter            |
 | Idempotency Service      | Duplicate operation prevention    | Deterministic key generation               |
@@ -233,18 +243,19 @@ A payment system engineered for correctness, security, and reliability—where m
 
 ### 🔧 Core Engineering Principles
 
-- **Idempotency Guarantees** — All Stripe API calls use deterministic idempotency keys (SHA-256 hashed from operation type, user ID, and relevant data) ensuring safe retries without duplicate charges
-- **Webhook Idempotency** — Dual-layer event deduplication using in-memory cache (O(1) lookup) with database persistence for cross-restart consistency
-- **Fail-Open Design** — Idempotency database checks fail-open to prevent blocking legitimate transactions during transient DB issues
+- **Idempotency Guarantees** — All Polar API calls use deterministic idempotency keys (SHA-256 hashed from operation type, user ID, and relevant data) ensuring safe retries without duplicate charges
+- **Webhook Idempotency** — In-memory event deduplication with O(1) lookup preventing duplicate processing
+- **Fail-Open Design** — Idempotency checks fail-open to prevent blocking legitimate transactions during transient issues
 - **Token Balance Preservation** — Subscription changes preserve top-up tokens using pure calculation: `newBalance = newCredits + max(0, currentBalance - oldCredits)`
+- **Separate Token Pools** — Subscription tokens (`tokenBalance`) reset monthly; purchased tokens (`topupTokenBalance`) persist indefinitely
 
 ### 🔐 Security Implementation
 
 - **Signature Verification** — All webhook payloads verified against HMAC signatures before processing
-- **Price ID Validation** — Two-layer validation: Zod schema format check + business logic allowlist verification
+- **Product ID Validation** — Two-layer validation: Zod UUID format check + business logic allowlist verification
 - **User Authentication** — Server actions enforce Clerk authentication with automatic sign-in redirects
 - **No Internal Secrets Exposed** — User-facing error messages sanitized through dedicated `getUserErrorMessage()` function
-- **Client-Side Security** — Safe error logging (type-only, no sensitive data), race condition guards, and secure toast notifications
+- **Clerk Metadata Sync** — Payment status synchronized to Clerk for client-side access control
 
 ### 📈 Retry & Error Strategy
 
@@ -264,29 +275,32 @@ A payment system engineered for correctness, security, and reliability—where m
 
 ### 🎯 Webhook Event Processing
 
-| **Event Type**                  | **Handler Action**                                      |
-| :------------------------------ | :------------------------------------------------------ |
-| `customer.subscription.created` | Allocate tier credits, set plan ID, sync Clerk metadata |
-| `customer.subscription.updated` | Recalculate balance preserving top-ups, update tier     |
-| `customer.subscription.deleted` | Downgrade to free tier, clear subscription fields       |
-| `invoice.payment_succeeded`     | Reset subscription credits on renewal, preserve top-ups |
-| `invoice.payment_failed`        | Update payment failure status, manage grace period      |
-| `checkout.session.completed`    | Process one-time top-up purchases, increment balance    |
+| **Event Type**              | **Handler Action**                                           |
+| :-------------------------- | :----------------------------------------------------------- |
+| `subscription.active`       | Allocate tier credits, set plan ID, sync Clerk metadata      |
+| `subscription.updated`      | Recalculate balance preserving top-ups, handle plan changes  |
+| `subscription.canceled`     | Downgrade to free tier at period end                         |
+| `subscription.revoked`      | Immediate downgrade, clear subscription fields               |
+| `subscription.past_due`     | Set payment failed flag, show warning banner                 |
+| `subscription.uncanceled`   | Restore subscription, clear payment warnings                 |
+| `order.paid`                | Process one-time top-up purchases, increment balance         |
+| `order.refunded`            | Deduct refunded tokens, create audit record                  |
 
 ### 🧪 Testing Philosophy
 
-- **100% Test Coverage** — 177+ tests covering all Stripe-related code paths
-- **External API Mocking Only** — Tests mock Stripe SDK, Prisma, and Clerk, but execute all internal business logic with real implementations
+- **Comprehensive Test Coverage** — Tests covering all Polar-related code paths
+- **External API Mocking Only** — Tests mock Polar SDK, Prisma, and Clerk, but execute all internal business logic with real implementations
 - **Financial Software Standards** — Zero tolerance for test failures; all edge cases and error paths verified
-- **Concurrent Processing Tests** — Race condition and duplicate event handling validated
-- **Payment Page Security** — Safe error logging, race condition prevention, and comprehensive edge case testing for credits and top-up pages
+- **Business Logic Testing** — Token calculations, plan tier logic, and validation schemas thoroughly tested
 
 ### 💎 Credit System Architecture
 
-- **Single Source of Truth** — `tokenBalance` field is authoritative; no derived calculations in business logic
-- **Tier-Based Allocation** — Credits mapped from price IDs via environment-configured lookup table
+- **Dual Token Pools** — `tokenBalance` (subscription, resets monthly) + `topupTokenBalance` (purchased, persists forever)
+- **Usage Priority** — Subscription tokens consumed first, then top-up tokens
+- **Tier-Based Allocation** — Credits mapped from product IDs via environment-configured lookup table
 - **Top-Up Preservation** — One-time purchases survive subscription changes through stateless balance calculation
-- **Transaction Audit Trail** — All balance mutations recorded with Stripe event IDs for reconciliation
+- **Transaction Audit Trail** — All balance mutations recorded with Polar event IDs for reconciliation
+- **Payment Failed Banner** — Automatic UI warning when payment fails, with direct link to update payment method
 
 ---
 
