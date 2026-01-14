@@ -363,6 +363,7 @@ Modern form architecture leveraging React 19 hooks and Next.js 16 server actions
 - **Context-Based Complex Forms** — `VerbAttributesForm` uses provider pattern to share state across nested components without prop drilling
 - **Field-Level Subscriptions** — Single `useWatch` call for multiple fields, maintaining React Hook Form's optimization benefits
 - **Structured Error Handling** — Server actions return typed `ActionState<T>` with success/error/data discriminated unions
+- **Rapid Submit Prevention** — Success effects only trigger after transitions complete, preventing double executions during fast refresh/retry scenarios
 - **Test Coverage** — Forms tested with `data-testid` attributes (never text content), ensuring reliable test stability across i18n and content changes
 
 ### 💎 Example Architecture
@@ -394,8 +395,11 @@ const handleSuccess = useEffectEvent(() => {
 }); // No dependency array needed!
 
 useEffect(() => {
-  if (actionState.success) handleSuccess();
-}, [actionState.success]);
+  // Rapid submit prevention: only trigger success effects after transition completes
+  if (actionState.success && !isPending) {
+    handleSuccess();
+  }
+}, [actionState, isPending]);
 ```
 
 ---
