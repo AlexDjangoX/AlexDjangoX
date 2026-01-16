@@ -9,6 +9,7 @@
     <img src="https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS 4.1" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Prisma-7-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma 7" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Tambo_AI-FF6B35?style=for-the-badge&logo=ai&logoColor=white" alt="Tambo AI" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Polar-0062FF?style=for-the-badge&logo=polar&logoColor=white" alt="Polar" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Zuplo-FF00BD?style=for-the-badge&logo=zuplo&logoColor=white" alt="Zuplo" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Lexical-0668E1?style=for-the-badge&logo=meta&logoColor=white" alt="Lexical Editor" style="margin: 0 5px;" />
@@ -77,6 +78,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 |                              | ESLint, Prettier, import-sorting plugins             | Automated linting, formatting, and code consistency  |
 | **AI & Integrations**        | OpenAI GPT-4, DALL-E 3                               | Language processing and image generation             |
 |                              | OpenAI Realtime API, Whisper API, OpenAI TTS         | Real-time voice, speech-to-text, and text-to-speech  |
+|                              | Tambo AI                                             | Conversational AI with persistent threads            |
 |                              | Stream Chat                                          | Real-time chat and collaboration                     |
 
 ---
@@ -109,6 +111,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **Whisper API** - Audio transcription for podcasts and video content
 - **Text-to-Speech (TTS)** - AI-generated audio pronunciation
 - **Stream Chat** - Real-time messaging with AI assistance
+- **Tambo AI Chat Integration** - Advanced conversational AI with thread-based persistence, custom interactive components, and integrated token-based costing system
 - **Custom AI Prompts** - Specialized language learning prompts and instructions
 
 ### 📚 **Comprehensive Learning Modules**
@@ -305,6 +308,113 @@ Polar acts as the Merchant of Record (MoR), handling all international tax oblig
 - **Top-Up Preservation** — One-time purchases survive subscription changes through stateless balance calculation
 - **Transaction Audit Trail** — All balance mutations recorded with Polar event IDs for reconciliation
 - **Payment Failed Banner** — Automatic UI warning when payment fails, with direct link to update payment method
+
+---
+
+## 🤖 **Tambo AI Integration**
+
+<div align="center">
+<em>Enterprise-grade conversational AI with persistent threads and integrated costing</em>
+</div>
+
+<br/>
+
+### Architecture Overview
+
+| **Component**            | **Responsibility**                 | **Technology**                              |
+| :----------------------- | :--------------------------------- | :------------------------------------------- |
+| TamboProvider            | Authentication & component registry | Clerk JWT + @tambo-ai/react                 |
+| AITutorAssistant         | Main chat interface & thread mgmt  | Thread persistence + real-time streaming    |
+| Custom Components        | Rich UI interactions               | LearningHintCard, ProgressViz, Exercises    |
+| Token Costing System     | Usage tracking & billing           | Pre-charge + post-usage analytics           |
+
+### 🔧 Core Engineering Principles
+
+- **Thread Persistence** - LocalStorage-based thread restoration with cross-session continuity
+- **Authentication Integration** - Seamless Clerk JWT token exchange with automatic refresh (15s intervals)
+- **Component Registry** - Dynamic AI-rendered components with Zod schema validation
+- **Token-Based Costing** - Pre-charge estimation + actual usage logging with markup application
+- **Real-time Streaming** - Live response streaming with message state management
+
+### 💰 Integrated Costing Architecture
+
+**Dual-Phase Billing:**
+- **Pre-Charge**: Token estimation (user input + system prompt + estimated output) with 2x markup
+- **Post-Usage**: Actual cost calculation with detailed analytics logging
+- **Balance Management**: Separate subscription/purchase token pools with priority consumption
+
+**Cost Calculation Flow:**
+```
+User Input (11 chars) → Estimate Tokens (3) → Add System Prompt (8) → Estimate Output (163)
+→ Calculate Cost ($0.09945) → Apply Markup (2x = $0.1989) → Charge Tokens (20)
+→ Stream Response → Calculate Actual Cost → Log Analytics → Update Balance
+```
+
+**Supported Models:**
+- GPT-4o-mini (primary chat model)
+- GPT-4, Whisper, TTS, DALL-E 3 (costing system ready)
+
+### 🧵 Thread Management System
+
+**Persistence Strategy:**
+- Thread IDs stored per user + context combination
+- Automatic cleanup of invalid/placeholder threads
+- Wait-for-auth pattern prevents premature thread operations
+
+**Restoration Logic:**
+1. Authenticate user (wait for Clerk)
+2. Load thread list from Tambo
+3. Validate saved thread exists
+4. Switch to thread or create new
+5. Handle failures gracefully
+
+### 🎨 Custom Component Integration
+
+**AI-Rendered Components:**
+- **LearningHintCard**: Contextual learning tips with examples
+- **ProgressVisualization**: Charts showing learning milestones
+- **ExerciseGenerator**: Interactive quizzes with scoring
+- **ContextExamples**: Polish phrases with translations
+- **PronunciationGuide**: Phonetic notation with audio
+
+**Schema Validation:**
+```typescript
+// Zod schemas ensure type safety for AI-generated components
+const learningHintSchema = z.object({
+  title: z.string(),
+  hint: z.string(),
+  examples: z.array(z.string()).optional(),
+  difficulty: z.enum(['beginner', 'intermediate', 'advanced'])
+});
+```
+
+### 🔒 Security & Error Handling
+
+- **Token Security**: No sensitive data in error messages or logs
+- **Authentication Recovery**: Automatic refresh with user-friendly fallbacks
+- **Cost Validation**: Insufficient balance redirects with clear messaging
+- **Thread Safety**: Invalid thread cleanup and graceful degradation
+
+### 📊 Analytics & Monitoring
+
+**Usage Tracking:**
+- Pre-charge vs actual cost comparisons
+- Token consumption analytics by model/context
+- User engagement metrics and conversation patterns
+- Cost breakdown (input vs output pricing)
+
+**Error Monitoring:**
+- Authentication failure tracking
+- Thread loading success/failure rates
+- Component rendering success metrics
+- Cost calculation accuracy validation
+
+### 🔄 Future Enhancements
+
+- **Advanced Thread Organization**: Folders, search, export capabilities
+- **Multi-Modal Interactions**: Voice + text + visual learning experiences
+- **Collaborative Learning**: Shared threads with teacher/student interactions
+- **Dynamic Cost Optimization**: Usage pattern-based pricing adjustments
 
 ---
 
