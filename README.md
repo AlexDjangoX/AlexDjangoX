@@ -9,7 +9,6 @@
     <img src="https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS 4.1" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Prisma-7-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma 7" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" style="margin: 0 5px;" />
-    <img src="https://img.shields.io/badge/Tambo_AI-FF6B35?style=for-the-badge&logo=ai&logoColor=white" alt="Tambo AI" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Polar-0062FF?style=for-the-badge&logo=polar&logoColor=white" alt="Polar" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Zuplo-FF00BD?style=for-the-badge&logo=zuplo&logoColor=white" alt="Zuplo" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Lexical-0668E1?style=for-the-badge&logo=meta&logoColor=white" alt="Lexical Editor" style="margin: 0 5px;" />
@@ -69,8 +68,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 |                              | Tailwind CSS 4, ShadCN                               | Design system, layout, and reusable UI components    |
 |                              | Lexical Editor, Framer Motion                        | Rich authoring experience and high-quality motion    |
 | **Backend & Infrastructure** | Prisma 7, PostgreSQL, Supabase                       | Type-safe data access and relational persistence     |
-|                              | Clerk Auth, Polar, Stream Chat, Redis                | Authentication, payments, real-time messaging, cache |
-| **Zuplo API Gateway**        | **Rate limiting, strict CORS, Clerk JWT required**   |
+|                              | Clerk Auth, Stripe, Stream Chat, Redis               | Authentication, payments, real-time messaging, cache |
 | **Testing & Quality**        | Jest, React Testing Library                          | Unit and integration coverage for components & logic |
 |                              | Playwright                                           | End-to-end browser regression on critical journeys   |
 |                              | k6, Artillery                                        | Load and performance validation for APIs and flows   |
@@ -99,8 +97,6 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 - **Zuplo API Gateway** - Secure API management, rate limiting, and enterprise-grade security
 - **Enterprise Security** - Role-based access control & secure authentication
-- **Production-Grade Error Handling** - Comprehensive security audit eliminating 50+ data exposure vulnerabilities
-- **Secure Error Sanitization** - All error messages sanitized to prevent sensitive data leakage
 - **Performance Optimized** - SSR, edge caching, optimized database queries
 - **Comprehensive Testing** - Unit, integration, and E2E test coverage
 
@@ -111,7 +107,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **Whisper API** - Audio transcription for podcasts and video content
 - **Text-to-Speech (TTS)** - AI-generated audio pronunciation
 - **Stream Chat** - Real-time messaging with AI assistance
-- **Tambo AI Chat Integration** - Advanced conversational AI with thread-based persistence, custom interactive components, and integrated token-based costing system
+- **Tambo AI Chat Integration** - Advanced conversational AI with thread-based persistence, custom interactive components, and integrated token-based costing system (see dedicated section below)
 - **Custom AI Prompts** - Specialized language learning prompts and instructions
 
 ### 📚 **Comprehensive Learning Modules**
@@ -219,29 +215,18 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 ## 🛡️ **Battle-Tested Payment Infrastructure**
 
 <div align="center">
-<em>Production-grade Polar integration built with financial software engineering standards</em>
+<em>Production-grade Stripe integration built with financial software engineering standards</em>
 </div>
 
 <br/>
 
-### 🔄 Migration: Stripe → Polar
-
-We migrated from Stripe to **Polar** for a critical business reason: **International Tax Compliance**.
-
-Polar acts as the Merchant of Record (MoR), handling all international tax obligations including VAT, GST, and sales tax across 100+ countries. This removes the significant operational burden of tax compliance that Stripe leaves to merchants—a gap that can expose businesses to legal and financial risk when selling internationally.
-
-**Why Polar?**
-
-- ✅ **Automatic Tax Compliance** — Polar calculates, collects, and remits taxes globally
-- ✅ **Merchant of Record** — Polar is the legal seller, assuming tax liability
-- ✅ **No Tax Registration Required** — Sell globally without registering in each jurisdiction
-- ✅ **Simplified Operations** — One integration, worldwide coverage
+A payment system engineered for correctness, security, and reliability—where money is involved, there's zero tolerance for bugs.
 
 ### Architecture Overview
 
 | **Component**            | **Responsibility**                | **Design Pattern**                         |
 | :----------------------- | :-------------------------------- | :----------------------------------------- |
-| Polar Client Singleton   | Centralized SDK configuration     | Singleton with server environment config   |
+| Stripe Client Singleton  | Centralized SDK configuration     | Singleton with API version pinning         |
 | Error Handling Layer     | Standardized error classification | Custom error types with user-safe messages |
 | Retry Logic              | Transient failure recovery        | Exponential backoff with jitter            |
 | Idempotency Service      | Duplicate operation prevention    | Deterministic key generation               |
@@ -250,19 +235,18 @@ Polar acts as the Merchant of Record (MoR), handling all international tax oblig
 
 ### 🔧 Core Engineering Principles
 
-- **Idempotency Guarantees** — All Polar API calls use deterministic idempotency keys (SHA-256 hashed from operation type, user ID, and relevant data) ensuring safe retries without duplicate charges
-- **Webhook Idempotency** — In-memory event deduplication with O(1) lookup preventing duplicate processing
-- **Fail-Open Design** — Idempotency checks fail-open to prevent blocking legitimate transactions during transient issues
+- **Idempotency Guarantees** — All Stripe API calls use deterministic idempotency keys (SHA-256 hashed from operation type, user ID, and relevant data) ensuring safe retries without duplicate charges
+- **Webhook Idempotency** — Dual-layer event deduplication using in-memory cache (O(1) lookup) with database persistence for cross-restart consistency
+- **Fail-Open Design** — Idempotency database checks fail-open to prevent blocking legitimate transactions during transient DB issues
 - **Token Balance Preservation** — Subscription changes preserve top-up tokens using pure calculation: `newBalance = newCredits + max(0, currentBalance - oldCredits)`
-- **Separate Token Pools** — Subscription tokens (`tokenBalance`) reset monthly; purchased tokens (`topupTokenBalance`) persist indefinitely
 
 ### 🔐 Security Implementation
 
 - **Signature Verification** — All webhook payloads verified against HMAC signatures before processing
-- **Product ID Validation** — Two-layer validation: Zod UUID format check + business logic allowlist verification
+- **Price ID Validation** — Two-layer validation: Zod schema format check + business logic allowlist verification
 - **User Authentication** — Server actions enforce Clerk authentication with automatic sign-in redirects
 - **No Internal Secrets Exposed** — User-facing error messages sanitized through dedicated `getUserErrorMessage()` function
-- **Clerk Metadata Sync** — Payment status synchronized to Clerk for client-side access control
+- **Client-Side Security** — Safe error logging (type-only, no sensitive data), race condition guards, and secure toast notifications
 
 ### 📈 Retry & Error Strategy
 
@@ -282,139 +266,30 @@ Polar acts as the Merchant of Record (MoR), handling all international tax oblig
 
 ### 🎯 Webhook Event Processing
 
-| **Event Type**            | **Handler Action**                                          |
-| :------------------------ | :---------------------------------------------------------- |
-| `subscription.active`     | Allocate tier credits, set plan ID, sync Clerk metadata     |
-| `subscription.updated`    | Recalculate balance preserving top-ups, handle plan changes |
-| `subscription.canceled`   | Downgrade to free tier at period end                        |
-| `subscription.revoked`    | Immediate downgrade, clear subscription fields              |
-| `subscription.past_due`   | Set payment failed flag, show warning banner                |
-| `subscription.uncanceled` | Restore subscription, clear payment warnings                |
-| `order.paid`              | Process one-time top-up purchases, increment balance        |
-| `order.refunded`          | Deduct refunded tokens, create audit record                 |
+| **Event Type**                  | **Handler Action**                                      |
+| :------------------------------ | :------------------------------------------------------ |
+| `customer.subscription.created` | Allocate tier credits, set plan ID, sync Clerk metadata |
+| `customer.subscription.updated` | Recalculate balance preserving top-ups, update tier     |
+| `customer.subscription.deleted` | Downgrade to free tier, clear subscription fields       |
+| `invoice.payment_succeeded`     | Reset subscription credits on renewal, preserve top-ups |
+| `invoice.payment_failed`        | Update payment failure status, manage grace period      |
+| `checkout.session.completed`    | Process one-time top-up purchases, increment balance    |
 
 ### 🧪 Testing Philosophy
 
-- **Comprehensive Test Coverage** — Tests covering all Polar-related code paths
-- **External API Mocking Only** — Tests mock Polar SDK, Prisma, and Clerk, but execute all internal business logic with real implementations
+- **100% Test Coverage** — 177+ tests covering all Stripe-related code paths
+- **External API Mocking Only** — Tests mock Stripe SDK, Prisma, and Clerk, but execute all internal business logic with real implementations
 - **Financial Software Standards** — Zero tolerance for test failures; all edge cases and error paths verified
-- **Business Logic Testing** — Token calculations, plan tier logic, and validation schemas thoroughly tested
+- **Concurrent Processing Tests** — Race condition and duplicate event handling validated
+- **Payment Page Security** — Safe error logging, race condition prevention, and comprehensive edge case testing for credits and top-up pages
 
 ### 💎 Credit System Architecture
 
-- **Dual Token Pools** — `tokenBalance` (subscription, resets monthly) + `topupTokenBalance` (purchased, persists forever)
-- **Usage Priority** — Subscription tokens consumed first, then top-up tokens
-- **Tier-Based Allocation** — Credits mapped from product IDs via environment-configured lookup table
+- **Single Source of Truth** — `tokenBalance` field is authoritative; no derived calculations in business logic
+- **Tier-Based Allocation** — Credits mapped from price IDs via environment-configured lookup table
 - **Top-Up Preservation** — One-time purchases survive subscription changes through stateless balance calculation
 - **Transaction Audit Trail** — All balance mutations recorded with Polar event IDs for reconciliation
 - **Payment Failed Banner** — Automatic UI warning when payment fails, with direct link to update payment method
-
----
-
-## 🤖 **Tambo AI Integration**
-
-<div align="center">
-<em>Enterprise-grade conversational AI with persistent threads and integrated costing</em>
-</div>
-
-<br/>
-
-### Architecture Overview
-
-| **Component**            | **Responsibility**                 | **Technology**                              |
-| :----------------------- | :--------------------------------- | :------------------------------------------- |
-| TamboProvider            | Authentication & component registry | Clerk JWT + @tambo-ai/react                 |
-| AITutorAssistant         | Main chat interface & thread mgmt  | Thread persistence + real-time streaming    |
-| Custom Components        | Rich UI interactions               | LearningHintCard, ProgressViz, Exercises    |
-| Token Costing System     | Usage tracking & billing           | Pre-charge + post-usage analytics           |
-
-### 🔧 Core Engineering Principles
-
-- **Thread Persistence** - LocalStorage-based thread restoration with cross-session continuity
-- **Authentication Integration** - Seamless Clerk JWT token exchange with automatic refresh (15s intervals)
-- **Component Registry** - Dynamic AI-rendered components with Zod schema validation
-- **Token-Based Costing** - Pre-charge estimation + actual usage logging with markup application
-- **Real-time Streaming** - Live response streaming with message state management
-
-### 💰 Integrated Costing Architecture
-
-**Dual-Phase Billing:**
-- **Pre-Charge**: Token estimation (user input + system prompt + estimated output) with 2x markup
-- **Post-Usage**: Actual cost calculation with detailed analytics logging
-- **Balance Management**: Separate subscription/purchase token pools with priority consumption
-
-**Cost Calculation Flow:**
-```
-User Input (11 chars) → Estimate Tokens (3) → Add System Prompt (8) → Estimate Output (163)
-→ Calculate Cost ($0.09945) → Apply Markup (2x = $0.1989) → Charge Tokens (20)
-→ Stream Response → Calculate Actual Cost → Log Analytics → Update Balance
-```
-
-**Supported Models:**
-- GPT-4o-mini (primary chat model)
-- GPT-4, Whisper, TTS, DALL-E 3 (costing system ready)
-
-### 🧵 Thread Management System
-
-**Persistence Strategy:**
-- Thread IDs stored per user + context combination
-- Automatic cleanup of invalid/placeholder threads
-- Wait-for-auth pattern prevents premature thread operations
-
-**Restoration Logic:**
-1. Authenticate user (wait for Clerk)
-2. Load thread list from Tambo
-3. Validate saved thread exists
-4. Switch to thread or create new
-5. Handle failures gracefully
-
-### 🎨 Custom Component Integration
-
-**AI-Rendered Components:**
-- **LearningHintCard**: Contextual learning tips with examples
-- **ProgressVisualization**: Charts showing learning milestones
-- **ExerciseGenerator**: Interactive quizzes with scoring
-- **ContextExamples**: Polish phrases with translations
-- **PronunciationGuide**: Phonetic notation with audio
-
-**Schema Validation:**
-```typescript
-// Zod schemas ensure type safety for AI-generated components
-const learningHintSchema = z.object({
-  title: z.string(),
-  hint: z.string(),
-  examples: z.array(z.string()).optional(),
-  difficulty: z.enum(['beginner', 'intermediate', 'advanced'])
-});
-```
-
-### 🔒 Security & Error Handling
-
-- **Token Security**: No sensitive data in error messages or logs
-- **Authentication Recovery**: Automatic refresh with user-friendly fallbacks
-- **Cost Validation**: Insufficient balance redirects with clear messaging
-- **Thread Safety**: Invalid thread cleanup and graceful degradation
-
-### 📊 Analytics & Monitoring
-
-**Usage Tracking:**
-- Pre-charge vs actual cost comparisons
-- Token consumption analytics by model/context
-- User engagement metrics and conversation patterns
-- Cost breakdown (input vs output pricing)
-
-**Error Monitoring:**
-- Authentication failure tracking
-- Thread loading success/failure rates
-- Component rendering success metrics
-- Cost calculation accuracy validation
-
-### 🔄 Future Enhancements
-
-- **Advanced Thread Organization**: Folders, search, export capabilities
-- **Multi-Modal Interactions**: Voice + text + visual learning experiences
-- **Collaborative Learning**: Shared threads with teacher/student interactions
-- **Dynamic Cost Optimization**: Usage pattern-based pricing adjustments
 
 ---
 
@@ -473,7 +348,6 @@ Modern form architecture leveraging React 19 hooks and Next.js 16 server actions
 - **Context-Based Complex Forms** — `VerbAttributesForm` uses provider pattern to share state across nested components without prop drilling
 - **Field-Level Subscriptions** — Single `useWatch` call for multiple fields, maintaining React Hook Form's optimization benefits
 - **Structured Error Handling** — Server actions return typed `ActionState<T>` with success/error/data discriminated unions
-- **Rapid Submit Prevention** — Success effects only trigger after transitions complete, preventing double executions during fast refresh/retry scenarios
 - **Test Coverage** — Forms tested with `data-testid` attributes (never text content), ensuring reliable test stability across i18n and content changes
 
 ### 💎 Example Architecture
@@ -505,57 +379,150 @@ const handleSuccess = useEffectEvent(() => {
 }); // No dependency array needed!
 
 useEffect(() => {
-  // Rapid submit prevention: only trigger success effects after transition completes
-  if (actionState.success && !isPending) {
-    handleSuccess();
-  }
-}, [actionState, isPending]);
+  if (actionState.success) handleSuccess();
+}, [actionState.success]);
 ```
 
 ---
 
-## 🔒 **Security Audit & Hardening**
+## 🤖 **Tambo AI Learning Assistant**
 
 <div align="center">
-<em>Comprehensive security audit eliminating all data exposure vulnerabilities</em>
+<em>Context-aware conversational AI with persistent threads and interactive components</em>
 </div>
 
 <br/>
 
-### 🎯 **Critical Security Achievements**
+A sophisticated AI tutoring system powered by Tambo SDK, providing personalized Polish language instruction with full conversation persistence and custom interactive learning components.
 
-- **Zero Data Leakage** - Complete elimination of sensitive data exposure through error messages
-- **50+ Vulnerabilities Fixed** - Systematic security audit across entire codebase
-- **Production-Ready Security** - Enterprise-grade error handling and data protection
-- **Type-Safe Error Management** - TypeScript enforcement prevents future security regressions
+### Architecture Overview
 
-### 🛡️ **Security Infrastructure**
+| **Component**          | **Responsibility**                    | **Pattern**                                    |
+| :--------------------- | :------------------------------------ | :--------------------------------------------- |
+| TamboProvider          | SDK initialization & thread context   | React Context with auth token injection        |
+| Thread Persistence     | Conversation state management         | localStorage + PostgreSQL hybrid storage       |
+| Message Streaming      | Real-time AI response delivery        | Server-Sent Events with generation stages      |
+| Component Registry     | Dynamic UI rendering from AI          | Zod-validated props with component mapping     |
+| Tool Registry          | AI function calling capabilities      | Type-safe tool definitions with input schemas  |
+| Token Charging         | Usage-based billing integration       | Pre-charge with actual usage reconciliation    |
 
-| **Security Layer**     | **Implementation**                                                | **Coverage**           |
-| :--------------------- | :---------------------------------------------------------------- | :--------------------- |
-| **API Gateway**        | **Zuplo** - Rate limiting, strict CORS, Clerk JWT required        | **All API routes**     |
-| **Authentication**     | **Gateway-level Clerk JWT** - Zero-trust API access               | **Every API request**  |
-| **Error Sanitization** | `safeError()`, `sanitizeSupabaseError()`, `sanitizeUploadError()` | All user-facing errors |
-| **Data Protection**    | Type-safe error objects, no raw `.message` exposure               | 100% of error handling |
-| **API Security**       | Sanitized error responses, credential protection                  | All external API calls |
-| **User Privacy**       | Sensitive data never reaches client applications                  | Zero data leakage      |
+### 🎯 Key Features
 
-### 🔍 **Audit Scope & Results**
+- **Thread-Based Conversations** — Full conversation history preserved across sessions with automatic restoration on page load
+- **Lab-Specific Context** — AI tutor adapts to current learning module (Aspect Master, Reflexive Lab, Preposition Lab, etc.)
+- **Custom Interactive Components** — AI can render learning-specific UI:
+  - `LearningHintCard` — Contextual tips with difficulty levels and examples
+  - `ExerciseGenerator` — Interactive quizzes with real Polish content
+  - `ProgressVisualization` — Learning analytics with charts and statistics
+- **Thread Management** — Archive conversations with titles/subtitles, restore previous threads, delete old conversations
+- **Message Limits** — Configurable per-thread message caps with graceful degradation
+- **Token-Based Costing** — Integrated with platform credit system, pre-authorization with actual usage tracking
 
-- **Files Audited:** 40+ files across actions, components, and utilities
-- **Vulnerabilities Eliminated:** 50+ instances of unsafe error handling
-- **Security Risk Level:** Reduced from **CRITICAL** to **SECURE**
-- **Compliance:** OWASP A05:2021 (Security Misconfiguration), PCI DSS, ISO 27001 A.12.4, GDPR Article 32
+### 🏗️ Component Architecture
 
-### 🚀 **Security Implementation Highlights**
+```
+┌─────────────────────────────────────────────────────────────┐
+│  AITutorAssistant                                           │
+│  ├── TamboProvider (SDK Context)                            │
+│  │   ├── useTamboThread (conversation state)                │
+│  │   └── useTamboThreadInput (message handling)             │
+│  ├── ChatHeader                                             │
+│  │   ├── ThreadSelector (dropdown with archived threads)    │
+│  │   └── ThreadArchiveForm (save with title/subtitle)       │
+│  ├── MessageList                                            │
+│  │   ├── MessageItem (user/assistant messages)              │
+│  │   ├── MarkdownRenderer (formatted responses)             │
+│  │   └── LoadingIndicator (streaming state)                 │
+│  ├── ChatInput (textarea with send button)                  │
+│  └── QuickSuggestions (one-click prompts)                   │
+└─────────────────────────────────────────────────────────────┘
+```
 
-- **Zuplo API Gateway** - Rate limiting, strict CORS, mandatory Clerk JWT authentication
-- **Gateway-Level Auth** - Zero-trust architecture with Clerk JWT required for all API access
-- **Systematic Error Sanitization** - All `error.message` exposures replaced with safe alternatives
-- **Action Return Type Safety** - All server actions return sanitized error strings
-- **Component Error Protection** - All toast notifications and UI error displays secured
-- **Storage Operation Security** - All Supabase operations use sanitized error handling
-- **Type Enforcement** - TypeScript compilation prevents unsafe error patterns
+### 🔄 Thread Lifecycle
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  Thread Creation & Persistence Flow                         │
+├─────────────────────────────────────────────────────────────┤
+│  1. User opens lab → Check localStorage for saved threadId  │
+│  2. If found → Restore thread with retry logic (3 attempts) │
+│  3. If not → Create new thread on first message             │
+├─────────────────────────────────────────────────────────────┤
+│  4. Messages sent → Real-time streaming response            │
+│  5. Thread auto-saved → localStorage + database sync        │
+│  6. Message count tracked → Update database periodically    │
+├─────────────────────────────────────────────────────────────┤
+│  7. User archives → Save title/subtitle, mark as archived   │
+│  8. New thread created → localStorage cleared, fresh start  │
+│  9. User can restore → Select from dropdown, switch thread  │
+│  10. User can delete → Permanent removal from database      │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 🔧 Custom Hooks
+
+| **Hook**                 | **Purpose**                                           |
+| :----------------------- | :---------------------------------------------------- |
+| `useThreadPersistence`   | localStorage management, thread ID tracking, restore  |
+| `useThreadDatabase`      | Background sync of thread metadata to PostgreSQL      |
+| `useActualUsageLogging`  | Token usage tracking after AI response completion     |
+
+### 🎨 AI-Rendered Components
+
+The AI can dynamically render interactive learning components by returning structured JSON:
+
+```typescript
+// AI returns component specification
+{
+  "component": "ExerciseGenerator",
+  "props": {
+    "title": "Verb Aspect Practice",
+    "exercises": [
+      {
+        "question": "Wczoraj _____ (czytać/przeczytać) książkę przez cały dzień.",
+        "options": ["czytałem", "przeczytałem", "czytam"],
+        "correctAnswer": "czytałem",
+        "explanation": "Use imperfective 'czytałem' for duration"
+      }
+    ]
+  }
+}
+
+// Component registry maps to React component with Zod validation
+const tamboComponents = [
+  { name: 'ExerciseGenerator', component: ExerciseGenerator, propsSchema: exerciseGeneratorSchema },
+  { name: 'LearningHintCard', component: LearningHintCard, propsSchema: learningHintCardSchema },
+  { name: 'ProgressVisualization', component: ProgressVisualization, propsSchema: progressVisualizationSchema }
+];
+```
+
+### 💎 Database Schema
+
+```sql
+model TamboThread {
+  id          String    @id @default(cuid())
+  userId      String
+  labContext  String    -- "aspect-master", "reflexive-lab", etc.
+  threadId    String    -- Tambo SDK thread identifier
+  title       String?   -- User-provided archive title
+  subtitle    String?   -- Optional description
+  isCurrent   Boolean   @default(true)
+  isArchived  Boolean   @default(false)
+  messageCount Int      @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  archivedAt  DateTime?
+  
+  @@unique([userId, labContext, threadId])
+}
+```
+
+### 🧪 Testing Strategy
+
+- **122+ tests** covering Tambo components and integration
+- **Component isolation** — Each UI component tested independently with mocked Tambo hooks
+- **Integration tests** — Full AITutorAssistant flow with mocked SDK responses
+- **Server action tests** — Thread CRUD operations with Prisma mocking
 
 ---
 
