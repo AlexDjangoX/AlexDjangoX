@@ -106,7 +106,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **OpenAI Realtime API** - Voice conversations with real-time streaming responses
 - **Whisper API** - Audio transcription for podcasts and video content
 - **Text-to-Speech (TTS)** - AI-generated audio pronunciation
-- **Stream Chat** - Real-time messaging with AI assistance
+- **Stream Chat** - Real-time messaging with Firebase push notifications (see dedicated section below)
 - **Tambo AI Chat Integration** - Advanced conversational AI with thread-based persistence, custom interactive components, and integrated token-based costing system (see dedicated section below)
 - **Custom AI Prompts** - Specialized language learning prompts and instructions
 
@@ -145,7 +145,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 **Community & Social:**
 
-- **Real-time Chat** - Stream Chat integration for user communication
+- **Real-time Chat** - Stream Chat with FCM push notifications (see dedicated section)
 - **Memory Games** - Polish language memory recall activities
 - **Jira Integration** - Project management and task tracking
 - **Company Portals** - Multi-tenant learning environments with blogs, videos, and PDFs
@@ -397,14 +397,14 @@ A sophisticated AI tutoring system powered by Tambo SDK, providing personalized 
 
 ### Architecture Overview
 
-| **Component**          | **Responsibility**                    | **Pattern**                                    |
-| :--------------------- | :------------------------------------ | :--------------------------------------------- |
-| TamboProvider          | SDK initialization & thread context   | React Context with auth token injection        |
-| Thread Persistence     | Conversation state management         | localStorage + PostgreSQL hybrid storage       |
-| Message Streaming      | Real-time AI response delivery        | Server-Sent Events with generation stages      |
-| Component Registry     | Dynamic UI rendering from AI          | Zod-validated props with component mapping     |
-| Tool Registry          | AI function calling capabilities      | Type-safe tool definitions with input schemas  |
-| Token Charging         | Usage-based billing integration       | Pre-charge with actual usage reconciliation    |
+| **Component**      | **Responsibility**                  | **Pattern**                                   |
+| :----------------- | :---------------------------------- | :-------------------------------------------- |
+| TamboProvider      | SDK initialization & thread context | React Context with auth token injection       |
+| Thread Persistence | Conversation state management       | localStorage + PostgreSQL hybrid storage      |
+| Message Streaming  | Real-time AI response delivery      | Server-Sent Events with generation stages     |
+| Component Registry | Dynamic UI rendering from AI        | Zod-validated props with component mapping    |
+| Tool Registry      | AI function calling capabilities    | Type-safe tool definitions with input schemas |
+| Token Charging     | Usage-based billing integration     | Pre-charge with actual usage reconciliation   |
 
 ### 🎯 Key Features
 
@@ -461,11 +461,11 @@ A sophisticated AI tutoring system powered by Tambo SDK, providing personalized 
 
 ### 🔧 Custom Hooks
 
-| **Hook**                 | **Purpose**                                           |
-| :----------------------- | :---------------------------------------------------- |
-| `useThreadPersistence`   | localStorage management, thread ID tracking, restore  |
-| `useThreadDatabase`      | Background sync of thread metadata to PostgreSQL      |
-| `useActualUsageLogging`  | Token usage tracking after AI response completion     |
+| **Hook**                | **Purpose**                                          |
+| :---------------------- | :--------------------------------------------------- |
+| `useThreadPersistence`  | localStorage management, thread ID tracking, restore |
+| `useThreadDatabase`     | Background sync of thread metadata to PostgreSQL     |
+| `useActualUsageLogging` | Token usage tracking after AI response completion    |
 
 ### 🎨 AI-Rendered Components
 
@@ -512,7 +512,7 @@ model TamboThread {
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
   archivedAt  DateTime?
-  
+
   @@unique([userId, labContext, threadId])
 }
 ```
@@ -523,6 +523,184 @@ model TamboThread {
 - **Component isolation** — Each UI component tested independently with mocked Tambo hooks
 - **Integration tests** — Full AITutorAssistant flow with mocked SDK responses
 - **Server action tests** — Thread CRUD operations with Prisma mocking
+
+---
+
+## 💬 **Real-Time Chat with Stream & Firebase Push Notifications**
+
+<div align="center">
+<em>Multi-tenant messaging with cross-platform push notification delivery</em>
+</div>
+
+<br/>
+
+A production-grade real-time chat system built on Stream Chat SDK with Firebase Cloud Messaging (FCM) integration for reliable push notifications across web, Android, and iOS.
+
+### Architecture Overview
+
+| **Component**          | **Responsibility**                        | **Pattern**                                    |
+| :--------------------- | :---------------------------------------- | :--------------------------------------------- |
+| Stream Chat Client     | Real-time messaging & channel management  | Singleton with Clerk authentication            |
+| Firebase Messaging     | Push notification delivery                | FCM with service worker background handling    |
+| Push Template API      | Server-side notification configuration    | Stream Chat Push v3 with Handlebars templates  |
+| Device Registration    | FCM token management with Stream          | `addDevice()`/`removeDevice()` with localStorage |
+| Service Worker         | Background notification handling          | Firebase Messaging SW with message listener    |
+| Company Isolation      | Multi-tenant user filtering               | Clerk ID validation with company-scoped queries |
+
+### 🔧 Core Features
+
+- **Multi-Tenant Messaging** — Users can only chat with members of their organization through Clerk ID validation and company-scoped user queries
+- **Real-Time Updates** — Instant message delivery with typing indicators, read receipts, and presence status via Stream Chat WebSocket
+- **Channel Management** — Create, archive, and restore conversation channels with persistent state across sessions
+- **Per-Channel Muting** — Users can mute specific channels while maintaining global notification settings
+- **Responsive Design** — Adaptive sidebar/channel layout with mobile-first breakpoint management
+- **Internationalization** — Polish language support with custom translations via Streami18n
+
+### 📱 Push Notification Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  Push Notification Flow (Stream Chat Push v3 + Firebase)   │
+├─────────────────────────────────────────────────────────────┤
+│  1. User enables notifications → Browser permission request │
+├─────────────────────────────────────────────────────────────┤
+│  2. Permission granted → Firebase SDK requests FCM token    │
+├─────────────────────────────────────────────────────────────┤
+│  3. FCM token obtained → Register with Stream Chat          │
+│     via client.addDevice(token, 'firebase', userId)         │
+├─────────────────────────────────────────────────────────────┤
+│  4. Push template configured → Stream API receives template │
+│     with platform-specific notification payloads            │
+├─────────────────────────────────────────────────────────────┤
+│  5. New message event → Stream sends to Firebase servers    │
+├─────────────────────────────────────────────────────────────┤
+│  6. Firebase delivers → Service worker receives & displays  │
+│     notification even when app is backgrounded/closed       │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 🎯 Multi-Platform Push Template
+
+Stream Chat Push v3 uses Handlebars-style templates for customizable notifications:
+
+```json
+{
+  "data": {
+    "version": "v2",
+    "sender": "stream.chat",
+    "type": "{{ event_type }}",
+    "channel_id": "{{ channel.id }}",
+    "message_id": "{{ message.id }}"
+  },
+  "android": {
+    "priority": "high",
+    "notification": {
+      "title": "{{ sender.name }}",
+      "body": "{{ truncate message.text 150 }}",
+      "sound": "default"
+    }
+  },
+  "webpush": {
+    "notification": {
+      "title": "{{ sender.name }}",
+      "body": "{{ truncate message.text 150 }}",
+      "icon": "{{ sender.image }}"
+    },
+    "fcm_options": { "link": "/chat" }
+  },
+  "apns": {
+    "payload": {
+      "aps": {
+        "alert": {
+          "title": "New message from {{ sender.name }}",
+          "body": "{{ truncate message.text 150 }}"
+        },
+        "badge": "{{ unread_count }}",
+        "sound": "default"
+      }
+    }
+  }
+}
+```
+
+### 🏗️ Component Hierarchy
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  ChatPage                                                   │
+│  ├── Chat (Stream Chat Provider)                            │
+│  │   ├── ChannelIdHandler (deep-link support)               │
+│  │   ├── ChannelRestorer (session persistence)              │
+│  │   ├── ChatSidebar                                        │
+│  │   │   ├── ChannelList (filterable channel list)          │
+│  │   │   └── UserSearch (company-scoped user discovery)     │
+│  │   └── ChatChannel                                        │
+│  │       ├── Menubar                                        │
+│  │       │   ├── ThemeToggle                                │
+│  │       │   └── PushSubscriptionToggleButton               │
+│  │       ├── CustomChannelHeader                            │
+│  │       │   └── ChannelNotificationToggle (per-channel)    │
+│  │       ├── MessageList                                    │
+│  │       └── MessageInput                                   │
+│  └── usePushNotifications (FCM hook)                        │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 🔐 Security & Multi-Tenancy
+
+| **Security Layer**       | **Implementation**                                        |
+| :----------------------- | :-------------------------------------------------------- |
+| User Authentication      | Clerk-issued tokens validated on both client and server   |
+| Company Isolation        | Clerk ID format validation (`user_[a-zA-Z0-9_]+`)         |
+| Device Token Management  | FCM tokens stored locally, registered server-side only    |
+| Push Template Auth       | Server action with `auth()` guard before Stream API calls |
+| Channel Access Control   | Stream Chat channel membership enforced at SDK level      |
+
+### 🔄 Push Notification Hook
+
+The `usePushNotifications` hook manages the complete FCM lifecycle:
+
+```typescript
+interface UsePushNotificationsReturn {
+  isSupported: boolean;      // Browser supports notifications & Firebase configured
+  isEnabled: boolean;        // User granted permission
+  isLoading: boolean;        // Operation in progress
+  error: string | null;      // Last error message
+  enablePushNotifications: () => Promise<boolean>;
+  disablePushNotifications: () => Promise<boolean>;
+}
+
+// Key responsibilities:
+// 1. Check browser support & Firebase configuration
+// 2. Register Firebase service worker
+// 3. Request notification permission
+// 4. Obtain and cache FCM token
+// 5. Register/unregister device with Stream Chat
+// 6. Auto-register on client reconnection
+```
+
+### 💎 Service Worker Implementation
+
+The Firebase Messaging service worker handles background notifications:
+
+```javascript
+// firebase-messaging-sw.js
+importScripts('firebase/firebase-app-compat.js');
+importScripts('firebase/firebase-messaging-compat.js');
+
+// Receive config from main app via postMessage
+self.addEventListener('message', (event) => {
+  if (event.data?.type === 'FIREBASE_CONFIG') {
+    firebase.initializeApp(event.data.config);
+    const messaging = firebase.messaging();
+    
+    messaging.onBackgroundMessage((payload) => {
+      const { title, body, icon } = payload.notification;
+      self.registration.showNotification(title, { body, icon });
+    });
+  }
+});
+```
 
 ---
 
