@@ -68,7 +68,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 |                              | Tailwind CSS 4, ShadCN                               | Design system, layout, and reusable UI components    |
 |                              | Lexical Editor, Framer Motion                        | Rich authoring experience and high-quality motion    |
 | **Backend & Infrastructure** | Prisma 7, PostgreSQL, Supabase                       | Type-safe data access and relational persistence     |
-|                              | Clerk Auth, Stripe, Stream Chat, Redis               | Authentication, payments, real-time messaging, cache |
+|                              | Clerk Auth, Polar, Stream Chat, Redis                | Authentication, payments, real-time messaging, cache |
 | **Testing & Quality**        | Jest, React Testing Library                          | Unit and integration coverage for components & logic |
 |                              | Playwright                                           | End-to-end browser regression on critical journeys   |
 |                              | k6, Artillery                                        | Load and performance validation for APIs and flows   |
@@ -212,84 +212,80 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 ---
 
-## 🛡️ **Battle-Tested Payment Infrastructure**
+## 💳 **Production Payment Infrastructure**
 
 <div align="center">
-<em>Production-grade Stripe integration built with financial software engineering standards</em>
+<em>Enterprise-grade subscription and payment system built with financial software engineering standards</em>
 </div>
 
 <br/>
 
-A payment system engineered for correctness, security, and reliability—where money is involved, there's zero tolerance for bugs.
+### 🔄 Strategic Migration: Stripe → Polar
 
-### Architecture Overview
+Migrated from Stripe to **Polar** for **international tax compliance** and simplified global operations. Polar acts as Merchant of Record, handling VAT, GST, and sales tax obligations across 100+ countries—eliminating the operational burden and legal exposure that Stripe leaves to merchants when selling internationally.
 
-| **Component**            | **Responsibility**                | **Design Pattern**                         |
-| :----------------------- | :-------------------------------- | :----------------------------------------- |
-| Stripe Client Singleton  | Centralized SDK configuration     | Singleton with API version pinning         |
-| Error Handling Layer     | Standardized error classification | Custom error types with user-safe messages |
-| Retry Logic              | Transient failure recovery        | Exponential backoff with jitter            |
-| Idempotency Service      | Duplicate operation prevention    | Deterministic key generation               |
-| Webhook Handler          | Asynchronous event processing     | Event-driven with idempotency              |
-| Token Balance Calculator | Subscription credit management    | Pure function with state preservation      |
+**Business Value:**
+- ✅ **Automatic Tax Compliance** — Polar calculates, collects, and remits taxes globally
+- ✅ **Merchant of Record** — Polar assumes tax liability as the legal seller
+- ✅ **Zero Tax Registration** — Sell worldwide without jurisdiction-specific registrations
+- ✅ **Simplified Operations** — Single integration, worldwide coverage, reduced overhead
 
-### 🔧 Core Engineering Principles
+### 🏗️ System Architecture
 
-- **Idempotency Guarantees** — All Stripe API calls use deterministic idempotency keys (SHA-256 hashed from operation type, user ID, and relevant data) ensuring safe retries without duplicate charges
-- **Webhook Idempotency** — Dual-layer event deduplication using in-memory cache (O(1) lookup) with database persistence for cross-restart consistency
-- **Fail-Open Design** — Idempotency database checks fail-open to prevent blocking legitimate transactions during transient DB issues
-- **Token Balance Preservation** — Subscription changes preserve top-up tokens using pure calculation: `newBalance = newCredits + max(0, currentBalance - oldCredits)`
+**Design Principles:**
+- **Financial Software Standards** — Zero tolerance for bugs where money is involved; 87% test coverage with 140 comprehensive tests
+- **Idempotency Guarantees** — All operations use deterministic keys (SHA-256); safe retries without duplicate charges
+- **Fail-Open Design** — System continues processing during transient failures; no legitimate transactions blocked
+- **Event-Driven Processing** — Asynchronous webhook handlers with in-memory deduplication (O(1) lookup)
+
+| **Component**         | **Implementation**                                                   |
+| :-------------------- | :------------------------------------------------------------------- |
+| API Integration       | Singleton client with exponential backoff retry (3 attempts, jitter) |
+| Security Layer        | Multi-layer validation (Zod schemas + business logic allowlists)     |
+| Webhook Processing    | HMAC signature verification with idempotent event handling           |
+| Error Handling        | Sanitized user messages; internal details never exposed              |
+| State Synchronization | Real-time sync between database, Clerk metadata, and Zustand store   |
+
+### 💎 Dual-Balance Token System
+
+**Architecture:**
+- **Subscription Tokens** (`tokenBalance`) — Monthly allocation, resets on renewal (e.g., 1,000 for Pro, 2,500 for Premium)
+- **Top-up Tokens** (`topupTokenBalance`) — Purchased tokens, persist indefinitely
+- **Spending Priority** — Subscription tokens consumed first (monthly reset), then top-up tokens (never expire)
+- **Balance Preservation** — Subscription changes preserve purchased tokens via pure calculation: `newBalance = newCredits + max(0, currentTotal - oldCredits)`
+
+**Example:** User with 1,500 tokens (1,000 subscription + 500 purchased) upgrades to 2,500-credit plan → Final balance: 3,000 tokens (2,500 new subscription + 500 preserved top-up)
 
 ### 🔐 Security Implementation
 
-- **Signature Verification** — All webhook payloads verified against HMAC signatures before processing
-- **Price ID Validation** — Two-layer validation: Zod schema format check + business logic allowlist verification
-- **User Authentication** — Server actions enforce Clerk authentication with automatic sign-in redirects
-- **No Internal Secrets Exposed** — User-facing error messages sanitized through dedicated `getUserErrorMessage()` function
-- **Client-Side Security** — Safe error logging (type-only, no sensitive data), race condition guards, and secure toast notifications
+- **Multi-Layer Validation** — Zod UUID format check → Business logic allowlist → Runtime authorization
+- **Webhook Security** — HMAC signature verification on all payloads before processing
+- **Authentication Enforcement** — Clerk authentication required for all server actions; automatic sign-in redirects
+- **Error Sanitization** — User-facing messages sanitized through `getUserErrorMessage()`; no internal details exposed
+- **Audit Trail** — All balance mutations recorded with transaction IDs for reconciliation and compliance
 
-### 📈 Retry & Error Strategy
+### 📊 Webhook Event Handling
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│  Retry Strategy: Exponential Backoff with Jitter            │
-├─────────────────────────────────────────────────────────────┤
-│  Attempt 0: baseDelay × 2⁰ = 1000ms + jitter (0-10%)        │
-│  Attempt 1: baseDelay × 2¹ = 2000ms + jitter (0-10%)        │
-│  Attempt 2: baseDelay × 2² = 4000ms + jitter (0-10%)        │
-│  Max Delay: Capped at configurable ceiling                  │
-├─────────────────────────────────────────────────────────────┤
-│  Retryable: 5xx errors, 429 rate limits, network timeouts   │
-│  Non-Retryable: 4xx client errors (card declined, invalid)  │
-└─────────────────────────────────────────────────────────────┘
-```
+**8 Event Types Processed:**
 
-### 🎯 Webhook Event Processing
+| Event                    | Action                                                      |
+| :----------------------- | :---------------------------------------------------------- |
+| `subscription.active`    | Allocate tier credits, update plan ID, sync Clerk metadata  |
+| `subscription.updated`   | Recalculate balance preserving top-ups, handle plan changes |
+| `subscription.canceled`  | Downgrade to free tier at period end                        |
+| `subscription.revoked`   | Immediate downgrade, clear subscription fields              |
+| `order.paid`             | Process one-time purchases, increment purchased balance     |
+| `order.refunded`         | Deduct refunded tokens, create audit record                 |
+| `subscription.past_due`  | Payment failed flag, UI warning banner with update link     |
+| `subscription.uncanceled` | Restore subscription, clear payment warnings               |
 
-| **Event Type**                  | **Handler Action**                                      |
-| :------------------------------ | :------------------------------------------------------ |
-| `customer.subscription.created` | Allocate tier credits, set plan ID, sync Clerk metadata |
-| `customer.subscription.updated` | Recalculate balance preserving top-ups, update tier     |
-| `customer.subscription.deleted` | Downgrade to free tier, clear subscription fields       |
-| `invoice.payment_succeeded`     | Reset subscription credits on renewal, preserve top-ups |
-| `invoice.payment_failed`        | Update payment failure status, manage grace period      |
-| `checkout.session.completed`    | Process one-time top-up purchases, increment balance    |
+### 🧪 Quality Assurance
 
-### 🧪 Testing Philosophy
-
-- **100% Test Coverage** — 177+ tests covering all Stripe-related code paths
-- **External API Mocking Only** — Tests mock Stripe SDK, Prisma, and Clerk, but execute all internal business logic with real implementations
-- **Financial Software Standards** — Zero tolerance for test failures; all edge cases and error paths verified
-- **Concurrent Processing Tests** — Race condition and duplicate event handling validated
-- **Payment Page Security** — Safe error logging, race condition prevention, and comprehensive edge case testing for credits and top-up pages
-
-### 💎 Credit System Architecture
-
-- **Single Source of Truth** — `tokenBalance` field is authoritative; no derived calculations in business logic
-- **Tier-Based Allocation** — Credits mapped from price IDs via environment-configured lookup table
-- **Top-Up Preservation** — One-time purchases survive subscription changes through stateless balance calculation
-- **Transaction Audit Trail** — All balance mutations recorded with Polar event IDs for reconciliation
-- **Payment Failed Banner** — Automatic UI warning when payment fails, with direct link to update payment method
+- **140 Comprehensive Tests** — 87% code coverage across all payment logic
+- **Financial Standards** — Zero tolerance for test failures; all edge cases and error paths verified
+- **Idempotency Testing** — Duplicate webhook delivery, race conditions, concurrent updates
+- **Security Testing** — Product ID manipulation, authentication bypass, signature tampering
+- **Integration Testing** — Full payment flows from checkout to token allocation
 
 ---
 
@@ -538,14 +534,14 @@ A production-grade real-time chat system built on Stream Chat SDK with Firebase 
 
 ### Architecture Overview
 
-| **Component**          | **Responsibility**                        | **Pattern**                                    |
-| :--------------------- | :---------------------------------------- | :--------------------------------------------- |
-| Stream Chat Client     | Real-time messaging & channel management  | Singleton with Clerk authentication            |
-| Firebase Messaging     | Push notification delivery                | FCM with service worker background handling    |
-| Push Template API      | Server-side notification configuration    | Stream Chat Push v3 with Handlebars templates  |
-| Device Registration    | FCM token management with Stream          | `addDevice()`/`removeDevice()` with localStorage |
-| Service Worker         | Background notification handling          | Firebase Messaging SW with message listener    |
-| Company Isolation      | Multi-tenant user filtering               | Clerk ID validation with company-scoped queries |
+| **Component**       | **Responsibility**                       | **Pattern**                                      |
+| :------------------ | :--------------------------------------- | :----------------------------------------------- |
+| Stream Chat Client  | Real-time messaging & channel management | Singleton with Clerk authentication              |
+| Firebase Messaging  | Push notification delivery               | FCM with service worker background handling      |
+| Push Template API   | Server-side notification configuration   | Stream Chat Push v3 with Handlebars templates    |
+| Device Registration | FCM token management with Stream         | `addDevice()`/`removeDevice()` with localStorage |
+| Service Worker      | Background notification handling         | Firebase Messaging SW with message listener      |
+| Company Isolation   | Multi-tenant user filtering              | Clerk ID validation with company-scoped queries  |
 
 ### 🔧 Core Features
 
@@ -648,13 +644,13 @@ Stream Chat Push v3 uses Handlebars-style templates for customizable notificatio
 
 ### 🔐 Security & Multi-Tenancy
 
-| **Security Layer**       | **Implementation**                                        |
-| :----------------------- | :-------------------------------------------------------- |
-| User Authentication      | Clerk-issued tokens validated on both client and server   |
-| Company Isolation        | Clerk ID format validation (`user_[a-zA-Z0-9_]+`)         |
-| Device Token Management  | FCM tokens stored locally, registered server-side only    |
-| Push Template Auth       | Server action with `auth()` guard before Stream API calls |
-| Channel Access Control   | Stream Chat channel membership enforced at SDK level      |
+| **Security Layer**      | **Implementation**                                        |
+| :---------------------- | :-------------------------------------------------------- |
+| User Authentication     | Clerk-issued tokens validated on both client and server   |
+| Company Isolation       | Clerk ID format validation (`user_[a-zA-Z0-9_]+`)         |
+| Device Token Management | FCM tokens stored locally, registered server-side only    |
+| Push Template Auth      | Server action with `auth()` guard before Stream API calls |
+| Channel Access Control  | Stream Chat channel membership enforced at SDK level      |
 
 ### 🔄 Push Notification Hook
 
@@ -662,10 +658,10 @@ The `usePushNotifications` hook manages the complete FCM lifecycle:
 
 ```typescript
 interface UsePushNotificationsReturn {
-  isSupported: boolean;      // Browser supports notifications & Firebase configured
-  isEnabled: boolean;        // User granted permission
-  isLoading: boolean;        // Operation in progress
-  error: string | null;      // Last error message
+  isSupported: boolean; // Browser supports notifications & Firebase configured
+  isEnabled: boolean; // User granted permission
+  isLoading: boolean; // Operation in progress
+  error: string | null; // Last error message
   enablePushNotifications: () => Promise<boolean>;
   disablePushNotifications: () => Promise<boolean>;
 }
@@ -693,7 +689,7 @@ self.addEventListener('message', (event) => {
   if (event.data?.type === 'FIREBASE_CONFIG') {
     firebase.initializeApp(event.data.config);
     const messaging = firebase.messaging();
-    
+
     messaging.onBackgroundMessage((payload) => {
       const { title, body, icon } = payload.notification;
       self.registration.showNotification(title, { body, icon });
