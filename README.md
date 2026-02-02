@@ -903,17 +903,6 @@ Every change is validated through:
 - **Strict static typing and schema validation** with **TypeScript (strict mode)**, **Prisma**, **Zod**, and **@t3-oss/env-nextjs** for data, inputs, and configuration
 - **Automated linting and formatting** with **ESLint**, **Prettier**, and import-sorting to enforce consistent, production-grade code quality
 
----
-
-## 🔗 **Resources & Links**
-
-<div align="center">
-
-[![Watch Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=1Q7oyvCVanE)
-
-</div>
-
----
 
 ## 🎓 **Background**
 
