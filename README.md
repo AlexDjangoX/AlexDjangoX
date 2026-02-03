@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🚀 AlexDjangoX</h1>
+  <h1>💼 AlexDjangoX</h1>
   <h3>Full-Stack Developer | AI Solutions</h3>
   
   <div style="margin: 20px 0;">
@@ -17,7 +17,7 @@
 
 ---
 
-## <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fde047" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg> **Quick Facts**
+## ⚡ **Quick Facts**
 
 | **🎯 Focus**             | **🏗️ Architecture**  | **🤖 AI Integration** | **🧪 Testing**     |
 | :----------------------- | :------------------- | :-------------------- | :----------------- |
@@ -27,27 +27,27 @@
 
 ---
 
-## <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fde047" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg> **About Me**
+## 👤 **About Me**
 
 <div style="font-size: 16px; line-height: 1.6;">
 
 I am a **Full-Stack Developer** specializing in enterprise AI solutions and multi-tenant applications.
 
-<strong><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.15em;display:inline-block;margin-right:4px"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> My Expertise:</strong>
+**🎯 My Expertise:**
 
 - **Modern Web Technologies** - Next.js 16, React 19, TypeScript 5.9
 - **AI Integration** - OpenAI GPT-4, Realtime API, Whisper, TTS, custom prompts
 - **Enterprise Architecture** - Multi-tenant systems, secure APIs, payment processing
 - **Polish Language Learning** - Combined technical & linguistic expertise with 20+ interactive learning modules
 
-<strong><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#86efac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.15em;display:inline-block;margin-right:4px"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> Current Project:</strong>
+**💼 Current Project:**
 **PoliLex** - A sophisticated AI-powered language learning platform demonstrating enterprise-level architecture, multi-tenancy, real-time AI integration, and production-ready DevOps practices.
 
 </div>
 
 ---
 
-## <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> **Current Project: PoliLex**
+## 📌 **Current Project: PoliLex**
 
 <div align="center">
 
@@ -59,7 +59,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 ---
 
-## <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#86efac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg> **Tech Stack Overview**
+## 🛠️ **Tech Stack Overview**
 
 | **Category**                 | **Technology / Tools**                               | **Purpose**                                          |
 | :--------------------------- | :--------------------------------------------------- | :--------------------------------------------------- |
@@ -86,7 +86,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 </h3>
 
 <details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fda4af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>Key Achievements</strong> — Multi-tenant, security, AI, learning modules, Lexical editor</summary>
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🏆 Key Achievements</strong> — Multi-tenant, security, AI, learning modules, Lexical editor</summary>
 
 <div style="font-size: 16px; line-height: 1.6;">
 
@@ -218,7 +218,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 </details>
 
 <details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#86efac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>Production Payment Infrastructure</strong> — Polar, subscriptions, webhooks, custom UI</summary>
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>💳 Production Payment Infrastructure</strong> — Polar, subscriptions, webhooks, custom UI</summary>
 
 <div align="center">
 <em>Enterprise-grade subscription and payment system built with financial software engineering standards</em>
@@ -488,7 +488,7 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 </details>
 
 <details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>React 19 Form Architecture</strong> — Progressive enhancement, server actions, useActionState</summary>
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>📝 React 19 Form Architecture</strong> — Progressive enhancement, server actions, useActionState</summary>
 
 <div align="center">
 <em>Progressive enhancement meets type-safe server actions</em>
@@ -581,7 +581,7 @@ useEffect(() => {
 </details>
 
 <details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fdba74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>Tambo AI Learning Assistant</strong> — Context-aware conversational AI, persistent threads, interactive components</summary>
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🧠 Tambo AI Learning Assistant</strong> — Context-aware conversational AI, persistent threads, interactive components</summary>
 
 <div align="center">
 <em>Context-aware conversational AI with persistent threads and interactive components</em>
@@ -723,7 +723,7 @@ model TamboThread {
 </details>
 
 <details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>Real-Time Chat with Stream & Firebase Push Notifications</strong> — Multi-tenant messaging, FCM push</summary>
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>💬 Real-Time Chat with Stream & Firebase Push Notifications</strong> — Multi-tenant messaging, FCM push</summary>
 
 <div align="center">
 <em>Multi-tenant messaging with cross-platform push notification delivery</em>
@@ -902,7 +902,7 @@ self.addEventListener('message', (event) => {
 </details>
 
 <details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#86efac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></svg>Testing & Quality</strong> — Jest, Playwright, k6, Artillery, type safety</summary>
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🛡️ Testing & Quality</strong> — Jest, Playwright, k6, Artillery, type safety</summary>
 
 PoliLex is validated with a **full testing pipeline** that combines automated tests, static analysis, and load testing.  
 Every change is validated through:
@@ -916,7 +916,7 @@ Every change is validated through:
 </details>
 
 <details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Resources & Links</strong></summary>
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🔗 Resources & Links</strong></summary>
 
 <div align="center">
 
@@ -927,7 +927,7 @@ Every change is validated through:
 </details>
 
 <details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fdba74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>Background</strong> — Education, training, specialization</summary>
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>📚 Background</strong> — Education, training, specialization</summary>
 
 <table width="100%" style="font-size: 16px;">
 <tr>
