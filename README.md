@@ -81,7 +81,9 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 ---
 
-<h3 style="color: #fdba74; margin: 16px 0 24px 0; font-weight: 600; font-size: 1.1rem;">Click any section below to expand and read the details.</h3>
+<h3 style="color: #fbbb74; margin: 16px 0 24px 0; font-weight: 300; font-style: italic; font-size: 1.3rem;">
+    Click any section below to expand and read the details.
+</h3>
 
 <details style="margin-bottom: 16px;">
 <summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fda4af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>Key Achievements</strong> — Multi-tenant, security, AI, learning modules, Lexical editor</summary>
