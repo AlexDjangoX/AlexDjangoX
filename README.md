@@ -81,11 +81,14 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 ---
 
-## 🌟 **Key Achievements**
+<h3 style="color: #fb923c; margin: 16px 0 24px 0; font-weight: 600; font-size: 1.1rem;">Click any section below to expand and read the details.</h3>
+
+<details style="margin-bottom: 16px;">
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>Key Achievements</strong> — Multi-tenant, security, AI, learning modules, Lexical editor</summary>
 
 <div style="font-size: 16px; line-height: 1.6;">
 
-### 🏢 **Multi-Tenant Architecture**
+### • Multi-Tenant Architecture
 
 - **Authentication & Database Integration** - Sophisticated user management with role-based access control
 - **Company portals** with isolated data and secure tenant boundaries
@@ -93,14 +96,14 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **Permission Management** - Granular access control for teachers, students, and admins
 - **Data Isolation** - Company-specific data segregation with secure tenant boundaries
 
-### 🔐 **Enterprise Security & API Management**
+### • Enterprise Security & API Management
 
 - **Zuplo API Gateway** - Secure API management, rate limiting, and enterprise-grade security
 - **Enterprise Security** - Role-based access control & secure authentication
 - **Performance Optimized** - SSR, edge caching, optimized database queries
 - **Comprehensive Testing** - Unit, integration, and E2E test coverage
 
-### 🤖 **AI-Powered Features**
+### • AI-Powered Features
 
 - **GPT-4 Integration** - Personalized instruction and content generation
 - **OpenAI Realtime API** - Voice conversations with real-time streaming responses
@@ -110,7 +113,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **Tambo AI Chat Integration** - Advanced conversational AI with thread-based persistence, custom interactive components, and integrated token-based costing system (see dedicated section below)
 - **Custom AI Prompts** - Specialized language learning prompts and instructions
 
-### 📚 **Comprehensive Learning Modules**
+### • Comprehensive Learning Modules
 
 **Grammar Labs:**
 
@@ -150,7 +153,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **Jira Integration** - Project management and task tracking
 - **Company Portals** - Multi-tenant learning environments with blogs, videos, and PDFs
 
-### 💰 **OpenAI Pricing Strategy**
+### • OpenAI Pricing Strategy
 
 **Source of Truth:**
 
@@ -168,7 +171,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **Secure Initialization** - Seed scripts use secure service-level connections for initial data population
 - **Token-Based Authorization** - Admin privileges verified through secure token claims validated at both application and database layers
 
-### ✍️ **Custom Lexical Editor with Media Integration**
+### • Custom Lexical Editor with Media Integration
 
 - **Rich Text Editing** - Full-featured Lexical editor with markdown support, tables, lists, and formatting
 - **YouTube Integration** - Embed YouTube videos directly in editor content with resizable player controls
@@ -182,7 +185,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **Collaborative Features** - Real-time editing capabilities with history tracking
 - **Export Capabilities** - Export editor content to blog posts and learning materials
 
-### 👨‍🏫 **Teacher/Tutor Portal (Company System)**
+### • Teacher/Tutor Portal (Company System)
 
 - **Dedicated Company Portals** - Isolated multi-tenant environments for each teaching organization
 - **Blog Management System** - Full-featured blog with Lexical editor integration
@@ -210,9 +213,10 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 </div>
 
----
+</details>
 
-## 💳 **Production Payment Infrastructure**
+<details style="margin-bottom: 16px;">
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>Production Payment Infrastructure</strong> — Polar, subscriptions, webhooks, custom UI</summary>
 
 <div align="center">
 <em>Enterprise-grade subscription and payment system built with financial software engineering standards</em>
@@ -222,7 +226,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 **System Status:** ✅ **v2.3 — Production Ready & Live Validated** (January 28, 2026)
 
-### 🔄 Strategic Migration: Stripe → Polar
+### • Strategic Migration: Stripe → Polar
 
 Migrated from Stripe to **Polar** for **international tax compliance** and simplified global operations. Polar acts as Merchant of Record, handling VAT, GST, and sales tax obligations across 100+ countries—eliminating the operational burden and legal exposure that Stripe leaves to merchants when selling internationally.
 
@@ -233,7 +237,7 @@ Migrated from Stripe to **Polar** for **international tax compliance** and simpl
 - ✅ **Zero Tax Registration** — Sell worldwide without jurisdiction-specific registrations
 - ✅ **Simplified Operations** — Single integration, worldwide coverage, reduced overhead
 
-### 🏗️ System Architecture
+### • System Architecture
 
 **Design Principles:**
 
@@ -252,7 +256,7 @@ Migrated from Stripe to **Polar** for **international tax compliance** and simpl
 | Error Handling        | Sanitized user messages; internal details never exposed              |
 | State Synchronization | Real-time sync between database, Clerk metadata, and Zustand store   |
 
-### 💎 Dual-Balance Token System
+### • Dual-Balance Token System
 
 **Architecture:**
 
@@ -263,7 +267,7 @@ Migrated from Stripe to **Polar** for **international tax compliance** and simpl
 
 **Example:** User with 1,500 tokens (1,000 subscription + 500 purchased) upgrades to 2,500-credit plan → Final balance: 3,000 tokens (2,500 new subscription + 500 preserved top-up)
 
-### 🔐 Security Implementation (v2.1 Hardened)
+### • Security Implementation (v2.1 Hardened)
 
 **Three-Layer Defense-in-Depth:**
 
@@ -285,7 +289,7 @@ Migrated from Stripe to **Polar** for **international tax compliance** and simpl
    - Transaction audit trail with polarId tracking
    - Error sanitization (no internal details exposed to users)
 
-### 📊 Webhook Event Handling
+### • Webhook Event Handling
 
 **9 Event Types Processed:**
 
@@ -321,7 +325,7 @@ Migrated from Stripe to **Polar** for **international tax compliance** and simpl
 - ✅ **Cron Security** — Bearer token authorization, IP logging, fail-open error handling
 - ✅ **Operational Observability** — Comprehensive logging of execution metrics, desync rates, cleanup counts
 
-### 🎨 Custom UI Evolution: From Portal to In-App Experience
+### • Custom UI Evolution: From Portal to In-App Experience
 
 **Strategic Decision (Jan 28, 2026):** Migrated from Polar's hosted customer portal to **custom React components** for subscription management, achieving **greater control** over user experience and business logic.
 
@@ -394,7 +398,7 @@ Custom UI updates (new plan badge, token balance)
 
 **Result:** 95% of subscription interactions handled in-app with seamless UX, while Polar portal handles payment-sensitive operations (5% of use cases) requiring regulatory compliance.
 
-### 🔄 Automated Maintenance System (v2.3 — Jan 28, 2026)
+### • Automated Maintenance System (v2.3 — Jan 28, 2026)
 
 **Proactive Health & Data Management:**
 
@@ -431,7 +435,7 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 
 **Test Coverage:** 33 comprehensive tests validating authorization, success scenarios, error handling, and performance across both endpoints.
 
-### 🧪 Quality Assurance & Validation
+### • Quality Assurance & Validation
 
 **Automated Testing:**
 
@@ -457,7 +461,7 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 
 **Test Execution:** 4,386 tests pass (312 payment + 1,631 UI + 33 cron + 2,410 other)
 
-### 📚 Comprehensive Documentation
+### • Comprehensive Documentation
 
 **Seven Complete Guides (367 KB total):**
 
@@ -479,9 +483,10 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 
 **Security Rating:** 9.8/10 ⭐⭐⭐ (Enterprise-grade with Zuplo edge protection)
 
----
+</details>
 
-## ⚡ **React 19 Form Architecture**
+<details style="margin-bottom: 16px;">
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>React 19 Form Architecture</strong> — Progressive enhancement, server actions, useActionState</summary>
 
 <div align="center">
 <em>Progressive enhancement meets type-safe server actions</em>
@@ -491,7 +496,7 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 
 Modern form architecture leveraging React 19 hooks and Next.js 16 server actions for optimal DX and performance.
 
-### Architecture Overview
+### • Architecture Overview
 
 | **Component**        | **Responsibility**                 | **Pattern**                                   |
 | :------------------- | :--------------------------------- | :-------------------------------------------- |
@@ -502,7 +507,7 @@ Modern form architecture leveraging React 19 hooks and Next.js 16 server actions
 | Field Watching       | Reactive form updates              | `useWatch` for optimized re-renders           |
 | Context Architecture | Complex form state sharing         | Provider pattern with memoized context values |
 
-### 🔧 Core Patterns
+### • Core Patterns
 
 - **Progressive Enhancement** — Forms work without JavaScript using native `FormData` submission, enhanced with client-side validation when available
 - **Type-Safe Validation** — Dual-layer Zod schema validation (client-side React Hook Form + server-side `safeParse`) ensures data integrity at every boundary
@@ -510,7 +515,7 @@ Modern form architecture leveraging React 19 hooks and Next.js 16 server actions
 - **Stable Event Handlers** — React 19's `useEffectEvent` provides dependency-free callbacks for effect handlers, removing dependency array confusion
 - **Data-Driven Rendering** — Configuration objects with `map()` eliminate JSX repetition while maintaining type safety and readability
 
-### 📋 Server Action Flow
+### • Server Action Flow
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -531,14 +536,14 @@ Modern form architecture leveraging React 19 hooks and Next.js 16 server actions
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 🎯 Implementation Highlights
+### • Implementation Highlights
 
 - **Context-Based Complex Forms** — `VerbAttributesForm` uses provider pattern to share state across nested components without prop drilling
 - **Field-Level Subscriptions** — Single `useWatch` call for multiple fields, maintaining React Hook Form's optimization benefits
 - **Structured Error Handling** — Server actions return typed `ActionState<T>` with success/error/data discriminated unions
 - **Test Coverage** — Forms tested with `data-testid` attributes (never text content), ensuring reliable test stability across i18n and content changes
 
-### 💎 Example Architecture
+### • Example Architecture
 
 ```typescript
 // Server Action with safeParse validation
@@ -571,9 +576,10 @@ useEffect(() => {
 }, [actionState.success]);
 ```
 
----
+</details>
 
-## 🤖 **Tambo AI Learning Assistant**
+<details style="margin-bottom: 16px;">
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>Tambo AI Learning Assistant</strong> — Context-aware conversational AI, persistent threads, interactive components</summary>
 
 <div align="center">
 <em>Context-aware conversational AI with persistent threads and interactive components</em>
@@ -583,7 +589,7 @@ useEffect(() => {
 
 A sophisticated AI tutoring system powered by Tambo SDK, providing personalized Polish language instruction with full conversation persistence and custom interactive learning components.
 
-### Architecture Overview
+### • Architecture Overview
 
 | **Component**      | **Responsibility**                  | **Pattern**                                   |
 | :----------------- | :---------------------------------- | :-------------------------------------------- |
@@ -594,7 +600,7 @@ A sophisticated AI tutoring system powered by Tambo SDK, providing personalized 
 | Tool Registry      | AI function calling capabilities    | Type-safe tool definitions with input schemas |
 | Token Charging     | Usage-based billing integration     | Pre-charge with actual usage reconciliation   |
 
-### 🎯 Key Features
+### • Key Features
 
 - **Thread-Based Conversations** — Full conversation history preserved across sessions with automatic restoration on page load
 - **Lab-Specific Context** — AI tutor adapts to current learning module (Aspect Master, Reflexive Lab, Preposition Lab, etc.)
@@ -606,7 +612,7 @@ A sophisticated AI tutoring system powered by Tambo SDK, providing personalized 
 - **Message Limits** — Configurable per-thread message caps with graceful degradation
 - **Token-Based Costing** — Integrated with platform credit system, pre-authorization with actual usage tracking
 
-### 🏗️ Component Architecture
+### • Component Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -626,7 +632,7 @@ A sophisticated AI tutoring system powered by Tambo SDK, providing personalized 
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 🔄 Thread Lifecycle
+### • Thread Lifecycle
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -647,7 +653,7 @@ A sophisticated AI tutoring system powered by Tambo SDK, providing personalized 
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 🔧 Custom Hooks
+### • Custom Hooks
 
 | **Hook**                | **Purpose**                                          |
 | :---------------------- | :--------------------------------------------------- |
@@ -655,7 +661,7 @@ A sophisticated AI tutoring system powered by Tambo SDK, providing personalized 
 | `useThreadDatabase`     | Background sync of thread metadata to PostgreSQL     |
 | `useActualUsageLogging` | Token usage tracking after AI response completion    |
 
-### 🎨 AI-Rendered Components
+### • AI-Rendered Components
 
 The AI can dynamically render interactive learning components by returning structured JSON:
 
@@ -684,7 +690,7 @@ const tamboComponents = [
 ];
 ```
 
-### 💎 Database Schema
+### • Database Schema
 
 ```sql
 model TamboThread {
@@ -705,16 +711,17 @@ model TamboThread {
 }
 ```
 
-### 🧪 Testing Strategy
+### • Testing Strategy
 
 - **122+ tests** covering Tambo components and integration
 - **Component isolation** — Each UI component tested independently with mocked Tambo hooks
 - **Integration tests** — Full AITutorAssistant flow with mocked SDK responses
 - **Server action tests** — Thread CRUD operations with Prisma mocking
 
----
+</details>
 
-## 💬 **Real-Time Chat with Stream & Firebase Push Notifications**
+<details style="margin-bottom: 16px;">
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>Real-Time Chat with Stream & Firebase Push Notifications</strong> — Multi-tenant messaging, FCM push</summary>
 
 <div align="center">
 <em>Multi-tenant messaging with cross-platform push notification delivery</em>
@@ -724,7 +731,7 @@ model TamboThread {
 
 A production-grade real-time chat system built on Stream Chat SDK with Firebase Cloud Messaging (FCM) integration for reliable push notifications across web, Android, and iOS.
 
-### Architecture Overview
+### • Architecture Overview
 
 | **Component**       | **Responsibility**                       | **Pattern**                                      |
 | :------------------ | :--------------------------------------- | :----------------------------------------------- |
@@ -735,7 +742,7 @@ A production-grade real-time chat system built on Stream Chat SDK with Firebase 
 | Service Worker      | Background notification handling         | Firebase Messaging SW with message listener      |
 | Company Isolation   | Multi-tenant user filtering              | Clerk ID validation with company-scoped queries  |
 
-### 🔧 Core Features
+### • Core Features
 
 - **Multi-Tenant Messaging** — Users can only chat with members of their organization through Clerk ID validation and company-scoped user queries
 - **Real-Time Updates** — Instant message delivery with typing indicators, read receipts, and presence status via Stream Chat WebSocket
@@ -744,7 +751,7 @@ A production-grade real-time chat system built on Stream Chat SDK with Firebase 
 - **Responsive Design** — Adaptive sidebar/channel layout with mobile-first breakpoint management
 - **Internationalization** — Polish language support with custom translations via Streami18n
 
-### 📱 Push Notification Architecture
+### • Push Notification Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -767,7 +774,7 @@ A production-grade real-time chat system built on Stream Chat SDK with Firebase 
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 🎯 Multi-Platform Push Template
+### • Multi-Platform Push Template
 
 Stream Chat Push v3 uses Handlebars-style templates for customizable notifications:
 
@@ -811,7 +818,7 @@ Stream Chat Push v3 uses Handlebars-style templates for customizable notificatio
 }
 ```
 
-### 🏗️ Component Hierarchy
+### • Component Hierarchy
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -834,7 +841,7 @@ Stream Chat Push v3 uses Handlebars-style templates for customizable notificatio
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 🔐 Security & Multi-Tenancy
+### • Security & Multi-Tenancy
 
 | **Security Layer**      | **Implementation**                                        |
 | :---------------------- | :-------------------------------------------------------- |
@@ -844,7 +851,7 @@ Stream Chat Push v3 uses Handlebars-style templates for customizable notificatio
 | Push Template Auth      | Server action with `auth()` guard before Stream API calls |
 | Channel Access Control  | Stream Chat channel membership enforced at SDK level      |
 
-### 🔄 Push Notification Hook
+### • Push Notification Hook
 
 The `usePushNotifications` hook manages the complete FCM lifecycle:
 
@@ -867,7 +874,7 @@ interface UsePushNotificationsReturn {
 // 6. Auto-register on client reconnection
 ```
 
-### 💎 Service Worker Implementation
+### • Service Worker Implementation
 
 The Firebase Messaging service worker handles background notifications:
 
@@ -890,9 +897,10 @@ self.addEventListener('message', (event) => {
 });
 ```
 
----
+</details>
 
-## 🧪 **Testing & Quality**
+<details style="margin-bottom: 16px;">
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></svg>Testing & Quality</strong> — Jest, Playwright, k6, Artillery, type safety</summary>
 
 PoliLex is validated with a **full testing pipeline** that combines automated tests, static analysis, and load testing.  
 Every change is validated through:
@@ -903,8 +911,21 @@ Every change is validated through:
 - **Strict static typing and schema validation** with **TypeScript (strict mode)**, **Prisma**, **Zod**, and **@t3-oss/env-nextjs** for data, inputs, and configuration
 - **Automated linting and formatting** with **ESLint**, **Prettier**, and import-sorting to enforce consistent, production-grade code quality
 
+</details>
 
-## 🎓 **Background**
+<details style="margin-bottom: 16px;">
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Resources & Links</strong></summary>
+
+<div align="center">
+
+[![Watch Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=1Q7oyvCVanE)
+
+</div>
+
+</details>
+
+<details style="margin-bottom: 16px;">
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-0.2em;display:inline-block;margin-right:6px"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>Background</strong> — Education, training, specialization</summary>
 
 <table width="100%" style="font-size: 16px;">
 <tr>
@@ -918,6 +939,8 @@ Every change is validated through:
 <td style="text-align: center; padding: 12px; border: 1px solid #374151;"><strong>Polish Language Enthusiast</strong><br>Combined technical expertise with language learning</td>
 </tr>
 </table>
+
+</details>
 
 ---
 
