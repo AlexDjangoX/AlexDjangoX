@@ -41,19 +41,25 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **Polish Language Learning** - Combined technical & linguistic expertise with 20+ interactive learning modules
 
 **💼 Current Project:**
-**PoliLex** - A sophisticated AI-powered language learning platform demonstrating enterprise-level architecture, multi-tenancy, real-time AI integration, and production-ready DevOps practices.
+**PoliLex Bilingual** — An AI-enhanced Polish language learning platform. Built for learners who want to actually understand conjugation, aspect, and case (not just phrases). Production-ready subscriptions via Polar, a polished public home page, and deep grammatical-case practice with an integrated AI tutor.
 
 </div>
 
 ---
 
-## 📌 **Current Project: PoliLex**
+## 📌 **Current Project: PoliLex Bilingual**
 
 <div align="center">
 
-[![PoliLex Platform](https://img.shields.io/badge/PoliLex-AI%20Enhanced%20Polish%20Learning-red?style=for-the-badge&logo=language&logoColor=white)](https://lexical-verb.vercel.app/)
+[![PoliLex Platform](https://img.shields.io/badge/PoliLex%20Bilingual-AI%20Polish%20Learning-red?style=for-the-badge&logo=language&logoColor=white)](https://lexical-verb.vercel.app/)
 
-**Polish language learning platform with sophisticated full-stack architecture**
+**Polish is hard. Most apps pretend it isn’t.** — Conjugation, aspect, and grammatical case, with real accuracy.
+
+<br />
+
+<img src="https://github.com/AlexDjangoX/lexical-verb/raw/main/public/images/home-page.png" alt="PoliLex Bilingual — AI-Enhanced Polish Language Learning Platform home page" width="900" />
+
+*Home page: hero with conjugation table, features, how it works, comparison, and social proof (i18n EN/PL, light/dark).*
 
 </div>
 
@@ -86,9 +92,15 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 </h3>
 
 <details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🏆 Key Achievements</strong> — Multi-tenant, security, AI, learning modules, Lexical editor</summary>
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🏆 Key Achievements</strong> — Home page, Polar subscriptions, grammatical cases, AI tutor, learning modules, Lexical editor</summary>
 
 <div style="font-size: 16px; line-height: 1.6;">
+
+### Public-Facing Home Page
+
+- **Landing experience** — Hero with live conjugation table (e.g. robić/zrobić), pain-point bar (“Not another phrase app”), Features, How it works, Compare, Reviews, and Get started CTA
+- **i18n** — Full English and Polish for landing copy; theme toggle (light/dark)
+- **SEO & metadata** — Canonical URL, titles, and descriptions tuned for AI Polish tutor and case/conjugation keywords
 
 ### Multi-Tenant Architecture
 
@@ -135,7 +147,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **Occupations** - 5 interactive games (Flashcards, Quiz, Memory, Drag & Drop, Sentence Builder)
 - **Word Wizard** - AI-assisted vocabulary building with audio pronunciation
 - **Flashcards** - Customizable flashcards with example sentences
-- **Cases** - Grammatical case mastery through fill-in-the-blank exercises
+- **Grammatical Cases** - Full case practice: sentence and paragraph fill-in-the-blank, filters (case, difficulty, type), integrated AI tutor assistant, progress tracking, and optional game mode (e.g. Nom/Gen)
 - **Days & Months** - Temporal vocabulary practice
 - **Genealogy** - Interactive family tree drag-and-drop game
 
@@ -218,15 +230,15 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 </details>
 
 <details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong>💳 Production Payment Infrastructure</strong> — Polar, subscriptions, webhooks, custom UI</summary>
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>💳 Production Payment Infrastructure (Polar)</strong> — Subscriptions, webhooks, custom UI, cron automation</summary>
 
 <div align="center">
-<em>Enterprise-grade subscription and payment system built with financial software engineering standards</em>
+<em>Enterprise-grade subscription and payment system built with financial software engineering standards. Continuously maintained and validated in production.</em>
 </div>
 
 <br/>
 
-**System Status:** ✅ **v2.3 — Production Ready & Live Validated** (January 28, 2026)
+**System Status:** ✅ **v2.3 — Production Ready & Live Validated** (2026 — in continuous production use)
 
 ### Strategic Migration: Stripe → Polar
 
@@ -451,7 +463,7 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 - **Integration Testing** — Full payment flows with real webhook payloads
 - **Cron Security Testing** — Authorization validation, unauthorized access logging, error handling, performance
 
-**Live Validation (Jan 28, 2026):**
+**Live Validation (2026):**
 
 - **7 Real User Scenarios** — Complete subscription lifecycle tested with actual Polar webhooks
 - **100% Congruency** — Verified state synchronization across Polar → Database → Clerk → Frontend
@@ -949,3 +961,4 @@ Every change is validated through:
 <div align="center">
   <sub style="font-size: 14px;">Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications.</sub>
 </div>
+
