@@ -57,7 +57,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 <br />
 
-<img src="https://github.com/AlexDjangoX/lexical-verb/raw/main/public/images/home-page.png" alt="PoliLex Bilingual — AI-Enhanced Polish Language Learning Platform home page" width="900" />
+<img src="https://github.com/AlexDjangoX/portfolio-alexander/raw/main/public/home-page.png" alt="PoliLex Bilingual — AI-Enhanced Polish Language Learning Platform home page" width="900" />
 
 *Home page: hero with conjugation table, features, how it works, comparison, and social proof (i18n EN/PL, light/dark).*
 
