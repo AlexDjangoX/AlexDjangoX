@@ -3,15 +3,15 @@
   <h3>Full-Stack Developer | AI Solutions</h3>
   
   <div style="margin: 20px 0;">
-    <img src="https://img.shields.io/badge/Next.js-16.1-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js 16.1" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Next.js-16.2-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js 16.2" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/TypeScript-5.9-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript 5.9" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS 4.1" style="margin: 0 5px;" />
-    <img src="https://img.shields.io/badge/Prisma-7.2-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma 7.2" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Prisma-7.8-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma 7.8" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Polar-0062FF?style=for-the-badge&logo=polar&logoColor=white" alt="Polar" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Zuplo-FF00BD?style=for-the-badge&logo=zuplo&logoColor=white" alt="Zuplo" style="margin: 0 5px;" />
-    <img src="https://img.shields.io/badge/Lexical-0.38-0668E1?style=for-the-badge&logo=meta&logoColor=white" alt="Lexical 0.38" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Lexical-0.44-0668E1?style=for-the-badge&logo=meta&logoColor=white" alt="Lexical 0.44" style="margin: 0 5px;" />
   </div>
 </div>
 
@@ -19,11 +19,11 @@
 
 ## ⚡ **Quick Facts**
 
-| **🎯 Focus**             | **🏗️ Architecture**  | **🤖 AI Integration** | **🧪 Testing**       |
-| :----------------------- | :------------------- | :-------------------- | :------------------- |
-| Full-Stack Development   | Multi-Tenant Systems | OpenAI GPT-4          | Jest, Playwright, k6 |
-| Enterprise Solutions     | Real-time Features   | Realtime API          | E2E Testing          |
-| Polish Language Learning | Secure API Gateway   | Stream Chat           | TypeScript           |
+| **🎯 Focus**             | **🏗️ Architecture**  | **🤖 AI Integration** | **🧪 Testing**              |
+| :----------------------- | :------------------- | :-------------------- | :-------------------------- |
+| Full-Stack Development   | Multi-Tenant Systems | OpenAI GPT-4          | Jest, Playwright, Artillery |
+| Enterprise Solutions     | Real-time Features   | Realtime API          | E2E Testing                 |
+| Polish Language Learning | Secure API Gateway   | Stream Chat           | TypeScript                  |
 
 ---
 
@@ -35,7 +35,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 **🎯 My Expertise:**
 
-- **Modern Web Technologies** - Next.js 16.1, React 19, TypeScript 5.9
+- **Modern Web Technologies** - Next.js 16.2, React 19, TypeScript 5.9
 - **AI Integration** - OpenAI GPT-4, Realtime API, Whisper, TTS, custom prompts
 - **Enterprise Architecture** - Multi-tenant systems, secure APIs, payment processing
 - **Polish Language Learning** - Combined technical & linguistic expertise with 20+ interactive learning modules
@@ -69,15 +69,15 @@ _PoliLex Bilingual — home page with conjugation table and hero messaging_
 
 | **Category**                 | **Technology / Tools**                               | **Purpose**                                          |
 | :--------------------------- | :--------------------------------------------------- | :--------------------------------------------------- |
-| **Frontend**                 | Next.js 16.1, React 19                               | Core application shell and interactive UI            |
+| **Frontend**                 | Next.js 16.2, React 19                               | Core application shell and interactive UI            |
 |                              | TypeScript 5.9                                       | Type-safe client-side development                    |
-|                              | Tailwind CSS 4, ShadCN                               | Design system, layout, and reusable UI components    |
-|                              | Lexical 0.38, Framer Motion                          | Rich authoring experience and high-quality motion    |
-| **Backend & Infrastructure** | Prisma 7.2, PostgreSQL, Supabase                     | Type-safe data access and relational persistence     |
+|                              | Tailwind CSS 4.1, ShadCN / Radix UI                  | Design system, layout, and reusable UI components    |
+|                              | Lexical 0.44, Framer Motion                          | Rich authoring experience and high-quality motion    |
+| **Backend & Infrastructure** | Prisma 7.8, PostgreSQL, Supabase                     | Type-safe data access and relational persistence     |
 |                              | Clerk Auth, Polar, Stream Chat                       | Authentication, payments, real-time messaging        |
 | **Testing & Quality**        | Jest, React Testing Library                          | Unit and integration coverage for components & logic |
 |                              | Playwright                                           | End-to-end browser regression on critical journeys   |
-|                              | k6, Artillery                                        | Load and performance validation for APIs and flows   |
+|                              | Artillery                                            | Load and performance validation for APIs and flows   |
 |                              | TypeScript (strict), Prisma, Zod, @t3-oss/env-nextjs | Static typing and schema validation across the stack |
 |                              | ESLint, Prettier, import-sorting plugins             | Automated linting, formatting, and code consistency  |
 | **AI & Integrations**        | OpenAI GPT-4, DALL-E 3                               | Language processing and image generation             |
@@ -87,151 +87,7 @@ _PoliLex Bilingual — home page with conjugation table and hero messaging_
 
 ---
 
-<h3 style="color: #fbbb74; margin: 16px 0 24px 0; font-weight: 300; font-style: italic; font-size: 1.3rem;">
-    Click any section below to expand and read the details.
-</h3>
-
-<details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong>⚡ Next.js 16 Partial Prerendering — Architecture & Standards</strong> — cacheComponents, dual Prisma, skeleton system, ESLint enforcement, CI</summary>
-
-<div align="center">
-<em>Production-grade PPR implementation: static HTML shells from CDN, dynamic content streamed per-request, zero loading spinners</em>
-</div>
-
-<br/>
-
-**Status:** ✅ **Production — May 2026**
-
-Every route in PoliLex is a Partial Prerender (`◐`): the static shell (nav, layout, skeleton UI) is pre-generated at build time and served from CDN with instant TTFB. Dynamic content — auth state, user data, subscription status — streams in behind `<Suspense>` boundaries. This was a full codebase migration from `unstable_cache` + `force-dynamic` patterns to the Next.js 16 cache model.
-
-### Core Configuration
-
-`next.config.mjs` imports `STABLE_DATA_CACHE_LIFE` directly from `src/lib/constants/cache-ttl.ts` via `jiti`. The `cacheLife` config entry and every `cacheLife()` call inside `'use cache'` functions reference the same object — values cannot drift between build config and runtime:
-
-```ts
-// Single source of truth — next.config.mjs reads the same object 'use cache' functions use
-const { STABLE_DATA_CACHE_LIFE } = jiti(
-  resolve(__dirname, './src/lib/constants/cache-ttl.ts'),
-);
-const nextConfig = {
-  cacheComponents: true,
-  cacheLife: { 'stable-data': STABLE_DATA_CACHE_LIFE }, // stale 1h / revalidate 7d / expire 30d
-};
-```
-
-### Dual Prisma Client Pattern
-
-`auth()` (reads cookies/headers) must never be called inside a `'use cache'` function. The project exports two separate Prisma clients at the infrastructure level:
-
-| Client         | Context                                               | RLS                             |
-| :------------- | :---------------------------------------------------- | :------------------------------ |
-| `cachedPrisma` | Inside `'use cache'` functions — public / shared data | Anonymous RLS (empty claims)    |
-| `prisma`       | Loaders and server actions — user-scoped data         | Auth RLS (Clerk session claims) |
-
-The `prisma` client's `claimsFn` wraps `auth()` in try/catch and silently returns empty claims during PPR prerendering (when no request context exists), preventing build failures.
-
-### ESLint Enforcement
-
-A local inline rule (`local/no-cached-prisma-outside-use-cache`) in `eslint.config.mjs` warns when `cachedPrisma` is used inside a function that doesn't start with `'use cache'`. This catches accidental RLS bypass at write time. Set to `warn` (not `error`) because the rule cannot trace call stacks — delegate helpers explicitly designed to be called from `'use cache'` functions are valid uses. Suppress with a block comment when the use is intentionally public:
-
-```ts
-// Blog posts are public data — anonymous RLS is intentional here.
-/* eslint-disable local/no-cached-prisma-outside-use-cache */
-const [posts, total] = await Promise.all([cachedPrisma.blogPost.findMany(...)]);
-/* eslint-enable local/no-cached-prisma-outside-use-cache */
-```
-
-### Silent Auth Fallback During Prerendering
-
-During static prerendering there is no request context, so Clerk's `auth()` rejects with an internal `HangingPromiseRejectionError`. The solution is a typed `AuthRequiredError` class defined in a **client-safe** module (`src/lib/errors/auth-errors.ts`) with no server-only imports — essential because auth error detection runs in both server and client contexts:
-
-```ts
-// Brand property survives minification — class names mangle to 'i' or 'c' in production
-export class AuthRequiredError extends Error {
-  readonly isAuthRequiredError = true;
-}
-```
-
-All auth-gate helpers (`requireAuth`, `requireAdmin`, `requireSubscription`) catch `HangingPromiseRejectionError` and re-throw `AuthRequiredError`. A shared `safeFetch` utility in every page loader suppresses auth errors with **cause-chain walking** — if an action re-wraps `new Error('...', { cause: authErr })`, `safeFetch` recurses through `.cause` and still silently discards it:
-
-```ts
-function isAuthRequired(error: unknown): boolean {
-  if (error instanceof AuthRequiredError) return true;
-  if (
-    error instanceof Error &&
-    (error as AuthRequiredError).isAuthRequiredError
-  )
-    return true;
-  if (error instanceof Error && error.cause) return isAuthRequired(error.cause); // recursive
-  return false;
-}
-```
-
-`logUserError` replaces bare `console.error` in all action catch blocks. It falls back to `error.stack` frame extraction when `error.message` is empty — production minifiers mangle constructor names to single letters, making `error.constructor.name` useless as a log value.
-
-### `connection()` for cachedPrisma-only Pages
-
-Next.js tracks dynamic context through `fetch()`, `cookies()`, `headers()`, and `connection()`. Native TCP Prisma queries are not tracked. Pages whose first I/O is `cachedPrisma` (no preceding `auth()`) must call `await connection()` explicitly to register dynamic context — otherwise `crypto.randomUUID()` inside the Prisma PG adapter throws at build time:
-
-> Route "/video" used `crypto.randomUUID()` before accessing either uncached data or Request data.
-
-`connection()` lives in the **loader function**, not the page component, keeping framework internals out of the UI layer.
-
-### Navigation + Streaming Skeleton System
-
-Every route that streams dynamic content through a `<Suspense>` boundary uses **both** loading mechanisms:
-
-```
-User clicks <Link href="/adjectives" />
-  │
-  ├─ loading.tsx → AdjectivesPageSkeleton     ← navigation window (before server responds)
-  ├─ Server responds: static shell
-  ├─ <Suspense fallback={<AdjectivesPageSkeleton />}> ← streaming window (while data resolves)
-  └─ dataPromise resolves → full page
-```
-
-`src/app/loading.tsx` (root fallback) exports `AppShellSkeleton` — the former `LoadingOverlay` black-overlay spinner has been removed entirely. `AppShellSkeleton` is a pure Server Component that pixel-accurately mirrors the real Navbar: exact `bg-white dark:bg-gray-800`, same `h-8 min-w-20.5 rounded-full` pill tokens for LanguageSelector and DarkToggle, same gradient shells for the icon buttons.
-
-**Skeleton creation standards enforced across the codebase:**
-
-- Use `<Skeleton>` from `@/components/ui/skeleton` for individual elements
-- Apply `animate-pulse` to a container — all elements pulse together as a unit
-- Match colour tokens exactly from the real component (border, background, text)
-- Always include `dark:` variants
-- Never inline a skeleton in `page.tsx` — extract to `src/components/<feature>/FeatureSkeleton.tsx` so it can be imported by both `<Suspense fallback>` and `loading.tsx`
-
-Full coverage: 20 routes each have a matching `loading.tsx` pointing to a properly-built page skeleton.
-
-### CI Pipeline
-
-`.github/workflows/pr-checks.yml` runs three jobs on every PR:
-
-| Job              | Commands                             | Catches                                                          |
-| :--------------- | :----------------------------------- | :--------------------------------------------------------------- |
-| `lint-and-types` | `npm run lint && npm run type-check` | ESLint violations incl. `cachedPrisma` rule, TS errors           |
-| `test`           | `npm run test -- --ci --forceExit`   | Unit and integration regressions                                 |
-| `build`          | `npm run build` (requires secrets)   | Missing `connection()`, `auth()` in `'use cache'`, crypto errors |
-
-The `build` job is the **only** place missing `connection()` calls surface — these errors only occur during `next build`, not `next dev`. Fork PRs skip it automatically (GitHub withholds secrets from forks).
-
-### Removed Patterns
-
-| Old pattern                                                   | Reason removed                                                          |
-| :------------------------------------------------------------ | :---------------------------------------------------------------------- |
-| `export const dynamic = 'force-dynamic'`                      | Explicitly incompatible with `cacheComponents: true`                    |
-| `export const revalidate = N`                                 | Replaced by `cacheLife()` inside `'use cache'` functions                |
-| `unstable_cache` / `unstable_cacheLife` / `unstable_cacheTag` | Stabilized in Next.js 16 — prefix removed                               |
-| `export const runtime = 'nodejs'`                             | Node.js is the default; Edge runtime unsupported with `cacheComponents` |
-| `LoadingOverlay` spinner as route fallback                    | Replaced by `AppShellSkeleton`                                          |
-
-### Full Reference
-
-Complete implementation details, every pattern, rationale, and checklist: [`docs/cache-components/CACHE_COMPONENTS.md`](./docs/cache-components/CACHE_COMPONENTS.md)
-
-</details>
-
-<details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🏆 Key Achievements</strong> — Multi-tenant, security, AI, learning modules, Lexical editor</summary>
+## 🏆 Key Achievements
 
 <div style="font-size: 16px; line-height: 1.6;">
 
@@ -361,6 +217,222 @@ Complete implementation details, every pattern, rationale, and checklist: [`docs
 
 </div>
 
+---
+
+<h3 style="color: #fbbb74; margin: 16px 0 24px 0; font-weight: 300; font-style: italic; font-size: 1.3rem;">
+    Click any section below to expand and read the details.
+</h3>
+
+<details style="margin-bottom: 16px;">
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>⚡ Next.js 16 Partial Prerendering — Architecture & Standards</strong> — cacheComponents, dual Prisma, skeleton system, ESLint enforcement, CI</summary>
+
+<div align="center">
+<em>Production-grade PPR implementation: static HTML shells from CDN, dynamic content streamed per-request, zero loading spinners</em>
+</div>
+
+<br/>
+
+**Status:** ✅ **Production — May 2026**
+
+### Version History
+
+| Milestone                            | Date            | What shipped                                                                                                                                                                                  |
+| :----------------------------------- | :-------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `cachedPrisma` + `safeFetch` loaders | Nov 2025        | Dual Prisma client split; `safeFetch` utility and per-route loader pattern established                                                                                                        |
+| Next.js 16 upgrade                   | Feb 12, 2026    | Bumped to 16.1.6 (latest available at the time); `cacheComponents: true` attempted but abandoned — Clerk's `auth()` inside `'use cache'` caused build failures with no workaround at the time |
+| `unstable_cache` production baseline | Feb–May 2026    | Continued using `unstable_cache` / `unstable_cacheLife` / `unstable_cacheTag` as the stable caching strategy while `cacheComponents` remained blocked                                         |
+| **First successful PPR**             | **May 8, 2026** | Clerk `HangingPromiseRejectionError` solved via `AuthRequiredError` + silent fallback in `claimsFn`; `cacheComponents: true` live for the first time across all routes                        |
+| `'use cache'` migration              | May 8, 2026     | Full codebase migrated from `unstable_*` to stable `'use cache'` directive, `cacheLife()`, `cacheTag()`                                                                                       |
+| `cache-utils/` consolidation         | May 8, 2026     | `safe-fetch`, `cache-ttl`, `cache-monitor`, `dynamic-loader`, `invalidate` unified into `src/lib/cache-utils/`                                                                                |
+| `dynamicLoader()`                    | May 8, 2026     | `React.cache()` + `connection()` encapsulated as a single primitive; applied across all 17 loader files                                                                                       |
+| `invalidate.*()` helpers             | May 8, 2026     | Typed cache invalidation API replacing raw `revalidateTag()` strings across all server actions                                                                                                |
+| ESLint enforcement                   | May 8, 2026     | `local/no-cached-prisma-outside-use-cache` rule; `no-restricted-syntax` for `console.error` in actions                                                                                        |
+
+Every route in PoliLex is a Partial Prerender (`◐`): the static shell (nav, layout, skeleton UI) is pre-generated at build time and served from CDN with instant TTFB. Dynamic content — auth state, user data, subscription status — streams in behind `<Suspense>` boundaries. The entire application uses the Next.js 16 `'use cache'` directive with `cacheLife()` profiles rather than route-segment config — cache policy lives next to the data, not scattered across page files.
+
+### `src/lib/cache-utils/` — Unified Cache Module
+
+All caching concerns live in a single, purpose-built module. Nothing cache-related is scattered across `src/lib/utils/`, `src/lib/constants/`, or individual action files:
+
+| File                | Responsibility                                                                     |
+| :------------------ | :--------------------------------------------------------------------------------- |
+| `cache-ttl.ts`      | TTL constants & `STABLE_DATA_CACHE_LIFE` — single numeric source of truth          |
+| `safe-fetch.ts`     | `safeFetch()` — loader error handling with `AuthRequiredError` cause-chain walking |
+| `dynamic-loader.ts` | `dynamicLoader()` — wraps `React.cache()` + `connection()` for every loader        |
+| `invalidate.ts`     | `CACHE_TAGS` + `invalidate.*()` — all tag strings and typed invalidation helpers   |
+| `cache-monitor.ts`  | `cacheMonitor` singleton — hit/miss metrics, health summary, invalidation tracking |
+
+### Core Configuration
+
+`next.config.mjs` imports `STABLE_DATA_CACHE_LIFE` directly from `src/lib/cache-utils/cache-ttl.ts` via `jiti`. The `cacheLife` config entry and every `cacheLife()` call inside `'use cache'` functions reference the same object — values cannot drift between build config and runtime:
+
+```ts
+// Single source of truth — next.config.mjs reads the same object 'use cache' functions use
+const { STABLE_DATA_CACHE_LIFE } = jiti(
+  resolve(__dirname, './src/lib/cache-utils/cache-ttl.ts'),
+);
+const nextConfig = {
+  cacheComponents: true,
+  cacheLife: { 'stable-data': STABLE_DATA_CACHE_LIFE }, // stale 1h / revalidate 7d / expire 30d
+};
+```
+
+### `dynamicLoader()` — Zero-Boilerplate Loaders
+
+`dynamicLoader()` is a composable primitive that encapsulates the two framework requirements every loader must satisfy: `React.cache()` for per-request memoisation, and `connection()` to register dynamic context before any I/O so Next.js doesn't attempt to statically prerender the route. Without `connection()`, native TCP Prisma queries are invisible to the framework's static-analysis pass and the build throws a `crypto.randomUUID()` error at compile time.
+
+Wrapping these two concerns into a single utility means the pattern is structurally impossible to get wrong — you cannot forget `connection()`, call it in the wrong order, or accidentally duplicate `cache()` boilerplate. It works identically for zero-argument and parameterised loaders:
+
+```ts
+// Zero-argument loader
+export const loadAdjectivesData = dynamicLoader(async () =>
+  safeFetch(getAdjectiveCollectionData, fallback, 'Error:'),
+);
+
+// Parameterised loader — types flow through automatically
+export const loadAspectPairs = dynamicLoader(
+  async (limit: number): Promise<AspectPairsResult> =>
+    safeFetch(() => getCachedAspectPairs({ limit }), fallback, 'Error:'),
+);
+```
+
+### `invalidate.*()` — Typed Cache Invalidation
+
+Raw `revalidateTag()` calls are never used directly in server action files. All cache invalidation goes through named helpers exported from `src/lib/cache-utils/invalidate.ts`, which owns every tag string as a single typed constant:
+
+```ts
+// Tag strings defined once — callers never write raw strings
+invalidate.adjectives();
+invalidate.blog.post(companyId, postId); // touches POST_DETAIL + POSTS_LIST + ANALYTICS atomically
+invalidate.openaiCosts(model); // optional fine-grained model tag + the aggregate tag
+```
+
+The advantage over raw `revalidateTag()` is threefold: tag strings cannot be misspelled (TypeScript errors at the call site), related tags are always invalidated together (e.g. a blog post change also clears the post list and analytics), and the full set of tags in the system is discoverable in one place rather than grep-scattered across action files.
+
+### Dual Prisma Client Pattern
+
+`auth()` (reads cookies/headers) must never be called inside a `'use cache'` function. The project exports two separate Prisma clients at the infrastructure level:
+
+| Client         | Context                                               | RLS                             |
+| :------------- | :---------------------------------------------------- | :------------------------------ |
+| `cachedPrisma` | Inside `'use cache'` functions — public / shared data | Anonymous RLS (empty claims)    |
+| `prisma`       | Loaders and server actions — user-scoped data         | Auth RLS (Clerk session claims) |
+
+The `prisma` client's `claimsFn` wraps `auth()` in try/catch and silently returns empty claims during PPR prerendering (when no request context exists), preventing build failures.
+
+### ESLint Enforcement
+
+Two custom rules in `eslint.config.mjs` catch cache and logging mistakes at write time:
+
+**`local/no-cached-prisma-outside-use-cache`** — warns when `cachedPrisma` is used inside a function that doesn't start with `'use cache'`. Catches accidental RLS bypass. Set to `warn` because the rule cannot trace call stacks — helpers designed to be called _from_ `'use cache'` functions are valid uses:
+
+```ts
+// Blog posts are public data — anonymous RLS is intentional here.
+/* eslint-disable local/no-cached-prisma-outside-use-cache */
+const [posts, total] = await Promise.all([cachedPrisma.blogPost.findMany(...)]);
+/* eslint-enable local/no-cached-prisma-outside-use-cache */
+```
+
+**`no-restricted-syntax` on `console.error`** — warns in all `src/lib/actions/actions.*.ts` and `src/app/api/**/*.ts` files, pointing developers to `logUserError()` instead. `logUserError` silently swallows `AuthRequiredError` (expected during PPR prerendering) and uses `error.message` + stack-frame fallback rather than `error.constructor.name`, which production minifiers mangle to single letters:
+
+```ts
+// Bad — constructor names mangle to 'i' or 'c' in production builds
+console.error(
+  'Update failed:',
+  error instanceof Error ? error.constructor.name : typeof error,
+);
+
+// Good — always produces useful output in production
+logUserError('Update failed:', error);
+```
+
+### Silent Auth Fallback During Prerendering
+
+During static prerendering there is no request context, so Clerk's `auth()` rejects with an internal `HangingPromiseRejectionError`. The solution is a typed `AuthRequiredError` class defined in a **client-safe** module (`src/lib/errors/auth-errors.ts`) with no server-only imports — essential because auth error detection runs in both server and client contexts:
+
+```ts
+// Brand property survives minification — class names mangle to 'i' or 'c' in production
+export class AuthRequiredError extends Error {
+  readonly isAuthRequiredError = true;
+}
+```
+
+All auth-gate helpers (`requireAuth`, `requireAdmin`, `requireSubscription`) catch `HangingPromiseRejectionError` and re-throw `AuthRequiredError`. A shared `safeFetch` utility in every page loader suppresses auth errors with **cause-chain walking** — if an action re-wraps `new Error('...', { cause: authErr })`, `safeFetch` recurses through `.cause` and still silently discards it:
+
+```ts
+function isAuthRequired(error: unknown): boolean {
+  if (error instanceof AuthRequiredError) return true;
+  if (
+    error instanceof Error &&
+    (error as AuthRequiredError).isAuthRequiredError
+  )
+    return true;
+  if (error instanceof Error && error.cause) return isAuthRequired(error.cause); // recursive
+  return false;
+}
+```
+
+`logUserError` replaces bare `console.error` in all action catch blocks. It falls back to `error.stack` frame extraction when `error.message` is empty — production minifiers mangle constructor names to single letters, making `error.constructor.name` useless as a log value.
+
+### `connection()` for cachedPrisma-only Pages
+
+Next.js tracks dynamic context through `fetch()`, `cookies()`, `headers()`, and `connection()`. Native TCP Prisma queries are not tracked. Pages whose first I/O is `cachedPrisma` (no preceding `auth()`) must call `await connection()` explicitly to register dynamic context — otherwise `crypto.randomUUID()` inside the Prisma PG adapter throws at build time:
+
+> Route "/video" used `crypto.randomUUID()` before accessing either uncached data or Request data.
+
+`connection()` lives in the **loader function**, not the page component, keeping framework internals out of the UI layer.
+
+### Navigation + Streaming Skeleton System
+
+Every route that streams dynamic content through a `<Suspense>` boundary uses **both** loading mechanisms:
+
+```
+User clicks <Link href="/adjectives" />
+  │
+  ├─ loading.tsx → AdjectivesPageSkeleton     ← navigation window (before server responds)
+  ├─ Server responds: static shell
+  ├─ <Suspense fallback={<AdjectivesPageSkeleton />}> ← streaming window (while data resolves)
+  └─ dataPromise resolves → full page
+```
+
+`src/app/loading.tsx` (root fallback) exports `AppShellSkeleton` — a pure Server Component that pixel-accurately mirrors the real Navbar: exact `bg-white dark:bg-gray-800`, same `h-8 min-w-20.5 rounded-full` pill tokens for LanguageSelector and DarkToggle, same gradient shells for the icon buttons. All 21 routes use the same skeleton-component contract rather than inline fallbacks or full-screen spinners.
+
+**Skeleton creation standards enforced across the codebase:**
+
+- Use `<Skeleton>` from `@/components/ui/skeleton` for individual elements
+- Apply `animate-pulse` to a container — all elements pulse together as a unit
+- Match colour tokens exactly from the real component (border, background, text)
+- Always include `dark:` variants
+- Never inline a skeleton in `page.tsx` — extract to `src/components/<feature>/FeatureSkeleton.tsx` so it can be imported by both `<Suspense fallback>` and `loading.tsx`
+
+Full coverage: 21 routes each have a matching `loading.tsx` pointing to a properly-built page skeleton.
+
+### CI Pipeline
+
+`.github/workflows/pr-checks.yml` runs three jobs on every PR:
+
+| Job              | Commands                             | Catches                                                          |
+| :--------------- | :----------------------------------- | :--------------------------------------------------------------- |
+| `lint-and-types` | `npm run lint && npm run type-check` | ESLint violations incl. `cachedPrisma` rule, TS errors           |
+| `test`           | `npm run test -- --ci --forceExit`   | Unit and integration regressions                                 |
+| `build`          | `npm run build` (requires secrets)   | Missing `connection()`, `auth()` in `'use cache'`, crypto errors |
+
+The `build` job is the **only** place missing `connection()` calls surface — these errors only occur during `next build`, not `next dev`. Fork PRs skip it automatically (GitHub withholds secrets from forks).
+
+### Architecture Decisions
+
+| Decision                                                         | Rationale                                                                                                                                    |
+| :--------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------- |
+| No `export const dynamic = 'force-dynamic'`                      | Explicitly incompatible with `cacheComponents: true` — opt-in to dynamic is done via `connection()` inside loaders                           |
+| No route-level `export const revalidate = N`                     | Cache policy lives in `'use cache'` functions via `cacheLife()`, not at the page level — co-located with the data it covers                  |
+| No `unstable_cache` / `unstable_cacheLife` / `unstable_cacheTag` | These were the correct Next.js 15 APIs; Next.js 16 stabilised them — the `unstable_` prefix is gone and the stable forms are used throughout |
+| No `export const runtime = 'nodejs'`                             | Node.js is the default runtime; Edge runtime is unsupported with `cacheComponents` and incompatible with native Prisma                       |
+| No spinner fallbacks                                             | Route `loading.tsx` files export purpose-built skeleton components — pixel-accurate to the real UI, animate as a unit                        |
+
+### Full Reference
+
+Complete implementation details, every pattern, rationale, and checklist: [`docs/cache-components/CACHE_COMPONENTS.md`](./docs/cache-components/CACHE_COMPONENTS.md)
+
 </details>
 
 <details style="margin-bottom: 16px;">
@@ -373,6 +445,16 @@ Complete implementation details, every pattern, rationale, and checklist: [`docs
 <br/>
 
 **System Status:** ✅ **v2.5 — Production Ready** (April 2026; v2.4 live validation March 2026)
+
+### Version History
+
+| Version | Date         | Focus                                                                                                                                   |
+| :------ | :----------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
+| v2.1    | Jan 2026     | Three-layer security hardening: Zuplo edge IP allowlist, HMAC webhook verification, Prisma `Serializable` isolation                     |
+| v2.2    | Jan 28, 2026 | `subscription.created` event support, duplicate transaction prevention, custom in-app subscription UI replacing Polar portal            |
+| v2.3    | Jan 28, 2026 | Payment failure UX (`PaymentFailureAlert`, `past_due` flow), automated reconciliation / cleanup / webhook-recovery crons                |
+| v2.4    | March 2026   | Modular webhook handlers (`src/hooks/webhooks/polar/`), explicit `claimWebhookEvent` + `markWebhookEventProcessed` idempotency refactor |
+| v2.5    | April 2026   | `customer.state_changed` first-class handler, `period.ended` routing, order de-duplication, structured file-sink logging                |
 
 ### Billing: Polar (Merchant of Record)
 
@@ -444,7 +526,7 @@ flowchart LR
 **Design Principles:**
 
 - **Polar as source of truth** — Subscription and order reality comes only from **Polar** (webhooks + API). Postgres and Clerk are **projections**; drift is **corrected** toward Polar (live reads, reconciliation, crons).
-- **Financial Software Standards** — Zero tolerance for bugs where money is involved; heavy Jest coverage on `__tests__/lib/polar` + `__tests__/api/webhook` (**634** tests) and dedicated state-machine matrices
+- **Financial Software Standards** — Zero tolerance for bugs where money is involved; heavy Jest coverage on `__tests__/lib/polar` + `__tests__/api/webhook` (**632** tests) and dedicated state-machine matrices
 - **Database-Backed Idempotency** — Claim→apply→mark via `claimWebhookEvent` + `markWebhookEventProcessed` in `src/lib/polar/webhook-idempotency.ts` (insert claim, P2002 = duplicate); stable `eventId`s prevent double-processing
 - **Fail-Closed for Money** — Balance mutations fail-closed; metadata sync fail-open for optimal reliability
 - **Event-Driven Processing** — Asynchronous webhook handlers with state machine validation and transaction atomicity
@@ -498,7 +580,7 @@ flowchart LR
 
 **Event matrix** (subscription + `customer.state_changed` use claim→mark on the route; **top-up** `order.paid` / `order.refunded` claim inside `handleTopup` / `handleOrderRefunded` for top-up products only):
 
-| Event                                        | Action                                                                                                                                  | Notes |
+| Event                                        | Action                                                                                                                                  | Since |
 | :------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------- | :---- |
 | `subscription.created`                       | First subscribe / FREE → ACTIVE                                                                                                         | v2.2  |
 | `subscription.active`                        | Allocate tier credits, plan ID, Clerk sync                                                                                              |       |
@@ -540,13 +622,13 @@ flowchart LR
 
 **v2.5 Customer, period & order hardening (April 2026):**
 
-- **`customer.state_changed`** — First-class handler (`applyCustomerStateChanged`) for Polar’s customer-level snapshot: reconciles `active_subscriptions` with the database, with guards when the list is empty but the paid period is still valid, then state-machine + Clerk sync where appropriate; stable idempotency keys per customer + subscription shape.
+- **`customer.state_changed`** — First-class handler (`applyCustomerStateChanged`) for Polar's customer-level snapshot: reconciles `active_subscriptions` with the database, with guards when the list is empty but the paid period is still valid, then state-machine + Clerk sync where appropriate; stable idempotency keys per customer + subscription shape.
 - **Period end** — `period.ended` and `subscription.period_ended` wired through the same `transitionSubscription` + claim→mark path as other subscription events (explicit payload mapping for `subscription_id` / period fields).
 - **Order de-duplication** — `order.paid` / paid `order.updated` **skips** `subscription_create` when the subscription stream already owns allocation, reducing double-processing noise.
 - **Operations visibility** — Rich structured logging on the webhook route (`logPolar`); optional **file-sink** tracing via `webhook-file-logger` (claim, customer state, orders, result/end markers) to support E2E and production debugging; CLI helpers `logs:view`, `logs:clear`, `logs:tail` in `package.json`.
 - **Surface area** — `src/hooks/webhooks/polar/index.ts` exports `applyCustomerStateChanged` alongside existing transition, topup, refund, and retry modules.
 
-### State machine & test architecture (refactored)
+### State machine & test architecture
 
 **Runtime (single source of truth in code):**
 
@@ -584,7 +666,7 @@ Initially, the system relied on Polar's customer portal for all subscription ope
 
 **Custom Implementation:**
 
-Built **4 subscription UI entry points** (primary Jest files: **121** tests total) handling common operations in-app:
+Built **4 subscription UI entry points** (primary Jest files: **246** tests total) handling common operations in-app:
 
 | **Path**                                                                    | **Responsibility**                               | **Tests (Jest)**                                               |
 | :-------------------------------------------------------------------------- | :----------------------------------------------- | :------------------------------------------------------------- |
@@ -696,10 +778,10 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 
 **Automated Testing (verify with `npm test` — numbers below from Jest as run in dev):**
 
-- **Payment stack** — `__tests__/lib/polar` + `__tests__/api/webhook`: **634** Jest tests (idempotency, webhooks, state machine matrices, `transitionSubscription`, chaos/partial-failure suites)
-- **Subscription credits UI** — 121 tests in the four files listed above
+- **Payment stack** — `__tests__/lib/polar` + `__tests__/api/webhook`: **632** Jest tests (idempotency, webhooks, state machine matrices, `transitionSubscription`, chaos/partial-failure suites)
+- **Subscription credits UI** — 246 tests in the four files listed above
 - **Cron routes** — 57 tests under `__tests__/app/api/cron`
-- **Repo-wide** — **5,400+** Jest test cases (e.g. **5,446** on last full `npx jest` run; count shifts as tests are added)
+- **Repo-wide** — **5,297+** Jest test cases (e.g. **5,297** on last full `npx jest` run; count shifts as tests are added)
 - **Financial Standards** — Invariants covered by dedicated suites (`webhook-subscription-transitions`, integration routes)
 - **E2E** — Playwright on critical journeys (`npm run test:e2e*`)
 - **Idempotency** — `__tests__/lib/polar/webhook-idempotency.test.ts` and route integration tests (claim→mark, P2002 duplicates)
@@ -716,7 +798,7 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 - **Payment Failure UX** — Alert component integrated and tested with 2 new scenarios
 - **Automated Health Checks** — Reconciliation and cleanup cron jobs deployed and validated
 
-**Test Execution:** see `npm test`; payment-focused folders alone exceed **600** tests; full Jest run is **5,000+** cases
+**Test Execution:** see `npm test`; payment-focused folders alone exceed **600** tests; full Jest run is **5,297+** cases
 
 ### Comprehensive Documentation
 
@@ -1158,14 +1240,14 @@ self.addEventListener('message', (event) => {
 </details>
 
 <details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🛡️ Testing & Quality</strong> — Jest, Playwright, k6, Artillery, type safety</summary>
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🛡️ Testing & Quality</strong> — Jest, Playwright, Artillery, type safety</summary>
 
 PoliLex is validated with a **full testing pipeline** that combines automated tests, static analysis, and load testing.  
 Every change is validated through:
 
 - **Automated unit and integration suites** using **Jest** and **React Testing Library** for components and business logic
 - **End-to-end regression tests** with **Playwright** for critical user journeys in the browser
-- **Load and performance exercises** with **k6** and **Artillery** focused on core APIs, server-side operations, and caching behavior
+- **Load and performance exercises** with **Artillery** focused on core APIs, server-side operations, and caching behavior
 - **Strict static typing and schema validation** with **TypeScript (strict mode)**, **Prisma**, **Zod**, and **@t3-oss/env-nextjs** for data, inputs, and configuration
 - **Automated linting and formatting** with **ESLint**, **Prettier**, and import-sorting to enforce consistent, production-grade code quality
 - **CI pipeline** (`.github/workflows/pr-checks.yml`) running lint, type-check, Jest, and `next build` on every PR — the build step is the only place missing `connection()` calls and `'use cache'` violations surface (see PPR section above)
@@ -1206,4 +1288,3 @@ Every change is validated through:
 <div align="center">
   <sub style="font-size: 14px;">Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications. GITHUB.md last updated May 2026.</sub>
 </div>
-
