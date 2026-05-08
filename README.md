@@ -3,15 +3,15 @@
   <h3>Full-Stack Developer | AI Solutions</h3>
   
   <div style="margin: 20px 0;">
-    <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js 16" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Next.js-16.1-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js 16.1" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/TypeScript-5.9-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript 5.9" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS 4.1" style="margin: 0 5px;" />
-    <img src="https://img.shields.io/badge/Prisma-7-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma 7" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Prisma-7.2-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma 7.2" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Polar-0062FF?style=for-the-badge&logo=polar&logoColor=white" alt="Polar" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Zuplo-FF00BD?style=for-the-badge&logo=zuplo&logoColor=white" alt="Zuplo" style="margin: 0 5px;" />
-    <img src="https://img.shields.io/badge/Lexical-0668E1?style=for-the-badge&logo=meta&logoColor=white" alt="Lexical Editor" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Lexical-0.38-0668E1?style=for-the-badge&logo=meta&logoColor=white" alt="Lexical 0.38" style="margin: 0 5px;" />
   </div>
 </div>
 
@@ -19,11 +19,11 @@
 
 ## ⚡ **Quick Facts**
 
-| **🎯 Focus**             | **🏗️ Architecture**  | **🤖 AI Integration** | **🧪 Testing**     |
-| :----------------------- | :------------------- | :-------------------- | :----------------- |
-| Full-Stack Development   | Multi-Tenant Systems | OpenAI GPT-4          | 100% Test Coverage |
-| Enterprise Solutions     | Real-time Features   | Realtime API          | E2E Testing        |
-| Polish Language Learning | Secure API Gateway   | Stream Chat           | TypeScript         |
+| **🎯 Focus**             | **🏗️ Architecture**  | **🤖 AI Integration** | **🧪 Testing**       |
+| :----------------------- | :------------------- | :-------------------- | :------------------- |
+| Full-Stack Development   | Multi-Tenant Systems | OpenAI GPT-4          | Jest, Playwright, k6 |
+| Enterprise Solutions     | Real-time Features   | Realtime API          | E2E Testing          |
+| Polish Language Learning | Secure API Gateway   | Stream Chat           | TypeScript           |
 
 ---
 
@@ -35,31 +35,31 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 **🎯 My Expertise:**
 
-- **Modern Web Technologies** - Next.js 16, React 19, TypeScript 5.9
+- **Modern Web Technologies** - Next.js 16.1, React 19, TypeScript 5.9
 - **AI Integration** - OpenAI GPT-4, Realtime API, Whisper, TTS, custom prompts
 - **Enterprise Architecture** - Multi-tenant systems, secure APIs, payment processing
 - **Polish Language Learning** - Combined technical & linguistic expertise with 20+ interactive learning modules
 
 **💼 Current Project:**
-**PoliLex Bilingual** — An AI-enhanced Polish language learning platform. Built for learners who want to actually understand conjugation, aspect, and case (not just phrases). Production-ready subscriptions via Polar, a polished public home page, and deep grammatical-case practice with an integrated AI tutor.
+**PoliLex** - A sophisticated AI-powered language learning platform demonstrating enterprise-level architecture, multi-tenancy, real-time AI integration, and production-ready DevOps practices.
 
 </div>
 
 ---
 
-## 📌 **Current Project: PoliLex Bilingual**
+## 📌 **Current Project: PoliLex**
 
 <div align="center">
 
-[![PoliLex Platform](https://img.shields.io/badge/PoliLex%20Bilingual-AI%20Polish%20Learning-red?style=for-the-badge&logo=language&logoColor=white)](https://lexical-verb.vercel.app/)
+[![PoliLex Platform](https://img.shields.io/badge/PoliLex-AI%20Enhanced%20Polish%20Learning-red?style=for-the-badge&logo=language&logoColor=white)](https://lexical-verb.vercel.app/)
 
-**Polish is hard. Most apps pretend it isn’t.** — Conjugation, aspect, and grammatical case, with real accuracy.
+**Polish language learning platform with sophisticated full-stack architecture**
 
 <br />
 
 <img src="https://github.com/AlexDjangoX/portfolio-alexander/raw/main/public/home-page.png" alt="PoliLex Bilingual — AI-Enhanced Polish Language Learning Platform home page" width="900" />
 
-*Home page: hero with conjugation table, features, how it works, comparison, and social proof (i18n EN/PL, light/dark).*
+_PoliLex Bilingual — home page with conjugation table and hero messaging_
 
 </div>
 
@@ -69,12 +69,12 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 
 | **Category**                 | **Technology / Tools**                               | **Purpose**                                          |
 | :--------------------------- | :--------------------------------------------------- | :--------------------------------------------------- |
-| **Frontend**                 | Next.js 16, React 19                                 | Core application shell and interactive UI            |
+| **Frontend**                 | Next.js 16.1, React 19                               | Core application shell and interactive UI            |
 |                              | TypeScript 5.9                                       | Type-safe client-side development                    |
 |                              | Tailwind CSS 4, ShadCN                               | Design system, layout, and reusable UI components    |
-|                              | Lexical Editor, Framer Motion                        | Rich authoring experience and high-quality motion    |
-| **Backend & Infrastructure** | Prisma 7, PostgreSQL, Supabase                       | Type-safe data access and relational persistence     |
-|                              | Clerk Auth, Polar, Stream Chat, Redis                | Authentication, payments, real-time messaging, cache |
+|                              | Lexical 0.38, Framer Motion                          | Rich authoring experience and high-quality motion    |
+| **Backend & Infrastructure** | Prisma 7.2, PostgreSQL, Supabase                     | Type-safe data access and relational persistence     |
+|                              | Clerk Auth, Polar, Stream Chat                       | Authentication, payments, real-time messaging        |
 | **Testing & Quality**        | Jest, React Testing Library                          | Unit and integration coverage for components & logic |
 |                              | Playwright                                           | End-to-end browser regression on critical journeys   |
 |                              | k6, Artillery                                        | Load and performance validation for APIs and flows   |
@@ -92,15 +92,148 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 </h3>
 
 <details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🏆 Key Achievements</strong> — Home page, Polar subscriptions, grammatical cases, AI tutor, learning modules, Lexical editor</summary>
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>⚡ Next.js 16 Partial Prerendering — Architecture & Standards</strong> — cacheComponents, dual Prisma, skeleton system, ESLint enforcement, CI</summary>
+
+<div align="center">
+<em>Production-grade PPR implementation: static HTML shells from CDN, dynamic content streamed per-request, zero loading spinners</em>
+</div>
+
+<br/>
+
+**Status:** ✅ **Production — May 2026**
+
+Every route in PoliLex is a Partial Prerender (`◐`): the static shell (nav, layout, skeleton UI) is pre-generated at build time and served from CDN with instant TTFB. Dynamic content — auth state, user data, subscription status — streams in behind `<Suspense>` boundaries. This was a full codebase migration from `unstable_cache` + `force-dynamic` patterns to the Next.js 16 cache model.
+
+### Core Configuration
+
+`next.config.mjs` imports `STABLE_DATA_CACHE_LIFE` directly from `src/lib/constants/cache-ttl.ts` via `jiti`. The `cacheLife` config entry and every `cacheLife()` call inside `'use cache'` functions reference the same object — values cannot drift between build config and runtime:
+
+```ts
+// Single source of truth — next.config.mjs reads the same object 'use cache' functions use
+const { STABLE_DATA_CACHE_LIFE } = jiti(
+  resolve(__dirname, './src/lib/constants/cache-ttl.ts'),
+);
+const nextConfig = {
+  cacheComponents: true,
+  cacheLife: { 'stable-data': STABLE_DATA_CACHE_LIFE }, // stale 1h / revalidate 7d / expire 30d
+};
+```
+
+### Dual Prisma Client Pattern
+
+`auth()` (reads cookies/headers) must never be called inside a `'use cache'` function. The project exports two separate Prisma clients at the infrastructure level:
+
+| Client         | Context                                               | RLS                             |
+| :------------- | :---------------------------------------------------- | :------------------------------ |
+| `cachedPrisma` | Inside `'use cache'` functions — public / shared data | Anonymous RLS (empty claims)    |
+| `prisma`       | Loaders and server actions — user-scoped data         | Auth RLS (Clerk session claims) |
+
+The `prisma` client's `claimsFn` wraps `auth()` in try/catch and silently returns empty claims during PPR prerendering (when no request context exists), preventing build failures.
+
+### ESLint Enforcement
+
+A local inline rule (`local/no-cached-prisma-outside-use-cache`) in `eslint.config.mjs` warns when `cachedPrisma` is used inside a function that doesn't start with `'use cache'`. This catches accidental RLS bypass at write time. Set to `warn` (not `error`) because the rule cannot trace call stacks — delegate helpers explicitly designed to be called from `'use cache'` functions are valid uses. Suppress with a block comment when the use is intentionally public:
+
+```ts
+// Blog posts are public data — anonymous RLS is intentional here.
+/* eslint-disable local/no-cached-prisma-outside-use-cache */
+const [posts, total] = await Promise.all([cachedPrisma.blogPost.findMany(...)]);
+/* eslint-enable local/no-cached-prisma-outside-use-cache */
+```
+
+### Silent Auth Fallback During Prerendering
+
+During static prerendering there is no request context, so Clerk's `auth()` rejects with an internal `HangingPromiseRejectionError`. The solution is a typed `AuthRequiredError` class defined in a **client-safe** module (`src/lib/errors/auth-errors.ts`) with no server-only imports — essential because auth error detection runs in both server and client contexts:
+
+```ts
+// Brand property survives minification — class names mangle to 'i' or 'c' in production
+export class AuthRequiredError extends Error {
+  readonly isAuthRequiredError = true;
+}
+```
+
+All auth-gate helpers (`requireAuth`, `requireAdmin`, `requireSubscription`) catch `HangingPromiseRejectionError` and re-throw `AuthRequiredError`. A shared `safeFetch` utility in every page loader suppresses auth errors with **cause-chain walking** — if an action re-wraps `new Error('...', { cause: authErr })`, `safeFetch` recurses through `.cause` and still silently discards it:
+
+```ts
+function isAuthRequired(error: unknown): boolean {
+  if (error instanceof AuthRequiredError) return true;
+  if (
+    error instanceof Error &&
+    (error as AuthRequiredError).isAuthRequiredError
+  )
+    return true;
+  if (error instanceof Error && error.cause) return isAuthRequired(error.cause); // recursive
+  return false;
+}
+```
+
+`logUserError` replaces bare `console.error` in all action catch blocks. It falls back to `error.stack` frame extraction when `error.message` is empty — production minifiers mangle constructor names to single letters, making `error.constructor.name` useless as a log value.
+
+### `connection()` for cachedPrisma-only Pages
+
+Next.js tracks dynamic context through `fetch()`, `cookies()`, `headers()`, and `connection()`. Native TCP Prisma queries are not tracked. Pages whose first I/O is `cachedPrisma` (no preceding `auth()`) must call `await connection()` explicitly to register dynamic context — otherwise `crypto.randomUUID()` inside the Prisma PG adapter throws at build time:
+
+> Route "/video" used `crypto.randomUUID()` before accessing either uncached data or Request data.
+
+`connection()` lives in the **loader function**, not the page component, keeping framework internals out of the UI layer.
+
+### Navigation + Streaming Skeleton System
+
+Every route that streams dynamic content through a `<Suspense>` boundary uses **both** loading mechanisms:
+
+```
+User clicks <Link href="/adjectives" />
+  │
+  ├─ loading.tsx → AdjectivesPageSkeleton     ← navigation window (before server responds)
+  ├─ Server responds: static shell
+  ├─ <Suspense fallback={<AdjectivesPageSkeleton />}> ← streaming window (while data resolves)
+  └─ dataPromise resolves → full page
+```
+
+`src/app/loading.tsx` (root fallback) exports `AppShellSkeleton` — the former `LoadingOverlay` black-overlay spinner has been removed entirely. `AppShellSkeleton` is a pure Server Component that pixel-accurately mirrors the real Navbar: exact `bg-white dark:bg-gray-800`, same `h-8 min-w-20.5 rounded-full` pill tokens for LanguageSelector and DarkToggle, same gradient shells for the icon buttons.
+
+**Skeleton creation standards enforced across the codebase:**
+
+- Use `<Skeleton>` from `@/components/ui/skeleton` for individual elements
+- Apply `animate-pulse` to a container — all elements pulse together as a unit
+- Match colour tokens exactly from the real component (border, background, text)
+- Always include `dark:` variants
+- Never inline a skeleton in `page.tsx` — extract to `src/components/<feature>/FeatureSkeleton.tsx` so it can be imported by both `<Suspense fallback>` and `loading.tsx`
+
+Full coverage: 20 routes each have a matching `loading.tsx` pointing to a properly-built page skeleton.
+
+### CI Pipeline
+
+`.github/workflows/pr-checks.yml` runs three jobs on every PR:
+
+| Job              | Commands                             | Catches                                                          |
+| :--------------- | :----------------------------------- | :--------------------------------------------------------------- |
+| `lint-and-types` | `npm run lint && npm run type-check` | ESLint violations incl. `cachedPrisma` rule, TS errors           |
+| `test`           | `npm run test -- --ci --forceExit`   | Unit and integration regressions                                 |
+| `build`          | `npm run build` (requires secrets)   | Missing `connection()`, `auth()` in `'use cache'`, crypto errors |
+
+The `build` job is the **only** place missing `connection()` calls surface — these errors only occur during `next build`, not `next dev`. Fork PRs skip it automatically (GitHub withholds secrets from forks).
+
+### Removed Patterns
+
+| Old pattern                                                   | Reason removed                                                          |
+| :------------------------------------------------------------ | :---------------------------------------------------------------------- |
+| `export const dynamic = 'force-dynamic'`                      | Explicitly incompatible with `cacheComponents: true`                    |
+| `export const revalidate = N`                                 | Replaced by `cacheLife()` inside `'use cache'` functions                |
+| `unstable_cache` / `unstable_cacheLife` / `unstable_cacheTag` | Stabilized in Next.js 16 — prefix removed                               |
+| `export const runtime = 'nodejs'`                             | Node.js is the default; Edge runtime unsupported with `cacheComponents` |
+| `LoadingOverlay` spinner as route fallback                    | Replaced by `AppShellSkeleton`                                          |
+
+### Full Reference
+
+Complete implementation details, every pattern, rationale, and checklist: [`docs/cache-components/CACHE_COMPONENTS.md`](./docs/cache-components/CACHE_COMPONENTS.md)
+
+</details>
+
+<details style="margin-bottom: 16px;">
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🏆 Key Achievements</strong> — Multi-tenant, security, AI, learning modules, Lexical editor</summary>
 
 <div style="font-size: 16px; line-height: 1.6;">
-
-### Public-Facing Home Page
-
-- **Landing experience** — Hero with live conjugation table (e.g. robić/zrobić), pain-point bar (“Not another phrase app”), Features, How it works, Compare, Reviews, and Get started CTA
-- **i18n** — Full English and Polish for landing copy; theme toggle (light/dark)
-- **SEO & metadata** — Canonical URL, titles, and descriptions tuned for AI Polish tutor and case/conjugation keywords
 
 ### Multi-Tenant Architecture
 
@@ -134,6 +267,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **Aspect Master** - Verb aspect practice with quizzes, challenges, and timeline visualization
 - **Reflexive Lab** - Reflexive verb journeys with categories and templates
 - **Preposition Lab** - Interactive preposition challenges with case governance
+- **Declension** - Dedicated case-practice flow: game rounds, per-case panels, session bootstrap and reconciliation, and interactive exercise text segments (i18n)
 - **Motion Lab** - Verbs of motion (unidirectional/multidirectional pairs)
 - **Verb Prefixes** - Perfective prefix forms and transformations
 - **Conjugator** - Interactive Kanban board for verb conjugation practice
@@ -147,7 +281,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **Occupations** - 5 interactive games (Flashcards, Quiz, Memory, Drag & Drop, Sentence Builder)
 - **Word Wizard** - AI-assisted vocabulary building with audio pronunciation
 - **Flashcards** - Customizable flashcards with example sentences
-- **Grammatical Cases** - Full case practice: sentence and paragraph fill-in-the-blank, filters (case, difficulty, type), integrated AI tutor assistant, progress tracking, and optional game mode (e.g. Nom/Gen)
+- **Cases** - Grammatical case mastery through fill-in-the-blank exercises
 - **Days & Months** - Temporal vocabulary practice
 - **Genealogy** - Interactive family tree drag-and-drop game
 
@@ -230,19 +364,19 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 </details>
 
 <details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong>💳 Production Payment Infrastructure (Polar)</strong> — Subscriptions, webhooks, custom UI, cron automation</summary>
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>💳 Production Payment Infrastructure (v2.5)</strong> — Source of truth &amp; sync (Polar → DB → Clerk), webhooks, customer &amp; period events, custom UI, observability</summary>
 
 <div align="center">
-<em>Enterprise-grade subscription and payment system built with financial software engineering standards. Continuously maintained and validated in production.</em>
+<em>Enterprise-grade subscription and payment system built with financial software engineering standards</em>
 </div>
 
 <br/>
 
-**System Status:** ✅ **v2.3 — Production Ready & Live Validated** (2026 — in continuous production use)
+**System Status:** ✅ **v2.5 — Production Ready** (April 2026; v2.4 live validation March 2026)
 
-### Strategic Migration: Stripe → Polar
+### Billing: Polar (Merchant of Record)
 
-Migrated from Stripe to **Polar** for **international tax compliance** and simplified global operations. Polar acts as Merchant of Record, handling VAT, GST, and sales tax obligations across 100+ countries—eliminating the operational burden and legal exposure that Stripe leaves to merchants when selling internationally.
+**Polar** is the payment and subscription stack for **international tax compliance** and simplified global operations. It acts as Merchant of Record, handling VAT, GST, and sales tax obligations across 100+ countries—reducing operational burden versus acting as the merchant of record yourself.
 
 **Business Value:**
 
@@ -251,30 +385,87 @@ Migrated from Stripe to **Polar** for **international tax compliance** and simpl
 - ✅ **Zero Tax Registration** — Sell worldwide without jurisdiction-specific registrations
 - ✅ **Simplified Operations** — Single integration, worldwide coverage, reduced overhead
 
+### Source of truth & state synchronization
+
+**Principle: Polar is the source of truth** for **subscription and order state** (what the customer is entitled to, what was charged, and what Polar’s API returns). Nothing in the app “overrules” Polar for billing reality: **Postgres** holds **materialized** state and **app-derived** fields (e.g. token balances from your rules applied to Polar events); **Clerk** is a **cache** for fast auth and Edge gating. If Postgres or Clerk **lag** Polar, **reconciliation and live reads** converge back to Polar — see crons and `getSubscriptionStatus` / `resolvePolarSubscriptionForAccount`.
+
+**Mental model:** one authority (**Polar**), two projections (**DB** = durable + tokens, **Clerk** = session cache), with explicit **sync** and **repair** paths.
+
+#### Who owns what
+
+| **Layer**                                                         | **Role**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **In code**                                                                                                                                                                                                                             |
+| :---------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Polar** (API + webhooks)                                        | **Source of truth** for subscription _identity_ and orders: MoR records, what was paid, period boundaries, and signed webhooks. Live API reads and webhook streams are the same commercial reality.                                                                                                                                                                                                                                                                                        | `src/app/api/webhook/polar/route.ts` → handlers; `getPolarClient()`; `getPolarSubscriptionState` / `resolvePolarSubscriptionForAccount` in `src/lib/polar/subscription-state.ts`                                                        |
+| **PostgreSQL** (Prisma: `User`, `Transaction`, `WebhookEvent`, …) | **Materialized + app ledger** — **not** a second billing authority. Stores balances and polar\* columns **as applied from Polar events** (webhooks, crons) plus idempotency keys. Token math is your product policy **on top of** Polar-driven tier/order facts.                                                                                                                                                                                                                           | Webhook handlers under `src/hooks/webhooks/polar/`; `src/lib/polar/cron/polar-reconciliation.ts`, etc.                                                                                                                                  |
+| **Clerk `publicMetadata`**                                        | **Read-optimized cache** for the session and Edge: plan, `hasActiveSubscription`, payment flags. If **`syncClerk` fails** after a webhook, the handler still succeeds: the **webhook was already applied to Postgres from Polar’s event** — only Clerk is stale. _“The DB is the source of truth; Clerk is a cache…”_ in `src/hooks/webhooks/polar/sync-clerk.ts` means **Clerk** must not block money writes; **Polar** already decided the event; **Postgres** holds the applied result. | `syncClerk`; `syncClerkPublicMetadataFromDatabase` in `src/lib/clerk/sync-public-metadata-from-database.ts`                                                                                                                             |
+| **Client** (credits UI)                                           | **Consumes** server-computed status; does not invent billing state.                                                                                                                                                                                                                                                                                                                                                                                                                        | `getSubscriptionStatus()` — `src/lib/actions/actions.subscriptions.ts`; `useSubscriptionPolling` + `SubscriptionProvider` — `src/components/credits/subscription/`; token UI may use `useTokenBalance` — `src/store/useTokenBalance.ts` |
+
+#### Write path (money events)
+
+1. Polar sends a webhook → **`validateEvent`** (`@polar-sh/sdk/webhooks`) on `src/app/api/webhook/polar/route.ts`.
+2. **Claim** → **`claimWebhookEvent`** (`src/lib/polar/webhook-idempotency.ts`) — unique row per `provider` + `eventType` + `eventId` (P2002 = duplicate delivery, skip).
+3. **Apply** → e.g. `transitionSubscription`, `handleTopup`, `applyCustomerStateChanged`, `handleOrderRefunded` — **Prisma** updated (balances, rows).
+4. **Mark** → **`markWebhookEventProcessed`** with a `resultSnapshot`.
+5. **Best-effort Clerk** → **`syncClerk`** so middleware/UI see fresh metadata **after** the DB commit (failures logged; do not roll back money).
+
+#### Read path (UI, credits, gating)
+
+- **`getSubscriptionStatus()`** (`src/lib/actions/actions.subscriptions.ts`):
+  - Always reads **tokens** and stable user keys from **Prisma**.
+  - Merges **live Polar** via **`resolvePolarSubscriptionForAccount`** so subscription _identity_ matches **Polar** when the API is available (overrides a stale **local** mirror). If Polar is unreachable, response falls back to last-known DB state (logged) — a **degraded** read, not a second authority.
+  - **Edge case** in code: if Polar’s API shows no sub yet the DB has a still-valid `polarCurrentPeriodEnd` (e.g. migration/restored user), access may be granted from DB **until** Polar and reconciliation **align** — treat as **bridging**, not a competing SoT.
+  - **Background** **`syncClerkMetadataInBackground`** — repairs Clerk from computed state **without** blocking the response (comments: Clerk is a cache; webhooks are primary).
+- **Sign-in / mobile:** **`syncClerkPublicMetadataFromDatabase`** — re-hydrates Clerk from **Prisma + Polar** (see file header: _“Polar query failure is non-fatal — falls back to existing DB data”_). Used e.g. by **`POST /api/me/sync-public-metadata`** (Bearer JWT) for clients with empty metadata.
+- **Route protection:** `src/proxy.ts` — subscription gating calls **`evaluateSubscriptionGate`** in `src/lib/polar/derive-subscription-status.ts` (same rules as the former inline block; **Clerk** `publicMetadata` only, Edge-safe).
+
+#### Reconciliation (scheduled)
+
+Daily crons and **`retryWebhookEvent`** (see _Automated Maintenance System_) re-align **DB** and **Clerk** **to Polar** when webhooks are missed or processes crash after claim; see `src/lib/polar/cron/webhook-retry.ts` and related routes.
+
+#### Flow diagram
+
+```mermaid
+flowchart LR
+  subgraph polar [Polar MoR]
+    WH[Webhooks] --- API[Subscriptions API]
+  end
+  WH -->|HMAC + claim| DB[(Postgres / Prisma)]
+  DB -->|apply + mark| DB
+  DB -->|best effort| Clerk[(Clerk publicMetadata)]
+  API -->|live read| GS[getSubscriptionStatus]
+  DB --> GS
+  GS -->|background repair| Clerk
+  GS --> UI[Credits / clients]
+  Clerk --> MW[proxy / middleware gating]
+```
+
 ### System Architecture
 
 **Design Principles:**
 
-- **Financial Software Standards** — Zero tolerance for bugs where money is involved; 87% test coverage with 279 comprehensive tests
-- **Database-Backed Idempotency** — All webhook events use stable keys with persistent storage; prevents double-crediting on retries
+- **Polar as source of truth** — Subscription and order reality comes only from **Polar** (webhooks + API). Postgres and Clerk are **projections**; drift is **corrected** toward Polar (live reads, reconciliation, crons).
+- **Financial Software Standards** — Zero tolerance for bugs where money is involved; heavy Jest coverage on `__tests__/lib/polar` + `__tests__/api/webhook` (**634** tests) and dedicated state-machine matrices
+- **Database-Backed Idempotency** — Claim→apply→mark via `claimWebhookEvent` + `markWebhookEventProcessed` in `src/lib/polar/webhook-idempotency.ts` (insert claim, P2002 = duplicate); stable `eventId`s prevent double-processing
 - **Fail-Closed for Money** — Balance mutations fail-closed; metadata sync fail-open for optimal reliability
 - **Event-Driven Processing** — Asynchronous webhook handlers with state machine validation and transaction atomicity
 - **Live Validated** — 100% congruency verified across Polar ↔ Backend ↔ Clerk ↔ Frontend through comprehensive E2E testing
 - **Custom UI Control** — In-app subscription management (v2.2) for 95% of operations, Polar portal for payment-sensitive 5%
 
-| **Component**         | **Implementation**                                                   |
-| :-------------------- | :------------------------------------------------------------------- |
-| API Integration       | Singleton client with exponential backoff retry (3 attempts, jitter) |
-| Security Layer        | Multi-layer validation (Zod schemas + business logic allowlists)     |
-| Webhook Processing    | HMAC signature verification with idempotent event handling           |
-| Error Handling        | Sanitized user messages; internal details never exposed              |
-| State Synchronization | Real-time sync between database, Clerk metadata, and Zustand store   |
+| **Component**         | **Implementation**                                                                                                                                                                                                                                                   |
+| :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| API Integration       | `getPolarClient()` — `src/lib/polar/client.ts` (`@polar-sh/sdk`); `withRetry` / `withRetryConditional` — `src/lib/polar/retry.ts` (default `maxRetries: 3` → up to **4** attempts, exponential backoff + jitter)                                                     |
+| Security Layer        | Multi-layer validation (Zod schemas + business logic allowlists)                                                                                                                                                                                                     |
+| Webhook entry         | `src/app/api/webhook/polar/route.ts` — `validateEvent` from `@polar-sh/sdk/webhooks`, then dispatch to handlers below                                                                                                                                                |
+| Webhook Processing    | Modular handlers in `src/hooks/webhooks/polar/`; HMAC + claim→mark idempotency for subscription / `customer.state_changed`; top-up orders use claim→mark inside `handleTopup` / `handleOrderRefunded`                                                                |
+| Error Handling        | Sanitized user messages; internal details never exposed                                                                                                                                                                                                              |
+| State Synchronization | **Polar → Prisma (webhooks + crons) → best-effort Clerk**; **reads** via `getSubscriptionStatus` (Polar live merge + DB tokens); see **Source of truth & state synchronization** above; client: `SubscriptionContext` / polling; `useTokenBalance` for token UI only |
+| Debug & observability | `logPolar` / `src/lib/polar/debug/polar-logger.ts`; per-request `src/lib/polar/webhook-file-logger.ts`; `npm run logs:view` / `logs:clear` / `logs:tail` → `src/lib/polar/debug/view-polar-logs.js`                                                                  |
 
 ### Dual-Balance Token System
 
 **Architecture:**
 
-- **Subscription Tokens** (`tokenBalance`) — Monthly allocation, resets on renewal (e.g., 1,000 for Pro, 2,500 for Premium)
+- **Subscription Tokens** (`tokenBalance`) — Tier allocation from `getCreditsForProductId` / `CREDIT_ALLOCATIONS` in `src/lib/polar/utils.ts` (e.g. 1,000 Pro, 2,500 Premium; free tier `FREE_TIER_CREDITS` = **100**)
 - **Top-up Tokens** (`topupTokenBalance`) — Purchased tokens, persist indefinitely
 - **Spending Priority** — Subscription tokens consumed first (monthly reset), then top-up tokens (never expire)
 - **Balance Preservation** — Subscription changes preserve purchased tokens via pure calculation: `newBalance = newCredits + max(0, currentTotal - oldCredits)`
@@ -293,8 +484,8 @@ Migrated from Stripe to **Polar** for **international tax compliance** and simpl
 2. **Application Layer**
    - Multi-layer validation (Zod UUID → Business logic allowlist → Runtime auth)
    - HMAC signature verification via Polar SDK on all webhook payloads
-   - Database-backed idempotency with stable keys (no timestamps, prevents replay attacks)
-   - Atomic transactions with Serializable isolation (prevents race conditions)
+   - Database-backed idempotency — `claimWebhookEvent` + `markWebhookEventProcessed` with stable keys (duplicate insert P2002 → skip)
+   - Prisma `Serializable` isolation where used for race-sensitive billing/user updates (see e.g. critical user action paths)
    - Zero-trust metadata (token amounts derived from productId only, not client data)
 
 3. **Data Layer**
@@ -305,19 +496,21 @@ Migrated from Stripe to **Polar** for **international tax compliance** and simpl
 
 ### Webhook Event Handling
 
-**9 Event Types Processed:**
+**Event matrix** (subscription + `customer.state_changed` use claim→mark on the route; **top-up** `order.paid` / `order.refunded` claim inside `handleTopup` / `handleOrderRefunded` for top-up products only):
 
-| Event                     | Action                                                      | v2.2 Status |
-| :------------------------ | :---------------------------------------------------------- | :---------- |
-| `subscription.created`    | First event when subscribing, transitions FREE → ACTIVE     | NEW         |
-| `subscription.active`     | Allocate tier credits, update plan ID, sync Clerk metadata  |             |
-| `subscription.updated`    | Recalculate balance preserving top-ups, handle plan changes |             |
-| `subscription.canceled`   | Downgrade to free tier at period end                        |             |
-| `subscription.revoked`    | Immediate downgrade, clear subscription fields              |             |
-| `subscription.uncanceled` | Restore subscription, clear payment warnings                | v2.3        |
-| `subscription.past_due`   | Payment failed flag, UI alert with "Fix Payment" CTA        | v2.3        |
-| `order.paid`              | Process one-time purchases, increment purchased balance     |             |
-| `order.refunded`          | Deduct refunded tokens, create audit record                 |             |
+| Event                                        | Action                                                                                                                                  | Notes |
+| :------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------- | :---- |
+| `subscription.created`                       | First subscribe / FREE → ACTIVE                                                                                                         | v2.2  |
+| `subscription.active`                        | Allocate tier credits, plan ID, Clerk sync                                                                                              |       |
+| `subscription.updated`                       | Recalculate balance, top-up preservation, plan changes                                                                                  |       |
+| `subscription.canceled`                      | → `CANCELED_PENDING` in state machine; `transitionSubscription` sets cancel-at-period-end or clears immediately if period already ended |       |
+| `subscription.revoked`                       | Immediate downgrade, clear subscription fields                                                                                          |       |
+| `subscription.uncanceled`                    | Restore subscription, clear payment warnings                                                                                            | v2.3  |
+| `subscription.past_due`                      | Payment failed flag + credits UX                                                                                                        | v2.3  |
+| `period.ended` / `subscription.period_ended` | Period boundary via `transitionSubscription`                                                                                            | v2.5  |
+| `customer.state_changed`                     | Customer snapshot: `applyCustomerStateChanged` (empty active list + valid period guard, state machine, Clerk)                           | v2.5  |
+| `order.paid` / `order.updated` (paid)        | Top-ups; **`subscription_create` skipped** when subscription events own the flow                                                        | v2.5  |
+| `order.refunded`                             | Deduct purchased tokens, audit                                                                                                          |       |
 
 **v2.2 Refinements (Jan 28, 2026):**
 
@@ -339,6 +532,42 @@ Migrated from Stripe to **Polar** for **international tax compliance** and simpl
 - **Cron Security** — Bearer token authorization, IP logging, fail-open error handling
 - **Operational Observability** — Comprehensive logging of execution metrics, desync rates, cleanup counts
 
+**v2.4 Webhook Refactor & Idempotency (March 2026):**
+
+- **Modular Webhook Handlers** — Logic in `src/hooks/webhooks/polar/` (state-machine, subscription-transition, **customer-state-changed**, topup, order-refund, sync-clerk, retry)
+- **Idempotency Hardening** — Explicit `claimWebhookEvent` + `markWebhookEventProcessed` flow; deprecated `checkAndMarkWebhookEventProcessed`
+- **Direct Integration Tests** — 13 tests for claim→mark flow, replay prevention, fail-closed behavior
+
+**v2.5 Customer, period & order hardening (April 2026):**
+
+- **`customer.state_changed`** — First-class handler (`applyCustomerStateChanged`) for Polar’s customer-level snapshot: reconciles `active_subscriptions` with the database, with guards when the list is empty but the paid period is still valid, then state-machine + Clerk sync where appropriate; stable idempotency keys per customer + subscription shape.
+- **Period end** — `period.ended` and `subscription.period_ended` wired through the same `transitionSubscription` + claim→mark path as other subscription events (explicit payload mapping for `subscription_id` / period fields).
+- **Order de-duplication** — `order.paid` / paid `order.updated` **skips** `subscription_create` when the subscription stream already owns allocation, reducing double-processing noise.
+- **Operations visibility** — Rich structured logging on the webhook route (`logPolar`); optional **file-sink** tracing via `webhook-file-logger` (claim, customer state, orders, result/end markers) to support E2E and production debugging; CLI helpers `logs:view`, `logs:clear`, `logs:tail` in `package.json`.
+- **Surface area** — `src/hooks/webhooks/polar/index.ts` exports `applyCustomerStateChanged` alongside existing transition, topup, refund, and retry modules.
+
+### State machine & test architecture (refactored)
+
+**Runtime (single source of truth in code):**
+
+- **Pure state core** — `src/hooks/webhooks/polar/state-machine.ts`: `reduceSubscriptionState` (5 states × `SUBSCRIPTION_EVENTS` including `period.ended`), `reducePlanChange`, `deriveStateFromDb` — no database or network calls.
+- **Typed constants** — `src/hooks/webhooks/polar/polar-types.ts` exposes `SubscriptionState` / `SubscriptionEvent` and runtime arrays `SUBSCRIPTION_STATES` + `SUBSCRIPTION_EVENTS` (and `SUBSCRIPTION_STATE` / `SUBSCRIPTION_EVENT` maps) so tests can iterate **every** state and event in lockstep with the reducer.
+- **Orchestration** — `src/hooks/webhooks/polar/subscription-transition.ts` loads the user, computes `currentState` → `nextState` via the reducer, then executes **per-`nextState`** branches (ACTIVE, PAST_DUE, CANCELED_PENDING with period-edge logic, FREE, REVOKED) including Clerk sync and optional transaction rows.
+- **Token math isolated** — `src/hooks/webhooks/polar/subscription-token-balance.ts`: `computeActiveTransitionTokenBalance` and `computeRevokedTransitionTokenBalance` mirror the ACTIVE/REVOKED paths (incl. `polarSubscriptionIdChanged` for new checkout rows, `likelyStaleUpgrade` to avoid clobbering an already-credited balance, lateral/NONE).
+- **Idempotency helpers** — `subscriptionEventId` and `subscriptionPayloadSnapshot` live next to `transitionSubscription` and encode `period.ended` as `period_ended:{subId}` (and `modifiedAt` / period end where needed).
+
+**How tests are layered (no parallel “fake” state machine in production tests):**
+
+| Layer                       | File                                                            | Role                                                                                                                                                                                                                                                                                          |
+| :-------------------------- | :-------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Matrix + money              | `__tests__/lib/polar/webhook-subscription-transitions.test.ts`  | `calculateTokenBalance` / `compute*` / `subscriptionEventId`; **full Cartesian** `SUBSCRIPTION_STATES` × `SUBSCRIPTION_EVENTS` vs an `EXPECTED_TRANSITIONS` matrix; `deriveStateFromDb`; multi-step user journeys on the **real** `reduceSubscriptionState`                                   |
+| Production branches         | `__tests__/hooks/webhooks/polar/transitionSubscription.test.ts` | **Imports production** `transitionSubscription`; mocks only Prisma, `syncClerk`, loggers — covers guards, each `nextState` arm, token and transaction edge cases                                                                                                                              |
+| Webhook + customer          | `__tests__/api/webhook/polar-state-machine-integration.test.ts` | **Production** `transitionSubscription` and `applyCustomerStateChanged` with shared Prisma mocks; scenario-driven (upgrade, cancel, period end, past_due, invalid transitions, `customer.state_changed`); file header states explicitly: same modules as the route, **no** separate simulator |
+| Historical fixes            | `__tests__/api/webhook/polar-fixes-validation.test.ts`          | Documents early behavioral fixes; uses a **local inline** reducer subset for that narrative (not the import graph) — kept for regression storytelling                                                                                                                                         |
+| Cross-layer (status + gate) | `__tests__/lib/polar/subscription-layer-consistency.test.ts`    | Polar-shaped `subscriptionStatus` via `subscriptionStatusFromPolarState` vs **Clerk-shaped** `evaluateSubscriptionGate` (proxy); `deriveSubscriptionStatusForSessionResponse` vs session lag — **contract** table for one rules story                                                         |
+
+**Takeaway:** transitions are **provable** at the pure layer (exhaustive matrix), **verified** on the real async function, **cross-checked** against customer-level events, and **aligned** across proxy / credits server / Clerk metadata via `src/lib/polar/derive-subscription-status.ts` + consistency tests.
+
 ### Custom UI Evolution: From Portal to In-App Experience
 
 **Strategic Decision (Jan 28, 2026):** Migrated from Polar's hosted customer portal to **custom React components** for subscription management, achieving **greater control** over user experience and business logic.
@@ -355,14 +584,14 @@ Initially, the system relied on Polar's customer portal for all subscription ope
 
 **Custom Implementation:**
 
-Built **4 custom React components** (1,631 tests) handling common subscription operations in-app:
+Built **4 subscription UI entry points** (primary Jest files: **121** tests total) handling common operations in-app:
 
-| **Component**                      | **Responsibility**                       | **Tests** |
-| :--------------------------------- | :--------------------------------------- | :-------- |
-| `SubscriptionPlans.tsx`            | Plan display, upgrade/downgrade UI       | 520       |
-| `ManageSubscriptionBadge.tsx`      | Current plan badge, action buttons       | 292       |
-| `ConfirmationDialog.tsx`           | Destructive action confirmations         | 305       |
-| `useSubscriptionActions.ts` (hook) | Centralized subscription operation logic | 514       |
+| **Path**                                                                    | **Responsibility**                               | **Tests (Jest)**                                               |
+| :-------------------------------------------------------------------------- | :----------------------------------------------- | :------------------------------------------------------------- |
+| `src/components/credits/subscription/plans/SubscriptionPlans.tsx`           | Plan display, upgrade/downgrade UI               | 51 (`__tests__/components/credits/SubscriptionPlans.test.tsx`) |
+| `src/components/credits/ManageSubscriptionBadge.tsx`                        | Current plan badge, actions, payment failure CTA | 29                                                             |
+| `src/components/credits/ConfirmationDialog.tsx`                             | Upgrade / downgrade / cancel confirmations       | 19                                                             |
+| `src/components/credits/subscription/plans/hooks/useSubscriptionActions.ts` | Centralized subscription actions                 | 22 (integration: `SubscriptionActionsIntegration.test.tsx`)    |
 
 **Benefits Achieved:**
 
@@ -418,7 +647,14 @@ Custom UI updates (new plan badge, token balance)
 
 Implemented **automated cron jobs** to maintain system health and prevent data bloat without manual intervention.
 
-**Reconciliation Cron** (`/api/cron/reconciliation`):
+**Polar Reconciliation Cron** (`/api/cron/polar-reconciliation`):
+
+- **Schedule**: Daily at 4:00 AM UTC
+- **Purpose**: Sync database and Clerk with Polar (source of truth)
+- **Process**: For each user with polarCustomerId, query Polar API, compare with DB, fix mismatches
+- **Impact**: Catches re-registration, missed webhooks, manual Polar dashboard changes
+
+**Clerk Reconciliation Cron** (`/api/cron/clerk-reconciliation`):
 
 - **Schedule**: Daily at 3:00 AM UTC (Vercel Hobby–compatible; once per day)
 - **Purpose**: Self-healing system that detects and fixes DB-Clerk desynchronization
@@ -426,13 +662,20 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 - **Monitoring**: Alerts if desync rate exceeds 1%, tracks fix success rate
 - **Impact**: Zero manual intervention required; system self-corrects before users notice issues
 
-**Cleanup Cron** (`/api/cron/cleanup`):
+**Webhook Cleanup Cron** (`/api/cron/webhook-cleanup`):
 
 - **Schedule**: Daily at 2:00 AM UTC
 - **Purpose**: Delete webhook events older than 30 days to prevent database bloat
 - **Process**: Removes processed webhook records while maintaining audit trail for debugging
 - **Retention**: Configurable 30-day history balances compliance with performance
 - **Impact**: Prevents `WebhookEvent` table growth, maintains query performance
+
+**Webhook Recovery Cron** (`/api/cron/webhook-recovery`):
+
+- **Schedule**: Daily at 5:00 AM UTC
+- **Purpose**: Retry unprocessed webhook events (e.g., crashed between claim and mark)
+- **Process**: Finds events with `processedAt: null` in retry window (5 min–24 h old), re-applies via `retryWebhookEvent`
+- **Impact**: Self-healing for transient failures; events older than 24 h marked as failed
 
 **Security Architecture:**
 
@@ -447,23 +690,23 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 - **Cleanup**: ~15,000 events deleted daily, sub-100ms execution time
 - **Reliability**: Zero manual intervention required since deployment
 
-**Test Coverage:** 33 comprehensive tests validating authorization, success scenarios, error handling, and performance across both endpoints.
+**Test Coverage:** `__tests__/app/api/cron` — **57** Jest tests across cron route handlers (authorization, success, errors; run `npx jest __tests__/app/api/cron` for the exact set).
 
 ### Quality Assurance & Validation
 
-**Automated Testing:**
+**Automated Testing (verify with `npm test` — numbers below from Jest as run in dev):**
 
-- **312 Comprehensive Tests** — 87% code coverage across all payment logic (33 tests added for cron automation in v2.3)
-- **1,631 UI Component Tests** — Custom subscription UI fully tested (520 + 292 + 305 + 514 tests)
-- **33 Cron Job Tests** — Automated maintenance system fully validated (14 reconciliation + 19 cleanup tests)
-- **Financial Standards** — Zero tolerance for test failures; all edge cases and error paths verified
-- **E2E Scenario Testing** — 8 complete user journeys from signup to downgrade validated
-- **Idempotency Testing** — Duplicate webhook delivery, race conditions, concurrent updates
-- **Security Testing** — Product ID manipulation, authentication bypass, signature tampering, metadata tampering
-- **Integration Testing** — Full payment flows with real webhook payloads
-- **Cron Security Testing** — Authorization validation, unauthorized access logging, error handling, performance
+- **Payment stack** — `__tests__/lib/polar` + `__tests__/api/webhook`: **634** Jest tests (idempotency, webhooks, state machine matrices, `transitionSubscription`, chaos/partial-failure suites)
+- **Subscription credits UI** — 121 tests in the four files listed above
+- **Cron routes** — 57 tests under `__tests__/app/api/cron`
+- **Repo-wide** — **5,400+** Jest test cases (e.g. **5,446** on last full `npx jest` run; count shifts as tests are added)
+- **Financial Standards** — Invariants covered by dedicated suites (`webhook-subscription-transitions`, integration routes)
+- **E2E** — Playwright on critical journeys (`npm run test:e2e*`)
+- **Idempotency** — `__tests__/lib/polar/webhook-idempotency.test.ts` and route integration tests (claim→mark, P2002 duplicates)
+- **Security Testing** — Product ID / auth / signature scenarios in API webhook test folders
+- **Integration Testing** — `polar-state-machine-integration`, `polar-e2e-scenarios`, real-application suites
 
-**Live Validation (2026):**
+**Live Validation (Jan 28, 2026):**
 
 - **7 Real User Scenarios** — Complete subscription lifecycle tested with actual Polar webhooks
 - **100% Congruency** — Verified state synchronization across Polar → Database → Clerk → Frontend
@@ -473,13 +716,14 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 - **Payment Failure UX** — Alert component integrated and tested with 2 new scenarios
 - **Automated Health Checks** — Reconciliation and cleanup cron jobs deployed and validated
 
-**Test Execution:** 4,386 tests pass (312 payment + 1,631 UI + 33 cron + 2,410 other)
+**Test Execution:** see `npm test`; payment-focused folders alone exceed **600** tests; full Jest run is **5,000+** cases
 
 ### Comprehensive Documentation
 
 **Seven Complete Guides (367 KB total):**
 
 - **POLAR_IMPLEMENTATION.md** (105 KB) — Complete implementation guide, security architecture, custom UI documentation, phase-by-phase build
+- **PAYMENT_IMPLEMENTATION_WALKTHROUGH.md** — Developer walkthrough: Polar as source of truth, claim→apply→mark flow, event handlers, state machine
 - **STRIDE_THREAT_MODEL.md** (54 KB) — Security threat analysis, attack scenarios, defense-in-depth validation
 - **INTEGRATION_TESTING_SUMMARY.md** (9 KB) — Live testing results, all 7 scenarios documented, token calculation details
 - **DEVELOPER_QUICK_REFERENCE.md** (6 KB) — Quick reference for daily work, schemas, debugging tips
@@ -489,11 +733,11 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 
 **Custom UI Components:**
 
-- `SubscriptionPlans.tsx` — Full-featured plan display with upgrade/downgrade/cancel functionality
-- `ManageSubscriptionBadge.tsx` — Animated current plan badge with action buttons (includes payment failure handling)
-- `ConfirmationDialog.tsx` — Contextual confirmation dialogs for destructive actions
-- `PaymentFailureAlert.tsx` — Payment failure notification with "Fix Payment" CTA (v2.3)
-- `useSubscriptionActions.ts` — React hook centralizing all subscription operations
+- `src/components/credits/subscription/plans/SubscriptionPlans.tsx` — Plan display, upgrade/downgrade/cancel
+- `src/components/credits/ManageSubscriptionBadge.tsx` — Plan badge, actions, fix-payment when `paymentFailed`
+- `src/components/credits/ConfirmationDialog.tsx` — Upgrade / downgrade / cancel confirmations
+- `src/components/credits/PaymentFailureAlert.tsx` — Payment failure banner (v2.3)
+- `src/components/credits/subscription/plans/hooks/useSubscriptionActions.ts` — Centralized server-action wiring for the credits flow
 
 **Security Rating:** 9.8/10 ⭐⭐⭐ (Enterprise-grade with Zuplo edge protection)
 
@@ -924,6 +1168,7 @@ Every change is validated through:
 - **Load and performance exercises** with **k6** and **Artillery** focused on core APIs, server-side operations, and caching behavior
 - **Strict static typing and schema validation** with **TypeScript (strict mode)**, **Prisma**, **Zod**, and **@t3-oss/env-nextjs** for data, inputs, and configuration
 - **Automated linting and formatting** with **ESLint**, **Prettier**, and import-sorting to enforce consistent, production-grade code quality
+- **CI pipeline** (`.github/workflows/pr-checks.yml`) running lint, type-check, Jest, and `next build` on every PR — the build step is the only place missing `connection()` calls and `'use cache'` violations surface (see PPR section above)
 
 </details>
 
@@ -959,6 +1204,6 @@ Every change is validated through:
 ---
 
 <div align="center">
-  <sub style="font-size: 14px;">Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications.</sub>
+  <sub style="font-size: 14px;">Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications. GITHUB.md last updated May 2026.</sub>
 </div>
 
