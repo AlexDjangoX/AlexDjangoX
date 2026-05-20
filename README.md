@@ -36,6 +36,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 **🎯 My Expertise:**
 
 - **Modern Web Technologies** - Next.js 16.2, React 19, TypeScript 5.9
+- **Internationalization** - next-intl v4 on the App Router (ICU messages, always-prefixed locales, bundle-aware route loading, proxy-integrated middleware)
 - **AI Integration** - OpenAI GPT-4, Realtime API, Whisper, TTS, custom prompts
 - **Enterprise Architecture** - Multi-tenant systems, secure APIs, payment processing
 - **Polish Language Learning** - Combined technical & linguistic expertise with 20+ interactive learning modules
@@ -70,12 +71,13 @@ _PoliLex Bilingual — home page with conjugation table and hero messaging_
 | **Category**                 | **Technology / Tools**                               | **Purpose**                                          |
 | :--------------------------- | :--------------------------------------------------- | :--------------------------------------------------- |
 | **Frontend**                 | Next.js 16.2, React 19                               | Core application shell and interactive UI            |
+|                              | **next-intl** v4 (ICU, App Router)                   | Locale routing, server/client translation, SEO       |
 |                              | TypeScript 5.9                                       | Type-safe client-side development                    |
 |                              | Tailwind CSS 4.1, ShadCN / Radix UI                  | Design system, layout, and reusable UI components    |
 |                              | Lexical 0.44, Framer Motion                          | Rich authoring experience and high-quality motion    |
 | **Backend & Infrastructure** | Prisma 7.8, PostgreSQL, Supabase                     | Type-safe data access and relational persistence     |
 |                              | Clerk Auth, Polar, Stream Chat                       | Authentication, payments, real-time messaging        |
-| **Testing & Quality**        | Jest, React Testing Library                          | Unit and integration coverage for components & logic |
+| **Testing & Quality**        | Jest (**5,792+** cases), React Testing Library       | Unit and integration coverage for components & logic |
 |                              | Playwright                                           | End-to-end browser regression on critical journeys   |
 |                              | Artillery                                            | Load and performance validation for APIs and flows   |
 |                              | TypeScript (strict), Prisma, Zod, @t3-oss/env-nextjs | Static typing and schema validation across the stack |
@@ -103,8 +105,9 @@ _PoliLex Bilingual — home page with conjugation table and hero messaging_
 
 - **Zuplo API Gateway** - Secure API management, rate limiting, and enterprise-grade security
 - **Enterprise Security** - Role-based access control & secure authentication
-- **Performance Optimized** - SSR, edge caching, optimized database queries
-- **Comprehensive Testing** - Unit, integration, and E2E test coverage
+- **Performance Optimized** - SSR, edge caching, optimized database queries, route-level code splitting for heavy editor/chat/PDF dependencies
+- **SSR-Safe UI** - Verb/category pickers use Radix Popover + cmdk (`CreatableCombobox`); legacy `react-select` removed with ESLint enforcement
+- **Comprehensive Testing** - **5,792+** Jest cases plus Playwright E2E on critical journeys
 
 ### AI-Powered Features
 
@@ -123,7 +126,7 @@ _PoliLex Bilingual — home page with conjugation table and hero messaging_
 - **Aspect Master** - Verb aspect practice with quizzes, challenges, and timeline visualization
 - **Reflexive Lab** - Reflexive verb journeys with categories and templates
 - **Preposition Lab** - Interactive preposition challenges with case governance
-- **Declension** - Dedicated case-practice flow: game rounds, per-case panels, session bootstrap and reconciliation, and interactive exercise text segments (i18n)
+- **Declension** - Dedicated case-practice flow: game rounds, per-case panels, session bootstrap and reconciliation, and interactive exercise text segments (next-intl)
 - **Motion Lab** - Verbs of motion (unidirectional/multidirectional pairs)
 - **Verb Prefixes** - Perfective prefix forms and transformations
 - **Conjugator** - Interactive Kanban board for verb conjugation practice
@@ -187,6 +190,8 @@ _PoliLex Bilingual — home page with conjugation table and hero messaging_
 - **Speech-to-Text** - Built-in speech recognition plugin for voice input
 - **Auto-Embed Plugin** - Automatic detection and embedding of YouTube URLs
 - **Collaborative Features** - Real-time editing capabilities with history tracking
+- **On-Demand Heavy Dependencies** - Excalidraw, emoji picker (`@emoji-mart/*`), and similar tools load via `React.lazy` / dynamic `import()` when opened — not in the initial editor shell
+- **Resilient Emoji Picker** - `EmojiMartPicker` surfaces load/retry UI if dynamic imports fail (no stuck loading state)
 - **Export Capabilities** - Export editor content to blog posts and learning materials
 
 ### Teacher/Tutor Portal (Company System)
@@ -247,6 +252,7 @@ _PoliLex Bilingual — home page with conjugation table and hero messaging_
 | `dynamicLoader()`                    | May 8, 2026     | `React.cache()` + `connection()` encapsulated as a single primitive; applied across all 17 loader files                                                                                       |
 | `invalidate.*()` helpers             | May 8, 2026     | Typed cache invalidation API replacing raw `revalidateTag()` strings across all server actions                                                                                                |
 | ESLint enforcement                   | May 8, 2026     | `local/no-cached-prisma-outside-use-cache` rule; `no-restricted-syntax` for `console.error` in actions                                                                                        |
+| Bundle lazy-load + combobox migration | May 2026        | Excalidraw, emoji-mart, Stream Chat, `react-pdf` moved to async chunks; `react-select` removed → `CreatableCombobox` / `VerbCombobox` (SSR-safe, keyboard-accessible clear) |
 
 Every route in PoliLex is a Partial Prerender (`◐`): the static shell (nav, layout, skeleton UI) is pre-generated at build time and served from CDN with instant TTFB. Dynamic content — auth state, user data, subscription status — streams in behind `<Suspense>` boundaries. The entire application uses the Next.js 16 `'use cache'` directive with `cacheLife()` profiles rather than route-segment config — cache policy lives next to the data, not scattered across page files.
 
@@ -346,6 +352,9 @@ console.error(
 logUserError('Update failed:', error);
 ```
 
+`src/lib/actions/actions.podcast.ts` is fully on this pattern (including best-effort
+wordplay analysis logging at publish).
+
 ### Silent Auth Fallback During Prerendering
 
 During static prerendering there is no request context, so Clerk's `auth()` rejects with an internal `HangingPromiseRejectionError`. The solution is a typed `AuthRequiredError` class defined in a **client-safe** module (`src/lib/errors/auth-errors.ts`) with no server-only imports — essential because auth error detection runs in both server and client contexts:
@@ -382,30 +391,13 @@ Next.js tracks dynamic context through `fetch()`, `cookies()`, `headers()`, and 
 
 `connection()` lives in the **loader function**, not the page component, keeping framework internals out of the UI layer.
 
-### Navigation + Streaming Skeleton System
+### Navigation + streaming skeleton system
 
-Every route that streams dynamic content through a `<Suspense>` boundary uses **both** loading mechanisms:
+Most feature routes use **`<Suspense fallback={<FeatureSkeleton />}>`** around async server work or **`use(promise)`** (see `docs/cache-components/CACHE_COMPONENTS.md` Pattern 8). **There is no `src/app/loading.tsx`** (no root segment loading file). Only **two** segment **`loading.tsx`** files exist today (`src/app/[lang]/(landing)/onboarding/loading.tsx` and `src/app/[lang]/(home)/test-rls/loading.tsx`); do not duplicate the same loading UX with both segment `loading.tsx` and page-level Suspense for the same subtree.
 
-```
-User clicks <Link href="/adjectives" />
-  │
-  ├─ loading.tsx → AdjectivesPageSkeleton     ← navigation window (before server responds)
-  ├─ Server responds: static shell
-  ├─ <Suspense fallback={<AdjectivesPageSkeleton />}> ← streaming window (while data resolves)
-  └─ dataPromise resolves → full page
-```
+Clerk’s async **`ClerkProvider`** in **`src/app/[lang]/layout.tsx`** uses **`AppShellSkeletonWithPage`** ( **`NavbarSkeleton`** + **`SuspenseFallbackChrome`** ) as the Suspense fallback while **`getKeylessStatus`** runs.
 
-`src/app/loading.tsx` (root fallback) exports `AppShellSkeleton` — a pure Server Component that pixel-accurately mirrors the real Navbar: exact `bg-white dark:bg-gray-800`, same `h-8 min-w-20.5 rounded-full` pill tokens for LanguageSelector and DarkToggle, same gradient shells for the icon buttons. All 21 routes use the same skeleton-component contract rather than inline fallbacks or full-screen spinners.
-
-**Skeleton creation standards enforced across the codebase:**
-
-- Use `<Skeleton>` from `@/components/ui/skeleton` for individual elements
-- Apply `animate-pulse` to a container — all elements pulse together as a unit
-- Match colour tokens exactly from the real component (border, background, text)
-- Always include `dark:` variants
-- Never inline a skeleton in `page.tsx` — extract to `src/components/<feature>/FeatureSkeleton.tsx` so it can be imported by both `<Suspense fallback>` and `loading.tsx`
-
-Full coverage: 21 routes each have a matching `loading.tsx` pointing to a properly-built page skeleton.
+**Skeleton standards:** extract skeletons to `src/components/<feature>/*Skeleton*.tsx`; match layout tokens and `dark:` variants; prefer shared chrome helpers from `@/lib/skeleton-chrome` where applicable.
 
 ### CI Pipeline
 
@@ -427,11 +419,137 @@ The `build` job is the **only** place missing `connection()` calls surface — t
 | No route-level `export const revalidate = N`                     | Cache policy lives in `'use cache'` functions via `cacheLife()`, not at the page level — co-located with the data it covers                  |
 | No `unstable_cache` / `unstable_cacheLife` / `unstable_cacheTag` | These were the correct Next.js 15 APIs; Next.js 16 stabilised them — the `unstable_` prefix is gone and the stable forms are used throughout |
 | No `export const runtime = 'nodejs'`                             | Node.js is the default runtime; Edge runtime is unsupported with `cacheComponents` and incompatible with native Prisma                       |
-| No spinner fallbacks                                             | Route `loading.tsx` files export purpose-built skeleton components — pixel-accurate to the real UI, animate as a unit                        |
+| No spinner fallbacks                                             | Prefer route-appropriate skeleton components in `<Suspense fallback>` or segment `loading.tsx` — never an unstyled spinner for streamed work |
 
-### Full Reference
+### Canonical docs (engineers)
 
-Complete implementation details, every pattern, rationale, and checklist: [`docs/cache-components/CACHE_COMPONENTS.md`](./docs/cache-components/CACHE_COMPONENTS.md)
+[`docs/cache-components/CACHE_COMPONENTS.md`](./docs/cache-components/CACHE_COMPONENTS.md) — Cache Components, Suspense, loaders, patterns.  
+[`docs/cache-components/CACHE_STRATEGY.md`](./docs/cache-components/CACHE_STRATEGY.md) — cache tags, invalidation.  
+[`docs/next-intl/NEXT_INTL.md`](./docs/next-intl/NEXT_INTL.md) — next-intl (routing, bundles, `src/proxy.ts`).  
+[`docs/bundle-size/BUNDLE_SIZE.md`](./docs/bundle-size/BUNDLE_SIZE.md) — analyzer workflow, baselines, lazy-load targets.
+
+</details>
+
+<details style="margin-bottom: 16px;">
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🎨 UI components & client bundle discipline</strong> — SSR-safe comboboxes, lazy-loaded editor deps, measurable baselines</summary>
+
+<div align="center">
+<em>Design-system primitives first; heavy npm packages only when the user opens the feature</em>
+</div>
+
+<br/>
+
+### Combobox / select migration (2026-05)
+
+| Before | After |
+| :----- | :---- |
+| `react-select` + Emotion (~80 lines of theme `styles` per surface) | **`CreatableCombobox`** (Radix Popover + cmdk) + thin **`VerbCombobox`** wrapper |
+| Hydration risk on SSR routes | Tailwind semantic tokens; no CSS-in-JS injection |
+| `isMounted` gates masking mismatches | Root cause fixed; ESLint **`no-restricted-imports`** blocks `react-select` reintroduction |
+
+**Consumers:** flashcards add-verb modal, conjugator scrape wizard, podcast/conversation subtitle fields, adjective/adverb/occupation pickers, Wordplay text processor, Word Wizard / Spelling Master categories.
+
+**Engineering details:** large verb lists use A–Z browse batches + scroll load; clear control is keyboard- and screen-reader-accessible; conjugation wizard resets fetched verb state when the user picks a different lemma (prevents stale inject). Internal specs: [`docs/AUDIT-MD/SELECT_AUDIT.md`](./docs/AUDIT-MD/SELECT_AUDIT.md).
+
+### Lazy-load quick wins (2026-05)
+
+| Dependency | Pattern | User-visible surface |
+| :--------- | :------ | :------------------- |
+| `@excalidraw/excalidraw` | `React.lazy` | Editor diagram plugin |
+| `@emoji-mart/react` + data | `import()` on mount | Toolbar / blog emoji picker |
+| `stream-chat-react` | `next/dynamic` | `/chat` authenticated stream |
+| `react-pdf` / `pdfjs-dist` | dynamic viewer | Portable documents route |
+
+**Measurement:** `npm run bundle:baseline` + `scripts/compare-bundle-baseline.mjs` against checked-in baselines; `npx next experimental-analyze` for per-route graphs. Combined static JS stayed ~flat while CSS dropped ~349 KiB after splitting heavy CSS out of the eager graph.
+
+</details>
+
+<details style="margin-bottom: 16px;">
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🌍 Internationalization (next-intl)</strong> — App Router, bundle-size–aware messages, proxy integration, RSC boundaries</summary>
+
+<div align="center">
+<em>Production localization (next-intl): always-prefixed locales, lean server config, per-route message slices, shared error semantics across server and client</em>
+</div>
+
+<br/>
+
+**Stack:** [**next-intl**](https://next-intl.dev/) v4 · **ICU MessageFormat** in JSON · locales **`en`** (default) · **`pl`**
+
+PoliLex treats internationalization as a first-class platform concern: routing, middleware, layout boundaries, and client bundles are aligned so senior reviewers can reason about locale, payload size, and React 19 / Next.js 16 constraints in one place.
+
+### Routing & URLs
+
+| **Concern**            | **Implementation**                                                                                                                                                                                                                               |
+| :--------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Single source of truth | `defineRouting()` in `src/intl/routing.ts` — `locales`, `defaultLocale`, **`localePrefix: 'always'`** (every URL is `/{lang}/...`), **`localeDetection: true`**, **`NEXT_LOCALE`** cookie (`sameSite: 'lax'`, 30-day TTL).                       |
+| Navigation API         | `createNavigation(routing)` in `src/intl/navigation.ts` exports **`Link`**, **`redirect`**, **`usePathname`**, **`useRouter`**, **`getPathname`** — use these instead of raw `next/link` / `next/navigation` where locale rewriting is required. |
+| Language switcher      | `src/components/language-select/LanguageSelector.tsx` — `useRouter` + `usePathname` from `@/intl/navigation`, `router.replace(pathname, { locale })` for same-path locale changes.                                                               |
+
+### Middleware (`src/proxy.ts`)
+
+| **Concern**           | **Implementation**                                                                                                                                                                         |
+| :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Locale                | `createIntlMiddleware(routing)` handles unprefixed entry, negotiates from cookie / `Accept-Language`, **307** redirects to prefixed paths.                                                 |
+| Server locale context | Forwarded request headers preserve **`X-NEXT-INTL-LOCALE`** so RSC and `getRequestConfig` see the same locale as the edge middleware (avoids “URL changed but copy stayed in old locale”). |
+| Coexistence           | Same file chains **Clerk** (`clerkMiddleware`), **subscription gating**, bot blocking, and tenant routing **after** the intl middleware branch where applicable.                           |
+
+_Next.js 16:_ proxy lives at `src/proxy.ts` (Node runtime by default for this file — no segment `runtime` export in the proxy module.)
+
+### Layout split (theme vs locale)
+
+| **Layer**                         | **Role**                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`src/app/layout.tsx`**          | Owns **`<html>`** and **`<body>`**, root **metadata/viewport**, **`ThemeProvider`**, and analytics. **`lang`** on `<html>` is **`fallbackLng`** for SSR; the active routed locale updates **`document.documentElement.lang`** from **`IntlClientShell`** (**`DocumentLangFromSegment`**) once the **`[lang]`** tree mounts — same spirit as **`ThemeProvider`** above the locale segment (**`docs/next-intl/NEXT_INTL.md`** §6 / §11). |
+| **`src/app/[lang]/layout.tsx`**   | **Async** `await params`, **`IntlClientShell`**, then **`<Suspense fallback={<AppShellSkeletonWithPage />}>`** around **`ClerkProvider`** only (Pattern 3 — Clerk’s async RSC / `getKeylessStatus`). **App chrome** (nav, main, footer) and **`{children}`** (inner **`Suspense fallback={null}`**) live inside Clerk.                                                                                                                 |
+| **`src/app/[lang]/template.tsx`** | Client `LangTemplate`: **`ViewTransition name="page"`** for `ApplicationNavigation` + View Transition API. Lives under `[lang]` so markup stays under `<body>`. **`ViewTransition`** always renders a **stable `<div>`** when `name` is set and applies `view-transition-name` in `useEffect` — avoids fragment→`div` remount and first-load “double paint”.                                                                           |
+
+**`cacheComponents`:** uncached async work from **`ClerkProvider`** must sit inside **`<Suspense>`**. **`params`** are **not** hidden behind that fallback: the layout **`await`s `params`** first so locale + intl mount without flashing the full **`AppShellSkeletonWithPage`** for segment resolution alone (see **`docs/next-intl/NEXT_INTL.md`** §6).
+
+### Server config (`getRequestConfig`)
+
+| **Property**                         | **Purpose**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| :----------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`locale`**                         | Resolved from `requestLocale` with fallback to `routing.defaultLocale`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **`timeZone: 'UTC'`**                | Global default — removes `ENVIRONMENT_FALLBACK` warnings and avoids SSR/client **date** markup drift.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **`onError` / `getMessageFallback`** | Shared with the client via `src/intl/error-handling.ts`. **Do not disable `MISSING_MESSAGE` globally** as a substitute for keeping JSON in sync — treat gaps as technical debt: diff `t()` / `useTranslations` call sites against the locale JSON, or temporarily tighten **`intlOnError`** on a throwaway branch to surface `MISSING_MESSAGE` for review. Today **`intlOnError`** still no-ops `MISSING_MESSAGE` so legacy **OR**-chained **`t()`** fallbacks stay usable; **`getMessageFallback`** returns **`''`** so those chains behave as intended without throwing. |
+| **No global `messages` blob**        | Keeps **`getRequestConfig`** minimal for bundle and RSC payload hygiene; messages are mounted at route boundaries (below).                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+
+Plugin wiring: `createNextIntlPlugin('./src/intl/request.ts')` in **`next.config.mjs`**; `next-intl` listed in **`optimizePackageImports`**.
+
+### Client root provider: `IntlClientShell`
+
+| **Constraint**                                      | **Solution**                                                                                                                                                                                                                                                                                                  |
+| :-------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| RSC cannot pass function props to client components | **`IntlClientShell`** (`'use client'`) imports **`intlOnError`** / **`intlGetMessageFallback`** and passes them into **`NextIntlClientProvider`** with **`timeZone="UTC"`** and root **`messages`** from **`ROOT_SHELL_MESSAGES_BY_LOCALE`**.                                                                 |
+| `<html lang>` vs split root/`[lang]` layout         | **`DocumentLangFromSegment`** inside **`IntlClientShell`** uses **`useLayoutEffect`** so **`document.documentElement.lang`** matches the **`locale`** prop (aligned with next-intl’s **`html lang={locale}`** beside the provider — [Request configuration](https://next-intl.dev/docs/usage/configuration)). |
+| Nested providers                                    | Per-route **`RouteTranslations`** / **`ClientRouteTranslations`** nest **`NextIntlClientProvider`** so **`use-intl`** inherits the same error/fallback behavior.                                                                                                                                              |
+
+### Per-route messages (bundle size)
+
+| **Primitive**                 | **Use**                                                                                                                       |
+| :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
+| **`src/intl/bundles/*.ts`**   | Typed **`Record<Language, …>`** maps per feature/route; each file composes namespaces needed for that tree.                   |
+| **`RouteTranslations`**       | Server component: slices messages for the current locale only.                                                                |
+| **`ClientRouteTranslations`** | Client variant for `'use client'` subtrees; active locale via **`useLocale()`** from the parent **`NextIntlClientProvider`**. |
+| **JSON**                      | `src/intl/locales/{en,pl}/*.json` — **ICU** placeholders `{var}`, `{count, plural, …}`.                                       |
+
+### Ancillary helpers & SEO
+
+| **Item**                         | **Location**                                                                                                     |
+| :------------------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| Strip `/{locale}` for path logic | **`splitLocalePrefix`** — `src/lib/intl/locale-path.ts` (used by proxy wiring, protected-route checks, exam UI). |
+| hreflang / alternates            | **`src/app/sitemap.ts`** (and metadata patterns documented in **`docs/next-intl/NEXT_INTL.md`**).                |
+
+### Testing
+
+| **Approach**       | **Detail**                                                                                                                                                                                                                                                                                                                |
+| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Jest               | **`__tests__/setup/next-intl.ts`** mocks **`next-intl`**, **`next-intl/server`**, **`next-intl/navigation`**, plus lightweight stubs for **`next-intl/routing`** / **`next-intl/middleware`** where ESM parsing would otherwise break. **`useTranslations`** is stable per-namespace (avoids effect churn in hook tests). |
+| Deterministic copy | **`TEST_TRANSLATIONS`** map for keys assertions need real strings, not raw ids.                                                                                                                                                                                                                                           |
+
+### Full reference
+
+End-to-end file map, code pointers, SEO, and edge-case notes: **[`docs/next-intl/NEXT_INTL.md`](./docs/next-intl/NEXT_INTL.md)**
 
 </details>
 
@@ -781,7 +899,7 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 - **Payment stack** — `__tests__/lib/polar` + `__tests__/api/webhook`: **632** Jest tests (idempotency, webhooks, state machine matrices, `transitionSubscription`, chaos/partial-failure suites)
 - **Subscription credits UI** — 246 tests in the four files listed above
 - **Cron routes** — 57 tests under `__tests__/app/api/cron`
-- **Repo-wide** — **5,297+** Jest test cases (e.g. **5,297** on last full `npx jest` run; count shifts as tests are added)
+- **Repo-wide** — **5,792+** Jest test cases (e.g. **5,792** on last full `npx jest` run; count shifts as tests are added)
 - **Financial Standards** — Invariants covered by dedicated suites (`webhook-subscription-transitions`, integration routes)
 - **E2E** — Playwright on critical journeys (`npm run test:e2e*`)
 - **Idempotency** — `__tests__/lib/polar/webhook-idempotency.test.ts` and route integration tests (claim→mark, P2002 duplicates)
@@ -798,7 +916,7 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 - **Payment Failure UX** — Alert component integrated and tested with 2 new scenarios
 - **Automated Health Checks** — Reconciliation and cleanup cron jobs deployed and validated
 
-**Test Execution:** see `npm test`; payment-focused folders alone exceed **600** tests; full Jest run is **5,297+** cases
+**Test Execution:** see `npm test`; payment-focused folders alone exceed **600** tests; full Jest run is **5,792+** cases (387 suites)
 
 ### Comprehensive Documentation
 
@@ -881,11 +999,15 @@ Modern form architecture leveraging React 19 hooks and Next.js 16 server actions
 - **Context-Based Complex Forms** — `VerbAttributesForm` uses provider pattern to share state across nested components without prop drilling
 - **Field-Level Subscriptions** — Single `useWatch` call for multiple fields, maintaining React Hook Form's optimization benefits
 - **Structured Error Handling** — Server actions return typed `ActionState<T>` with success/error/data discriminated unions
-- **Test Coverage** — Forms tested with `data-testid` attributes (never text content), ensuring reliable test stability across i18n and content changes
+- **Test Coverage** — Forms tested with `data-testid` attributes (never text content), ensuring reliable test stability across **next-intl** copy and content changes.
+- **Creatable Fields** — Podcast/conversation subtitles and similar flows use **`VerbCombobox`** → **`CreatableCombobox`** with explicit null-clear handling (`opt?.value ?? ''`) for controlled React Hook Form fields.
 
 ### Example Architecture
 
 ```typescript
+// Client Component
+import { toast } from '@/lib/toast'; // Sonner wrapper
+
 // Server Action with safeParse validation
 export async function submitFormAction(
   prevState: ActionState<DataType>,
@@ -899,7 +1021,6 @@ export async function submitFormAction(
   return { success: true, data: createdRecord };
 }
 
-// Client Component
 const [actionState, formAction, isPending] = useActionState(
   submitFormAction,
   initialState,
@@ -907,7 +1028,7 @@ const [actionState, formAction, isPending] = useActionState(
 const watched = useWatch({ control: form.control }); // Single subscription
 
 const handleSuccess = useEffectEvent(() => {
-  toast({ title: 'Success!' });
+  toast.success('Success!');
   onSuccess?.();
 }); // No dependency array needed!
 
@@ -1245,7 +1366,7 @@ self.addEventListener('message', (event) => {
 PoliLex is validated with a **full testing pipeline** that combines automated tests, static analysis, and load testing.  
 Every change is validated through:
 
-- **Automated unit and integration suites** using **Jest** and **React Testing Library** for components and business logic
+- **Automated unit and integration suites** using **Jest** (**5,792+** tests across **387** suites) and **React Testing Library** for components and business logic — including combobox primitives (`CreatableCombobox`, `VerbCombobox`), flashcards, and Lexical UI (`EmojiMartPicker` load/error paths)
 - **End-to-end regression tests** with **Playwright** for critical user journeys in the browser
 - **Load and performance exercises** with **Artillery** focused on core APIs, server-side operations, and caching behavior
 - **Strict static typing and schema validation** with **TypeScript (strict mode)**, **Prisma**, **Zod**, and **@t3-oss/env-nextjs** for data, inputs, and configuration
@@ -1286,5 +1407,5 @@ Every change is validated through:
 ---
 
 <div align="center">
-  <sub style="font-size: 14px;">Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications. GITHUB.md last updated May 2026.</sub>
+  <sub style="font-size: 14px;">Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications. GITHUB.md last updated 2026-05-20.</sub>
 </div>
