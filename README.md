@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Polar-0062FF?style=for-the-badge&logo=polar&logoColor=white" alt="Polar" style="margin: 0 5px;" />
     <img src="https://img.shields.io/badge/Zuplo-FF00BD?style=for-the-badge&logo=zuplo&logoColor=white" alt="Zuplo" style="margin: 0 5px;" />
-    <img src="https://img.shields.io/badge/Lexical-0.44-0668E1?style=for-the-badge&logo=meta&logoColor=white" alt="Lexical 0.44" style="margin: 0 5px;" />
+    <img src="https://img.shields.io/badge/Lexical-0.44-0652E1?style=for-the-badge&logo=meta&logoColor=white" alt="Lexical 0.44" style="margin: 0 5px;" />
   </div>
 </div>
 
@@ -19,11 +19,11 @@
 
 ## ⚡ **Quick Facts**
 
-| **🎯 Focus**             | **🏗️ Architecture**  | **🤖 AI Integration** | **🧪 Testing**              |
-| :----------------------- | :------------------- | :-------------------- | :-------------------------- |
-| Full-Stack Development   | Multi-Tenant Systems | OpenAI GPT-4          | Jest, Playwright, Artillery |
-| Enterprise Solutions     | Real-time Features   | Realtime API          | E2E Testing                 |
-| Polish Language Learning | Secure API Gateway   | Stream Chat           | TypeScript                  |
+| **🎯 Focus**             | **🏗️ Architecture**  | **🤖 AI Integration** | **🧪 Testing**                  |
+| :----------------------- | :------------------- | :-------------------- | :------------------------------ |
+| Full-Stack Development   | Multi-Tenant Systems | OpenAI GPT-4          | Jest, Playwright, k6, Artillery |
+| Enterprise Solutions     | Real-time Features   | Realtime API          | E2E Testing                     |
+| Polish Language Learning | Secure API Gateway   | Stream Chat           | TypeScript                      |
 
 ---
 
@@ -39,7 +39,7 @@ I am a **Full-Stack Developer** specializing in enterprise AI solutions and mult
 - **Internationalization** - next-intl v4 on the App Router (ICU messages, always-prefixed locales, bundle-aware route loading, proxy-integrated middleware)
 - **AI Integration** - OpenAI GPT-4, Realtime API, Whisper, TTS, custom prompts
 - **Enterprise Architecture** - Multi-tenant systems, secure APIs, payment processing
-- **Polish Language Learning** - Combined technical & linguistic expertise with 20+ interactive learning modules
+- **Polish Language Learning** - Combined technical & linguistic expertise with 30+ interactive learning modules
 
 **💼 Current Project:**
 **PoliLex** - A sophisticated AI-powered language learning platform demonstrating enterprise-level architecture, multi-tenancy, real-time AI integration, and production-ready DevOps practices.
@@ -77,9 +77,9 @@ _PoliLex Bilingual — home page with conjugation table and hero messaging_
 |                              | Lexical 0.44, Framer Motion                          | Rich authoring experience and high-quality motion    |
 | **Backend & Infrastructure** | Prisma 7.8, PostgreSQL, Supabase                     | Type-safe data access and relational persistence     |
 |                              | Clerk Auth, Polar, Stream Chat                       | Authentication, payments, real-time messaging        |
-| **Testing & Quality**        | Jest (**5,792+** cases), React Testing Library       | Unit and integration coverage for components & logic |
+| **Testing & Quality**        | Jest (**7,389+** cases), React Testing Library       | Unit and integration coverage for components & logic |
 |                              | Playwright                                           | End-to-end browser regression on critical journeys   |
-|                              | Artillery                                            | Load and performance validation for APIs and flows   |
+|                              | k6, Artillery                                        | Load and performance validation for APIs and flows   |
 |                              | TypeScript (strict), Prisma, Zod, @t3-oss/env-nextjs | Static typing and schema validation across the stack |
 |                              | ESLint, Prettier, import-sorting plugins             | Automated linting, formatting, and code consistency  |
 | **AI & Integrations**        | OpenAI GPT-4, DALL-E 3                               | Language processing and image generation             |
@@ -103,11 +103,11 @@ _PoliLex Bilingual — home page with conjugation table and hero messaging_
 
 ### Enterprise Security & API Management
 
-- **Zuplo API Gateway** - Secure API management, rate limiting, and enterprise-grade security
+- **Zuplo API Gateway** - Secure API management for translate/scrape paths; Polar webhooks secured in-app via HMAC (`@polar-sh/sdk/webhooks`); optional edge allowlisting documented in STRIDE threat model
 - **Enterprise Security** - Role-based access control & secure authentication
 - **Performance Optimized** - SSR, edge caching, optimized database queries, route-level code splitting for heavy editor/chat/PDF dependencies
-- **SSR-Safe UI** - Verb/category pickers use Radix Popover + cmdk (`CreatableCombobox`); legacy `react-select` removed with ESLint enforcement
-- **Comprehensive Testing** - **5,792+** Jest cases plus Playwright E2E on critical journeys
+- **SSR-Safe UI** - Collection word pickers use **`CollectionWordSelect`**; verb/subtitle flows use **`CreatableCombobox`** / **`VerbCombobox`** (Radix Popover + cmdk); legacy `react-select` removed with ESLint enforcement
+- **Comprehensive Testing** - **7,389+** Jest cases plus Playwright E2E on critical journeys
 
 ### AI-Powered Features
 
@@ -130,28 +130,38 @@ _PoliLex Bilingual — home page with conjugation table and hero messaging_
 - **Motion Lab** - Verbs of motion (unidirectional/multidirectional pairs)
 - **Verb Prefixes** - Perfective prefix forms and transformations
 - **Conjugator** - Interactive Kanban board for verb conjugation practice
+- **Character Lab** - Polish grapheme and character-form practice with tabbed tracks and level filtering
+- **Adverb Lab** - Comparative and superlative degree practice (dedicated lab route, separate from the adverbs collection)
+- **Idioms Lab** - Idiom sets with preview, filtering, and challenge flows
+- **Verb Families** - Verb-family pattern exploration with level, form, and lemma routing
 
 **Vocabulary & Practice:**
 
 - **Counting** - Grammatical cases through counting 1-21 with contextual examples
 - **Adjectives** - Comparative forms and interactive exercises
-- **Adverbs** - Comparative and superlative forms practice
-- **Nouns** - Auto-generated flashcards with translations
+- **Adverbs** - Collection route for adverb vocabulary and exercises
 - **Occupations** - 5 interactive games (Flashcards, Quiz, Memory, Drag & Drop, Sentence Builder)
 - **Word Wizard** - AI-assisted vocabulary building with audio pronunciation
+- **Spelling Master** - Spelling drills with seeded content and progress tracking
+- **Wordplay** - Text-processor wordplay lab with podcast-linked workflows
 - **Flashcards** - Customizable flashcards with example sentences
-- **Cases** - Grammatical case mastery through fill-in-the-blank exercises
-- **Days & Months** - Temporal vocabulary practice
 - **Genealogy** - Interactive family tree drag-and-drop game
+
+**Exam & Assessment:**
+
+- **Exam Prep** - B1 exam simulation (grammar module live; listening, reading, and writing in active development) with task routing, progress tracking, and seeded exam corpora
+- **Original Exam** - Archive exam entry routes with stable deep links into historical B1 tasks
 
 **Interactive Content:**
 
 - **Lexical Editor** - Rich text editing with collaborative features
 - **PDF Processing** - Document processing and annotation
 - **Portable Documents** - PDF viewer with highlighting capabilities
-- **Podcasts** - Audio content with transcription
+- **Podcasts** - Audio content with transcription and read-along alignment
+- **Polish Music** - Music-based learning with YouTube integration, transcripts, and user playlists
 - **Videos** - Video learning with interactive features
 - **Audio Transcript** - Speech-to-text processing
+- **Q&A Lab** - Question-and-answer sets linked to podcast content
 
 **Community & Social:**
 
@@ -190,7 +200,7 @@ _PoliLex Bilingual — home page with conjugation table and hero messaging_
 - **Speech-to-Text** - Built-in speech recognition plugin for voice input
 - **Auto-Embed Plugin** - Automatic detection and embedding of YouTube URLs
 - **Collaborative Features** - Real-time editing capabilities with history tracking
-- **On-Demand Heavy Dependencies** - Excalidraw, emoji picker (`@emoji-mart/*`), and similar tools load via `React.lazy` / dynamic `import()` when opened — not in the initial editor shell
+- **On-Demand Heavy Dependencies** - Emoji picker (`@emoji-mart/*`) and similar tools load via `React.lazy` / dynamic `import()` when opened — not in the initial editor shell
 - **Resilient Emoji Picker** - `EmojiMartPicker` surfaces load/retry UI if dynamic imports fail (no stuck loading state)
 - **Export Capabilities** - Export editor content to blog posts and learning materials
 
@@ -241,22 +251,22 @@ _PoliLex Bilingual — home page with conjugation table and hero messaging_
 
 ### Version History
 
-| Milestone                            | Date            | What shipped                                                                                                                                                                                  |
-| :----------------------------------- | :-------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `cachedPrisma` + `safeFetch` loaders | Nov 2025        | Dual Prisma client split; `safeFetch` utility and per-route loader pattern established                                                                                                        |
-| Next.js 16 upgrade                   | Feb 12, 2026    | Bumped to 16.1.6 (latest available at the time); `cacheComponents: true` attempted but abandoned — Clerk's `auth()` inside `'use cache'` caused build failures with no workaround at the time |
-| `unstable_cache` production baseline | Feb–May 2026    | Continued using `unstable_cache` / `unstable_cacheLife` / `unstable_cacheTag` as the stable caching strategy while `cacheComponents` remained blocked                                         |
-| **First successful PPR**             | **May 8, 2026** | Clerk `HangingPromiseRejectionError` solved via `AuthRequiredError` + silent fallback in `claimsFn`; `cacheComponents: true` live for the first time across all routes                        |
-| `'use cache'` migration              | May 8, 2026     | Full codebase migrated from `unstable_*` to stable `'use cache'` directive, `cacheLife()`, `cacheTag()`                                                                                       |
-| `cache-utils/` consolidation         | May 8, 2026     | `safe-fetch`, `cache-ttl`, `cache-monitor`, `dynamic-loader`, `invalidate` unified into `src/lib/cache-utils/`                                                                                |
-| `dynamicLoader()`                    | May 8, 2026     | `React.cache()` + `connection()` encapsulated as a single primitive; applied across all 17 loader files                                                                                       |
-| `invalidate.*()` helpers             | May 8, 2026     | Typed cache invalidation API replacing raw `revalidateTag()` strings across all server actions                                                                                                |
-| ESLint enforcement                   | May 8, 2026     | `local/no-cached-prisma-outside-use-cache` rule; `no-restricted-syntax` for `console.error` in actions                                                                                        |
-| Bundle lazy-load + combobox migration | May 2026        | Excalidraw, emoji-mart, Stream Chat, `react-pdf` moved to async chunks; `react-select` removed → `CreatableCombobox` / `VerbCombobox` (SSR-safe, keyboard-accessible clear) |
+| Milestone                             | Date            | What shipped                                                                                                                                                                                                                 |
+| :------------------------------------ | :-------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `cachedPrisma` + `safeFetch` loaders  | Nov 2025        | Dual Prisma client split; `safeFetch` utility and per-route loader pattern established                                                                                                                                       |
+| Next.js 16 upgrade                    | Feb 12, 2026    | Initial bump to 16.1.6; `cacheComponents: true` attempted but abandoned — Clerk's `auth()` inside `'use cache'` caused build failures with no workaround at the time. Currently on **16.2.x** (`^16.2.4` in `package.json`). |
+| `unstable_cache` production baseline  | Feb–May 2026    | Continued using `unstable_cache` / `unstable_cacheLife` / `unstable_cacheTag` as the stable caching strategy while `cacheComponents` remained blocked                                                                        |
+| **First successful PPR**              | **May 8, 2026** | Clerk `HangingPromiseRejectionError` solved via `AuthRequiredError` + silent fallback in `claimsFn`; `cacheComponents: true` live for the first time across all routes                                                       |
+| `'use cache'` migration               | May 8, 2026     | Full codebase migrated from `unstable_*` to stable `'use cache'` directive, `cacheLife()`, `cacheTag()`                                                                                                                      |
+| `cache-utils/` consolidation          | May 8, 2026     | `safe-fetch`, `cache-ttl`, `cache-monitor`, `dynamic-loader`, `invalidate` unified into `src/lib/cache/`                                                                                                                     |
+| `dynamicLoader()`                     | May 8, 2026     | `React.cache()` + `connection()` encapsulated as a single primitive; applied across **34** route `loaders.ts` files                                                                                                          |
+| `invalidate.*()` helpers              | May 8, 2026     | Typed cache invalidation API replacing raw `revalidateTag()` strings across all server actions                                                                                                                               |
+| ESLint enforcement                    | May 8, 2026     | `local/no-cached-prisma-outside-use-cache` rule; `no-restricted-syntax` for `console.error` in actions                                                                                                                       |
+| Bundle lazy-load + combobox migration | May 2026        | emoji-mart, Stream Chat, `react-pdf` moved to async chunks; `react-select` removed → `CreatableCombobox` / `VerbCombobox` (SSR-safe, keyboard-accessible clear)                                                              |
 
 Every route in PoliLex is a Partial Prerender (`◐`): the static shell (nav, layout, skeleton UI) is pre-generated at build time and served from CDN with instant TTFB. Dynamic content — auth state, user data, subscription status — streams in behind `<Suspense>` boundaries. The entire application uses the Next.js 16 `'use cache'` directive with `cacheLife()` profiles rather than route-segment config — cache policy lives next to the data, not scattered across page files.
 
-### `src/lib/cache-utils/` — Unified Cache Module
+### `src/lib/cache/` — Unified Cache Module
 
 All caching concerns live in a single, purpose-built module. Nothing cache-related is scattered across `src/lib/utils/`, `src/lib/constants/`, or individual action files:
 
@@ -270,12 +280,12 @@ All caching concerns live in a single, purpose-built module. Nothing cache-relat
 
 ### Core Configuration
 
-`next.config.mjs` imports `STABLE_DATA_CACHE_LIFE` directly from `src/lib/cache-utils/cache-ttl.ts` via `jiti`. The `cacheLife` config entry and every `cacheLife()` call inside `'use cache'` functions reference the same object — values cannot drift between build config and runtime:
+`next.config.mjs` imports `STABLE_DATA_CACHE_LIFE` directly from `src/lib/cache/cache-ttl.ts` via `jiti`. The `cacheLife` config entry and every `cacheLife()` call inside `'use cache'` functions reference the same object — values cannot drift between build config and runtime:
 
 ```ts
 // Single source of truth — next.config.mjs reads the same object 'use cache' functions use
 const { STABLE_DATA_CACHE_LIFE } = jiti(
-  resolve(__dirname, './src/lib/cache-utils/cache-ttl.ts'),
+  resolve(__dirname, './src/lib/cache/cache-ttl.ts'),
 );
 const nextConfig = {
   cacheComponents: true,
@@ -304,56 +314,53 @@ export const loadAspectPairs = dynamicLoader(
 
 ### `invalidate.*()` — Typed Cache Invalidation
 
-Raw `revalidateTag()` calls are never used directly in server action files. All cache invalidation goes through named helpers exported from `src/lib/cache-utils/invalidate.ts`, which owns every tag string as a single typed constant:
+Server actions and mutations should call **`invalidate.*()`** helpers from `src/lib/cache/invalidate.ts` rather than raw tag strings. The module owns **`CACHE_TAGS`** (vocabulary, reflexive lab, exam content, blog/tenant, OpenAI costs) and wraps `revalidateTag()` internally:
 
 ```ts
 // Tag strings defined once — callers never write raw strings
 invalidate.adjectives();
 invalidate.blog.post(companyId, postId); // touches POST_DETAIL + POSTS_LIST + ANALYTICS atomically
 invalidate.openaiCosts(model); // optional fine-grained model tag + the aggregate tag
+invalidate.exam.exercise(examId, taskType); // surgical exam cache bust
 ```
 
-The advantage over raw `revalidateTag()` is threefold: tag strings cannot be misspelled (TypeScript errors at the call site), related tags are always invalidated together (e.g. a blog post change also clears the post list and analytics), and the full set of tags in the system is discoverable in one place rather than grep-scattered across action files.
+The advantage over ad-hoc `revalidateTag()` is threefold: tag strings cannot be misspelled (TypeScript errors at the call site), related tags are always invalidated together (e.g. a blog post change also clears the post list and analytics), and the full set of tags in the system is discoverable in one place rather than grep-scattered across action files.
 
 ### Dual Prisma Client Pattern
 
-`auth()` (reads cookies/headers) must never be called inside a `'use cache'` function. The project exports two separate Prisma clients at the infrastructure level:
+`auth()` (reads cookies/headers) must never be called inside a `'use cache'` function. Both clients are defined in **`src/server-actions/prisma.ts`** and exported as `prisma` (default) and `cachedPrisma`:
 
 | Client         | Context                                               | RLS                             |
 | :------------- | :---------------------------------------------------- | :------------------------------ |
 | `cachedPrisma` | Inside `'use cache'` functions — public / shared data | Anonymous RLS (empty claims)    |
 | `prisma`       | Loaders and server actions — user-scoped data         | Auth RLS (Clerk session claims) |
 
-The `prisma` client's `claimsFn` wraps `auth()` in try/catch and silently returns empty claims during PPR prerendering (when no request context exists), preventing build failures.
+The `prisma` client's `claimsFn` wraps `auth()` in try/catch and silently returns empty claims during PPR prerendering (when no request context exists), preventing build failures. **`cachedPrisma` must never call `auth()`** — ESLint rule `local/no-cached-prisma-outside-use-cache` flags accidental misuse at write time.
 
 ### ESLint Enforcement
 
-Two custom rules in `eslint.config.mjs` catch cache and logging mistakes at write time:
+Custom rules in `eslint.config.mjs` catch cache, logging, and App Router boundary mistakes at write time:
 
-**`local/no-cached-prisma-outside-use-cache`** — warns when `cachedPrisma` is used inside a function that doesn't start with `'use cache'`. Catches accidental RLS bypass. Set to `warn` because the rule cannot trace call stacks — helpers designed to be called _from_ `'use cache'` functions are valid uses:
+**Cache & Suspense**
+
+- **`local/no-cached-prisma-outside-use-cache`** — warns when `cachedPrisma` is used outside a `'use cache'` function (set to `warn` because call-stack tracing is incomplete).
+- **`local/require-suspense-for-suspending-route-components`** — client components using `useSearchParams()` or `use(promise)` must sit below `<Suspense>` (or the route opts in via `connection()`).
+- **`local/no-suspense-fallback-with-route-loading`** — prevents duplicating the same loading UX with both segment `loading.tsx` and page-level Suspense.
+
+**Server / client boundaries** (see [ACTIONS-STRUCTURE.md](docs/AUDIT-MD/SERVER%20ACTIONS/ACTIONS-STRUCTURE.md))
+
+- `local/no-use-client-in-server-layers`, `local/no-use-server-in-forbidden-locations`, `local/no-prisma-in-client-boundary`, `local/no-client-import-server-action-impl`, `local/no-barrel-server-actions-import`, and related rules enforce the RPC entrypoint pattern under `src/server-actions/`.
+
+**Logging**
+
+- **`no-restricted-syntax` on `console.error`** — warns in `src/server-actions/**/*.ts` and `src/app/api/**/*.ts`, pointing developers to `logUserError()` instead.
 
 ```ts
-// Blog posts are public data — anonymous RLS is intentional here.
-/* eslint-disable local/no-cached-prisma-outside-use-cache */
-const [posts, total] = await Promise.all([cachedPrisma.blogPost.findMany(...)]);
-/* eslint-enable local/no-cached-prisma-outside-use-cache */
-```
-
-**`no-restricted-syntax` on `console.error`** — warns in all `src/lib/actions/actions.*.ts` and `src/app/api/**/*.ts` files, pointing developers to `logUserError()` instead. `logUserError` silently swallows `AuthRequiredError` (expected during PPR prerendering) and uses `error.message` + stack-frame fallback rather than `error.constructor.name`, which production minifiers mangle to single letters:
-
-```ts
-// Bad — constructor names mangle to 'i' or 'c' in production builds
-console.error(
-  'Update failed:',
-  error instanceof Error ? error.constructor.name : typeof error,
-);
-
 // Good — always produces useful output in production
 logUserError('Update failed:', error);
 ```
 
-`src/lib/actions/actions.podcast.ts` is fully on this pattern (including best-effort
-wordplay analysis logging at publish).
+`src/server-actions/podcast/` is fully on this pattern (including best-effort wordplay analysis logging at publish).
 
 ### Silent Auth Fallback During Prerendering
 
@@ -393,7 +400,7 @@ Next.js tracks dynamic context through `fetch()`, `cookies()`, `headers()`, and 
 
 ### Navigation + streaming skeleton system
 
-Most feature routes use **`<Suspense fallback={<FeatureSkeleton />}>`** around async server work or **`use(promise)`** (see `docs/cache-components/CACHE_COMPONENTS.md` Pattern 8). **There is no `src/app/loading.tsx`** (no root segment loading file). Only **two** segment **`loading.tsx`** files exist today (`src/app/[lang]/(landing)/onboarding/loading.tsx` and `src/app/[lang]/(home)/test-rls/loading.tsx`); do not duplicate the same loading UX with both segment `loading.tsx` and page-level Suspense for the same subtree.
+Most feature routes use **`<Suspense fallback={<FeatureSkeleton />}>`** around async server work or **`use(promise)`** (see `docs/cache-components/CACHE_COMPONENTS.md` Pattern 8). **There is no root segment `loading.tsx`** under `src/app/`. Segment **`loading.tsx`** files exist for onboarding, RLS testing, and company portal subtrees (e.g. `src/app/[lang]/(landing)/onboarding/loading.tsx`, `src/app/[lang]/(home)/test-rls/loading.tsx`, `src/app/[lang]/companies/[slug]/loading.tsx` and blog/videos/pdf variants); do not duplicate the same loading UX with both segment `loading.tsx` and page-level Suspense for the same subtree.
 
 Clerk’s async **`ClerkProvider`** in **`src/app/[lang]/layout.tsx`** uses **`AppShellSkeletonWithPage`** ( **`NavbarSkeleton`** + **`SuspenseFallbackChrome`** ) as the Suspense fallback while **`getKeylessStatus`** runs.
 
@@ -401,15 +408,17 @@ Clerk’s async **`ClerkProvider`** in **`src/app/[lang]/layout.tsx`** uses **`A
 
 ### CI Pipeline
 
-`.github/workflows/pr-checks.yml` runs three jobs on every PR:
+Primary validation (**lint**, **type-check**, **Jest**, **`next build`**) runs **locally and on Vercel** — not in GitHub Actions (see workflow comment in `.github/workflows/pr-checks.yml`). The `build` step is the **only** place missing `connection()` calls and `'use cache'` violations surface; these errors only occur during `next build`, not `next dev`.
 
-| Job              | Commands                             | Catches                                                          |
-| :--------------- | :----------------------------------- | :--------------------------------------------------------------- |
-| `lint-and-types` | `npm run lint && npm run type-check` | ESLint violations incl. `cachedPrisma` rule, TS errors           |
-| `test`           | `npm run test -- --ci --forceExit`   | Unit and integration regressions                                 |
-| `build`          | `npm run build` (requires secrets)   | Missing `connection()`, `auth()` in `'use cache'`, crypto errors |
+GitHub Actions supplements with focused jobs:
 
-The `build` job is the **only** place missing `connection()` calls surface — these errors only occur during `next build`, not `next dev`. Fork PRs skip it automatically (GitHub withholds secrets from forks).
+| Job                  | Trigger                       | Commands                                                     | Catches                                             |
+| :------------------- | :---------------------------- | :----------------------------------------------------------- | :-------------------------------------------------- |
+| `gold-audit-diff`    | Pull request                  | `audit-test-gold.mjs --diff`, `npm run test:gold-report`     | Test gold-tier regressions on changed files         |
+| `gold-audit-nightly` | Mon 6 AM UTC + push to `main` | Full gold audit + phase1/phase2 layer audit, artifact upload | Manifest drift, harness gaps across the test corpus |
+| `polar-webhooks`     | Push to `main`                | `npm run test:polar-webhooks`                                | Payment webhook handler regressions (**652** tests) |
+
+Local equivalents: `npm run test:gold-audit:diff` (PR diff), `npm run test:gold-audit` (full audit), `npm run test:polar-webhooks`.
 
 ### Architecture Decisions
 
@@ -441,26 +450,38 @@ The `build` job is the **only** place missing `connection()` calls surface — t
 
 ### Combobox / select migration (2026-05)
 
-| Before | After |
-| :----- | :---- |
-| `react-select` + Emotion (~80 lines of theme `styles` per surface) | **`CreatableCombobox`** (Radix Popover + cmdk) + thin **`VerbCombobox`** wrapper |
-| Hydration risk on SSR routes | Tailwind semantic tokens; no CSS-in-JS injection |
-| `isMounted` gates masking mismatches | Root cause fixed; ESLint **`no-restricted-imports`** blocks `react-select` reintroduction |
+| Before                                                             | After                                                                                                       |
+| :----------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
+| `react-select` + Emotion (~80 lines of theme `styles` per surface) | **`CreatableCombobox`** (Radix Popover + cmdk) — shared primitive in `@/components/reusable/forms/combobox` |
+| Hydration risk on SSR routes                                       | Tailwind semantic tokens; no CSS-in-JS injection                                                            |
+| `isMounted` gates masking mismatches                               | Root cause fixed; ESLint **`no-restricted-imports`** blocks `react-select` reintroduction                   |
 
-**Consumers:** flashcards add-verb modal, conjugator scrape wizard, podcast/conversation subtitle fields, adjective/adverb/occupation pickers, Wordplay text processor, Word Wizard / Spelling Master categories.
+**Three-layer combobox stack:**
+
+| Layer               | Component                  | Used by                                                                                                    |
+| :------------------ | :------------------------- | :--------------------------------------------------------------------------------------------------------- |
+| Primitive           | **`CreatableCombobox`**    | All combobox surfaces                                                                                      |
+| Collection routes   | **`CollectionWordSelect`** | Adjectives, adverbs, occupations page clients                                                              |
+| Verb/subtitle flows | **`VerbCombobox`**         | Flashcards, conjugator, podcast/conversation subtitles, Wordplay, Word Wizard / Spelling Master categories |
 
 **Engineering details:** large verb lists use A–Z browse batches + scroll load; clear control is keyboard- and screen-reader-accessible; conjugation wizard resets fetched verb state when the user picks a different lemma (prevents stale inject). Internal specs: [`docs/AUDIT-MD/SELECT_AUDIT.md`](./docs/AUDIT-MD/SELECT_AUDIT.md).
 
-### Lazy-load quick wins (2026-05)
+### Lazy-load & deferral strategy
 
-| Dependency | Pattern | User-visible surface |
-| :--------- | :------ | :------------------- |
-| `@excalidraw/excalidraw` | `React.lazy` | Editor diagram plugin |
-| `@emoji-mart/react` + data | `import()` on mount | Toolbar / blog emoji picker |
-| `stream-chat-react` | `next/dynamic` | `/chat` authenticated stream |
-| `react-pdf` / `pdfjs-dist` | dynamic viewer | Portable documents route |
+Heavy npm packages and feature shells load only when the user navigates to them or opens the UI. Baseline workflow: `npm run bundle:baseline` → `node scripts/compare-bundle-baseline.mjs` (manual; compares checked-in snapshots under `baseline/`).
 
-**Measurement:** `npm run bundle:baseline` + `scripts/compare-bundle-baseline.mjs` against checked-in baselines; `npx next experimental-analyze` for per-route graphs. Combined static JS stayed ~flat while CSS dropped ~349 KiB after splitting heavy CSS out of the eager graph.
+| Dependency / surface       | Pattern                                                                        | Entry file                                                                       |
+| :------------------------- | :----------------------------------------------------------------------------- | :------------------------------------------------------------------------------- |
+| `@emoji-mart/react` + data | `import()` on mount                                                            | `src/lexical/lexical-ui/EmojiMartPicker.tsx`                                     |
+| Stream Chat UI shell       | `next/dynamic` → `ChatStreamAuthenticated` (`ssr: false`)                      | `src/app/[lang]/(chat)/chat/ChatPageClient.tsx`                                  |
+| Stream session host        | Lightweight `useCreateChatClient` when pathname is `/chat`                     | `src/components/stream-chat/session/StreamChatConnectionHost.tsx` in root layout |
+| `react-pdf` / `pdfjs-dist` | `next/dynamic` viewer                                                          | `src/components/portable-documents/PDFViewerDynamic.tsx`                         |
+| Tambo AI tutor             | User opt-in gate → dynamic `AITutorAssistantTambo`                             | `src/components/tambo/ai-tutor-assistant/AITutorAssistant.tsx`                   |
+| Lexical editor shell       | Dynamic `LexicalEditor`                                                        | `src/app/[lang]/(home)/editor/EditorPageClient.tsx`                              |
+| Global chrome deferrals    | `DeferredLayoutUI` — podcast player, bot, conjugator modal, credit badge, etc. | `src/components/layout/DeferredLayoutUI.tsx`                                     |
+| Route page clients         | ~48 `*RoutePageClient.tsx` files use `next/dynamic` for lab/admin shells       | e.g. wordplay, idioms-lab, exam, polish-music                                    |
+
+Full inventory and analyzer workflow: [`docs/bundle-size/BUNDLE_SIZE.md`](./docs/bundle-size/BUNDLE_SIZE.md). Combined static JS stayed ~flat while CSS dropped ~349 KiB after splitting heavy CSS out of the eager graph (May 2026 baseline).
 
 </details>
 
@@ -473,7 +494,7 @@ The `build` job is the **only** place missing `connection()` calls surface — t
 
 <br/>
 
-**Stack:** [**next-intl**](https://next-intl.dev/) v4 · **ICU MessageFormat** in JSON · locales **`en`** (default) · **`pl`**
+**Stack:** [**next-intl**](https://next-intl.dev/) v4 · **ICU MessageFormat** in JSON · **`en`** (default) and **`pl` only** — no other product locales
 
 PoliLex treats internationalization as a first-class platform concern: routing, middleware, layout boundaries, and client bundles are aligned so senior reviewers can reason about locale, payload size, and React 19 / Next.js 16 constraints in one place.
 
@@ -497,11 +518,11 @@ _Next.js 16:_ proxy lives at `src/proxy.ts` (Node runtime by default for this fi
 
 ### Layout split (theme vs locale)
 
-| **Layer**                         | **Role**                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`src/app/layout.tsx`**          | Owns **`<html>`** and **`<body>`**, root **metadata/viewport**, **`ThemeProvider`**, and analytics. **`lang`** on `<html>` is **`fallbackLng`** for SSR; the active routed locale updates **`document.documentElement.lang`** from **`IntlClientShell`** (**`DocumentLangFromSegment`**) once the **`[lang]`** tree mounts — same spirit as **`ThemeProvider`** above the locale segment (**`docs/next-intl/NEXT_INTL.md`** §6 / §11). |
-| **`src/app/[lang]/layout.tsx`**   | **Async** `await params`, **`IntlClientShell`**, then **`<Suspense fallback={<AppShellSkeletonWithPage />}>`** around **`ClerkProvider`** only (Pattern 3 — Clerk’s async RSC / `getKeylessStatus`). **App chrome** (nav, main, footer) and **`{children}`** (inner **`Suspense fallback={null}`**) live inside Clerk.                                                                                                                 |
-| **`src/app/[lang]/template.tsx`** | Client `LangTemplate`: **`ViewTransition name="page"`** for `ApplicationNavigation` + View Transition API. Lives under `[lang]` so markup stays under `<body>`. **`ViewTransition`** always renders a **stable `<div>`** when `name` is set and applies `view-transition-name` in `useEffect` — avoids fragment→`div` remount and first-load “double paint”.                                                                           |
+| **Layer**                         | **Role**                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **`src/app/layout.tsx`**          | Owns **`<html>`** and **`<body>`**, root **metadata/viewport**, **`ThemeProvider`**, and analytics. **`lang`** on `<html>` is **`fallbackLng`** for SSR; the active routed locale updates **`document.documentElement.lang`** from **`IntlClientShell`** (**`DocumentLangFromSegment`**) once the **`[lang]`** tree mounts — same spirit as **`ThemeProvider`** above the locale segment (**`docs/next-intl/NEXT_INTL.md`** §6 / §11).                        |
+| **`src/app/[lang]/layout.tsx`**   | **Async** `await params`, **`IntlClientShell`**, then **`<Suspense fallback={<AppShellSkeletonWithPage />}>`** around **`ClerkProvider`** only (Pattern 3). Inside Clerk: **`StreamChatSessionClearOnSignOut`**, **`EditorStoreAuthScope`**, **`PendingTokenRefundRetry`**, **`AudioProvider`**, **`UIVisibilityProvider`**, **`PaymentFailedBanner`**, nav/main/footer, **`DeferredLayoutUI`**, and **`{children}`** (inner **`Suspense fallback={null}`**). |
+| **`src/app/[lang]/template.tsx`** | Client `LangTemplate`: **`ViewTransition name="page"`** for `ApplicationNavigation` + View Transition API. Lives under `[lang]` so markup stays under `<body>`. **`ViewTransition`** always renders a **stable `<div>`** when `name` is set and applies `view-transition-name` in `useEffect` — avoids fragment→`div` remount and first-load “double paint”.                                                                                                  |
 
 **`cacheComponents`:** uncached async work from **`ClerkProvider`** must sit inside **`<Suspense>`**. **`params`** are **not** hidden behind that fallback: the layout **`await`s `params`** first so locale + intl mount without flashing the full **`AppShellSkeletonWithPage`** for segment resolution alone (see **`docs/next-intl/NEXT_INTL.md`** §6).
 
@@ -566,13 +587,14 @@ End-to-end file map, code pointers, SEO, and edge-case notes: **[`docs/next-intl
 
 ### Version History
 
-| Version | Date         | Focus                                                                                                                                   |
-| :------ | :----------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
-| v2.1    | Jan 2026     | Three-layer security hardening: Zuplo edge IP allowlist, HMAC webhook verification, Prisma `Serializable` isolation                     |
-| v2.2    | Jan 28, 2026 | `subscription.created` event support, duplicate transaction prevention, custom in-app subscription UI replacing Polar portal            |
-| v2.3    | Jan 28, 2026 | Payment failure UX (`PaymentFailureAlert`, `past_due` flow), automated reconciliation / cleanup / webhook-recovery crons                |
-| v2.4    | March 2026   | Modular webhook handlers (`src/hooks/webhooks/polar/`), explicit `claimWebhookEvent` + `markWebhookEventProcessed` idempotency refactor |
-| v2.5    | April 2026   | `customer.state_changed` first-class handler, `period.ended` routing, order de-duplication, structured file-sink logging                |
+| Version | Date         | Focus                                                                                                                                                                                    |
+| :------ | :----------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| v2.1    | Jan 2026     | Defense-in-depth: HMAC webhook verification; Zuplo edge allowlist documented in STRIDE; Prisma `Serializable` on user mutations                                                          |
+| v2.2    | Jan 28, 2026 | `subscription.created` event support, duplicate transaction prevention, custom in-app subscription UI replacing Polar portal                                                             |
+| v2.3    | Jan 28, 2026 | Payment failure UX (`PaymentFailureAlert`, `past_due` flow), automated reconciliation / cleanup / webhook-recovery crons                                                                 |
+| v2.4    | March 2026   | Modular webhook handlers (`src/hooks/webhooks/polar/`), explicit `claimWebhookEvent` + `markWebhookEventProcessed` idempotency refactor                                                  |
+| v2.5    | April 2026   | `customer.state_changed` first-class handler, `period.ended` routing, order de-duplication, structured file-sink logging                                                                 |
+| v2.6    | June 2026    | **`src/modules/polar/`** signup reconcile services; modular webhook idempotency re-export in **`src/modules/webhooks/`**; **`FixPaymentAction`** replaces legacy payment badge component |
 
 ### Billing: Polar (Merchant of Record)
 
@@ -593,12 +615,12 @@ End-to-end file map, code pointers, SEO, and edge-case notes: **[`docs/next-intl
 
 #### Who owns what
 
-| **Layer**                                                         | **Role**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **In code**                                                                                                                                                                                                                             |
-| :---------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Polar** (API + webhooks)                                        | **Source of truth** for subscription _identity_ and orders: MoR records, what was paid, period boundaries, and signed webhooks. Live API reads and webhook streams are the same commercial reality.                                                                                                                                                                                                                                                                                        | `src/app/api/webhook/polar/route.ts` → handlers; `getPolarClient()`; `getPolarSubscriptionState` / `resolvePolarSubscriptionForAccount` in `src/lib/polar/subscription-state.ts`                                                        |
-| **PostgreSQL** (Prisma: `User`, `Transaction`, `WebhookEvent`, …) | **Materialized + app ledger** — **not** a second billing authority. Stores balances and polar\* columns **as applied from Polar events** (webhooks, crons) plus idempotency keys. Token math is your product policy **on top of** Polar-driven tier/order facts.                                                                                                                                                                                                                           | Webhook handlers under `src/hooks/webhooks/polar/`; `src/lib/polar/cron/polar-reconciliation.ts`, etc.                                                                                                                                  |
-| **Clerk `publicMetadata`**                                        | **Read-optimized cache** for the session and Edge: plan, `hasActiveSubscription`, payment flags. If **`syncClerk` fails** after a webhook, the handler still succeeds: the **webhook was already applied to Postgres from Polar’s event** — only Clerk is stale. _“The DB is the source of truth; Clerk is a cache…”_ in `src/hooks/webhooks/polar/sync-clerk.ts` means **Clerk** must not block money writes; **Polar** already decided the event; **Postgres** holds the applied result. | `syncClerk`; `syncClerkPublicMetadataFromDatabase` in `src/lib/clerk/sync-public-metadata-from-database.ts`                                                                                                                             |
-| **Client** (credits UI)                                           | **Consumes** server-computed status; does not invent billing state.                                                                                                                                                                                                                                                                                                                                                                                                                        | `getSubscriptionStatus()` — `src/lib/actions/actions.subscriptions.ts`; `useSubscriptionPolling` + `SubscriptionProvider` — `src/components/credits/subscription/`; token UI may use `useTokenBalance` — `src/store/useTokenBalance.ts` |
+| **Layer**                                                         | **Role**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **In code**                                                                                                                                                                                                                      |
+| :---------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Polar** (API + webhooks)                                        | **Source of truth** for subscription _identity_ and orders: MoR records, what was paid, period boundaries, and signed webhooks. Live API reads and webhook streams are the same commercial reality.                                                                                                                                                                                                                                                                                        | `src/app/api/webhook/polar/route.ts` → handlers; `getPolarClient()`; `getPolarSubscriptionState` / `resolvePolarSubscriptionForAccount` in `src/lib/polar/subscription-state.ts`                                                 |
+| **PostgreSQL** (Prisma: `User`, `Transaction`, `WebhookEvent`, …) | **Materialized + app ledger** — **not** a second billing authority. Stores balances and polar\* columns **as applied from Polar events** (webhooks, crons) plus idempotency keys. Token math is your product policy **on top of** Polar-driven tier/order facts.                                                                                                                                                                                                                           | Webhook handlers under `src/hooks/webhooks/polar/`; cron jobs under `src/lib/polar/cron/`; signup reconcile via `src/modules/polar/polar-customer.service.ts` + `polar-subscription.service.ts`                                  |
+| **Clerk `publicMetadata`**                                        | **Read-optimized cache** for the session and Edge: plan, `hasActiveSubscription`, payment flags. If **`syncClerk` fails** after a webhook, the handler still succeeds: the **webhook was already applied to Postgres from Polar’s event** — only Clerk is stale. _“The DB is the source of truth; Clerk is a cache…”_ in `src/hooks/webhooks/polar/sync-clerk.ts` means **Clerk** must not block money writes; **Polar** already decided the event; **Postgres** holds the applied result. | `syncClerk`; `syncClerkPublicMetadataFromDatabase` in `src/lib/clerk/sync-public-metadata-from-database.ts`                                                                                                                      |
+| **Client** (credits UI)                                           | **Consumes** server-computed status; does not invent billing state.                                                                                                                                                                                                                                                                                                                                                                                                                        | `getSubscriptionStatus()` — `src/server-actions/subscriptions/`; `useSubscriptionPolling` + `SubscriptionProvider` — `src/components/credits/subscription/`; token UI may use `useTokenBalance` — `src/store/useTokenBalance.ts` |
 
 #### Write path (money events)
 
@@ -610,7 +632,7 @@ End-to-end file map, code pointers, SEO, and edge-case notes: **[`docs/next-intl
 
 #### Read path (UI, credits, gating)
 
-- **`getSubscriptionStatus()`** (`src/lib/actions/actions.subscriptions.ts`):
+- **`getSubscriptionStatus()`** (`src/server-actions/subscriptions/`):
   - Always reads **tokens** and stable user keys from **Prisma**.
   - Merges **live Polar** via **`resolvePolarSubscriptionForAccount`** so subscription _identity_ matches **Polar** when the API is available (overrides a stale **local** mirror). If Polar is unreachable, response falls back to last-known DB state (logged) — a **degraded** read, not a second authority.
   - **Edge case** in code: if Polar’s API shows no sub yet the DB has a still-valid `polarCurrentPeriodEnd` (e.g. migration/restored user), access may be granted from DB **until** Polar and reconciliation **align** — treat as **bridging**, not a competing SoT.
@@ -644,7 +666,7 @@ flowchart LR
 **Design Principles:**
 
 - **Polar as source of truth** — Subscription and order reality comes only from **Polar** (webhooks + API). Postgres and Clerk are **projections**; drift is **corrected** toward Polar (live reads, reconciliation, crons).
-- **Financial Software Standards** — Zero tolerance for bugs where money is involved; heavy Jest coverage on `__tests__/lib/polar` + `__tests__/api/webhook` (**632** tests) and dedicated state-machine matrices
+- **Financial Software Standards** — Zero tolerance for bugs where money is involved; **`npm run test:polar-webhooks`** covers **652** Jest tests across `__tests__/lib/polar`, `__tests__/hooks/webhooks/polar`, `__tests__/api/webhook`, and `__tests__/modules/webhooks` — plus dedicated state-machine matrices
 - **Database-Backed Idempotency** — Claim→apply→mark via `claimWebhookEvent` + `markWebhookEventProcessed` in `src/lib/polar/webhook-idempotency.ts` (insert claim, P2002 = duplicate); stable `eventId`s prevent double-processing
 - **Fail-Closed for Money** — Balance mutations fail-closed; metadata sync fail-open for optimal reliability
 - **Event-Driven Processing** — Asynchronous webhook handlers with state machine validation and transaction atomicity
@@ -676,16 +698,16 @@ flowchart LR
 
 **Three-Layer Defense-in-Depth:**
 
-1. **Edge Protection (Zuplo API Gateway)**
-   - IP allowlisting for webhooks (Polar's 5 official IPs only)
-   - Rate limiting (100 req/min webhooks, 20 req/min checkouts)
-   - Comprehensive audit logging with IP, user agent, timestamp
+1. **Edge Protection (Zuplo API Gateway — optional external layer)**
+   - Documented in `docs/polar/STRIDE_THREAT_MODEL.md` for webhook IP allowlisting and rate limits
+   - **In-repo Polar webhook security** = HMAC signature verification via `@polar-sh/sdk/webhooks` only
+   - Zuplo **is** used elsewhere for translate/scrape gateway paths (`NEXT_PUBLIC_GATEWAY_URL`) — not wired into `src/app/api/webhook/polar/`
 
 2. **Application Layer**
    - Multi-layer validation (Zod UUID → Business logic allowlist → Runtime auth)
    - HMAC signature verification via Polar SDK on all webhook payloads
    - Database-backed idempotency — `claimWebhookEvent` + `markWebhookEventProcessed` with stable keys (duplicate insert P2002 → skip)
-   - Prisma `Serializable` isolation where used for race-sensitive billing/user updates (see e.g. critical user action paths)
+   - Prisma `Serializable` isolation on race-sensitive **user** mutations (e.g. `src/server-actions/user/mutations.ts`) — not inside polar webhook handlers themselves
    - Zero-trust metadata (token amounts derived from productId only, not client data)
 
 3. **Data Layer**
@@ -722,11 +744,10 @@ flowchart LR
 **v2.3 Automation & UX (Jan 28, 2026):**
 
 - **Payment Failure Handling** — Complete UX flow for failed payments:
-  - `PaymentFailureAlert.tsx` component with prominent "Fix Payment" CTA
-  - Alert displays on credits page when `subscription.past_due` webhook received
+  - `PaymentFailureAlert.tsx` on credits page when `subscription.past_due` webhook received
   - Shows period end date and redirects to Polar portal for secure payment update
-  - `ManageSubscriptionBadge.tsx` prioritizes payment failure button above all other actions
-  - 2 new test scenarios added to credits page test suite
+  - **`FixPaymentAction.tsx`** in `AccountManagementCard` prioritizes payment failure CTA above other actions
+  - `PaymentFailedBanner` in locale layout surfaces payment issues app-wide
 - **Reconciliation Cron** — Automated DB-Clerk desync detection and healing (daily at 3 AM UTC; Hobby-compatible)
 - **Cleanup Cron** — Automated webhook event pruning (daily at 2 AM UTC, 30-day retention)
 - **Cron Security** — Bearer token authorization, IP logging, fail-open error handling
@@ -784,14 +805,14 @@ Initially, the system relied on Polar's customer portal for all subscription ope
 
 **Custom Implementation:**
 
-Built **4 subscription UI entry points** (primary Jest files: **246** tests total) handling common operations in-app:
+Built **4 subscription UI entry points** (primary Jest files: **117** tests total) handling common operations in-app:
 
-| **Path**                                                                    | **Responsibility**                               | **Tests (Jest)**                                               |
-| :-------------------------------------------------------------------------- | :----------------------------------------------- | :------------------------------------------------------------- |
-| `src/components/credits/subscription/plans/SubscriptionPlans.tsx`           | Plan display, upgrade/downgrade UI               | 51 (`__tests__/components/credits/SubscriptionPlans.test.tsx`) |
-| `src/components/credits/ManageSubscriptionBadge.tsx`                        | Current plan badge, actions, payment failure CTA | 29                                                             |
-| `src/components/credits/ConfirmationDialog.tsx`                             | Upgrade / downgrade / cancel confirmations       | 19                                                             |
-| `src/components/credits/subscription/plans/hooks/useSubscriptionActions.ts` | Centralized subscription actions                 | 22 (integration: `SubscriptionActionsIntegration.test.tsx`)    |
+| **Path**                                                                                            | **Responsibility**                               | **Tests (Jest)**                                                                         |
+| :-------------------------------------------------------------------------------------------------- | :----------------------------------------------- | :--------------------------------------------------------------------------------------- |
+| `src/components/credits/subscription/plans/SubscriptionPlans.tsx`                                   | Plan display, upgrade/downgrade UI               | 52 (`__tests__/components/credits/SubscriptionPlans.test.tsx`)                           |
+| `src/components/credits/subscription/plans/components/account-management/AccountManagementCard.tsx` | Current plan badge, actions, payment failure CTA | 27 (`__tests__/components/subscriptions/AccountManagementCard.test.tsx`)                 |
+| `src/components/credits/ConfirmationDialog.tsx`                                                     | Upgrade / downgrade / cancel confirmations       | 16                                                                                       |
+| `src/components/credits/subscription/plans/hooks/useSubscriptionActions.ts`                         | Centralized subscription actions                 | 22 (`__tests__/components/credits/subscription/SubscriptionActionsIntegration.test.tsx`) |
 
 **Benefits Achieved:**
 
@@ -896,15 +917,16 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 
 **Automated Testing (verify with `npm test` — numbers below from Jest as run in dev):**
 
-- **Payment stack** — `__tests__/lib/polar` + `__tests__/api/webhook`: **632** Jest tests (idempotency, webhooks, state machine matrices, `transitionSubscription`, chaos/partial-failure suites)
-- **Subscription credits UI** — 246 tests in the four files listed above
+- **Payment stack** — `npm run test:polar-webhooks`: **652** Jest tests across `__tests__/lib/polar`, `__tests__/hooks/webhooks/polar`, `__tests__/api/webhook`, `__tests__/modules/webhooks`
+- **Subscription credits UI** — **117** tests in the four primary files listed above (**213** under `__tests__/components/credits`; **+98** under `__tests__/components/subscriptions` for account-management integration)
 - **Cron routes** — 57 tests under `__tests__/app/api/cron`
-- **Repo-wide** — **5,792+** Jest test cases (e.g. **5,792** on last full `npx jest` run; count shifts as tests are added)
+- **Repo-wide** — **7,389+** Jest test cases across **709** suite files (count shifts as tests are added)
 - **Financial Standards** — Invariants covered by dedicated suites (`webhook-subscription-transitions`, integration routes)
-- **E2E** — Playwright on critical journeys (`npm run test:e2e*`)
+- **E2E** — Playwright on critical journeys (`npm run test:e2e*`), including payment lifecycle, URL contracts, and exam routes
 - **Idempotency** — `__tests__/lib/polar/webhook-idempotency.test.ts` and route integration tests (claim→mark, P2002 duplicates)
 - **Security Testing** — Product ID / auth / signature scenarios in API webhook test folders
 - **Integration Testing** — `polar-state-machine-integration`, `polar-e2e-scenarios`, real-application suites
+- **Test gold audit** — `npm run test:gold-audit:diff` on PRs; nightly full manifest audit via GitHub Actions
 
 **Live Validation (Jan 28, 2026):**
 
@@ -916,30 +938,31 @@ Implemented **automated cron jobs** to maintain system health and prevent data b
 - **Payment Failure UX** — Alert component integrated and tested with 2 new scenarios
 - **Automated Health Checks** — Reconciliation and cleanup cron jobs deployed and validated
 
-**Test Execution:** see `npm test`; payment-focused folders alone exceed **600** tests; full Jest run is **5,792+** cases (387 suites)
+**Test Execution:** see `npm test`; `npm run test:polar-webhooks` alone is **652** cases; full Jest run is **7,389+** cases (**709** suites)
 
 ### Comprehensive Documentation
 
-**Seven Complete Guides (367 KB total):**
+**Polar & billing guides (`docs/polar/`, ~213 KB total):**
 
-- **POLAR_IMPLEMENTATION.md** (105 KB) — Complete implementation guide, security architecture, custom UI documentation, phase-by-phase build
-- **PAYMENT_IMPLEMENTATION_WALKTHROUGH.md** — Developer walkthrough: Polar as source of truth, claim→apply→mark flow, event handlers, state machine
-- **STRIDE_THREAT_MODEL.md** (54 KB) — Security threat analysis, attack scenarios, defense-in-depth validation
-- **INTEGRATION_TESTING_SUMMARY.md** (9 KB) — Live testing results, all 7 scenarios documented, token calculation details
-- **DEVELOPER_QUICK_REFERENCE.md** (6 KB) — Quick reference for daily work, schemas, debugging tips
-- **VALIDATION_REPORT_2026-01-28.md** (13 KB) — Complete validation report with before/after comparisons
-- **CRON_IMPLEMENTATION.md** (68 KB) — Automated maintenance system documentation, cron job architecture, monitoring guide
-- **RECOMMENDATIONS.md** (112 KB) — Technical recommendations for hardening, observability, and production readiness
+- **POLAR_INTEGRATION_TECHNICAL_GUIDE.md** (~33 KB) — Complete implementation guide, security architecture, custom UI documentation
+- **PAYMENT_IMPLEMENTATION_WALKTHROUGH.md** (~10 KB) — Developer walkthrough: Polar as source of truth, claim→apply→mark flow, event handlers, state machine
+- **STRIDE_THREAT_MODEL.md** (~70 KB) — Security threat analysis, attack scenarios, defense-in-depth validation
+- **E2E_SUBSCRIPTION_COMPLETE_CYCLE.md** (~25 KB) — Live E2E subscription lifecycle scenarios and validation notes
+- **CRON_IMPLEMENTATION.md** (~18 KB) — Automated maintenance system documentation, cron job architecture, monitoring guide
+- **WEBHOOK_RECOVERY.md** (~14 KB) — Webhook recovery cron, retry windows, and operational runbook
+- **EXPO.md** (~42 KB) — Mobile client integration notes for Polar and session sync
+
+**Broader engineering index:** [`docs/README.md`](./docs/README.md) — feature layout, cache components, next-intl, testing gold standard, and audit docs.
 
 **Custom UI Components:**
 
 - `src/components/credits/subscription/plans/SubscriptionPlans.tsx` — Plan display, upgrade/downgrade/cancel
-- `src/components/credits/ManageSubscriptionBadge.tsx` — Plan badge, actions, fix-payment when `paymentFailed`
+- `src/components/credits/subscription/plans/components/account-management/AccountManagementCard.tsx` — Plan badge, actions, fix-payment when `paymentFailed`
 - `src/components/credits/ConfirmationDialog.tsx` — Upgrade / downgrade / cancel confirmations
 - `src/components/credits/PaymentFailureAlert.tsx` — Payment failure banner (v2.3)
 - `src/components/credits/subscription/plans/hooks/useSubscriptionActions.ts` — Centralized server-action wiring for the credits flow
 
-**Security Rating:** 9.8/10 ⭐⭐⭐ (Enterprise-grade with Zuplo edge protection)
+**Security Rating:** 9.8/10 ⭐⭐⭐ (Enterprise-grade: HMAC webhooks, RLS, idempotent money writes; optional Zuplo edge documented in STRIDE threat model)
 
 </details>
 
@@ -956,14 +979,16 @@ Modern form architecture leveraging React 19 hooks and Next.js 16 server actions
 
 ### Architecture Overview
 
-| **Component**        | **Responsibility**                 | **Pattern**                                   |
-| :------------------- | :--------------------------------- | :-------------------------------------------- |
-| Client-Side State    | Form validation & user interaction | React Hook Form with Zod resolver             |
-| Server Actions       | Data mutations & persistence       | Next.js 16 `action` prop with `FormData` API  |
-| State Management     | Server response handling           | `useActionState` for declarative state        |
-| Event Handlers       | Stable callbacks without deps      | `useEffectEvent` for effect event handlers    |
-| Field Watching       | Reactive form updates              | `useWatch` for optimized re-renders           |
-| Context Architecture | Complex form state sharing         | Provider pattern with memoized context values |
+| **Component**     | **Responsibility**                 | **Pattern**                                                                                                                                                      |
+| :---------------- | :--------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Client-Side State | Form validation & user interaction | React Hook Form with Zod resolver                                                                                                                                |
+| Server Actions    | Data mutations & persistence       | Next.js 16 `action` prop with `FormData` API; live under **`src/server-actions/`** — [ACTIONS-STRUCTURE.md](docs/AUDIT-MD/SERVER%20ACTIONS/ACTIONS-STRUCTURE.md) |
+| State Management  | Server response handling           | `useActionState` for declarative state                                                                                                                           |
+| Event Handlers    | Stable callbacks without deps      | `useEffectEvent` for effect event handlers                                                                                                                       |
+| Field Watching    | Reactive form updates              | `useWatch` (React Hook Form) for granular re-renders                                                                                                             |
+| Complex forms     | Multi-section verb/podcast flows   | Hook composition (e.g. **`useCreateVerbForm`**) — not context providers                                                                                          |
+
+**Canonical references:** [FORM_ACTIONS_ARCHITECTURE.md](docs/forms/FORM_ACTIONS_ARCHITECTURE.md) · `ActionState<T>` in **`src/lib/utils/form-actions.ts`**
 
 ### Core Patterns
 
@@ -996,17 +1021,18 @@ Modern form architecture leveraging React 19 hooks and Next.js 16 server actions
 
 ### Implementation Highlights
 
-- **Context-Based Complex Forms** — `VerbAttributesForm` uses provider pattern to share state across nested components without prop drilling
-- **Field-Level Subscriptions** — Single `useWatch` call for multiple fields, maintaining React Hook Form's optimization benefits
-- **Structured Error Handling** — Server actions return typed `ActionState<T>` with success/error/data discriminated unions
-- **Test Coverage** — Forms tested with `data-testid` attributes (never text content), ensuring reliable test stability across **next-intl** copy and content changes.
-- **Creatable Fields** — Podcast/conversation subtitles and similar flows use **`VerbCombobox`** → **`CreatableCombobox`** with explicit null-clear handling (`opt?.value ?? ''`) for controlled React Hook Form fields.
+- **Hook-Composed Complex Forms** — `VerbAttributesForm` delegates to **`useCreateVerbForm`** (`src/components/conjugator/form/create-verb-form/hooks/`) with child field components; legacy `VerbAttributesFormProvider` context was removed
+- **Reference implementations** — `AddAdjectiveForm.tsx`, `WordWizardForm.tsx`, `TextProcessor.tsx`, `useCreatePodcastForm` / `useCreateConversationForm`
+- **Structured Error Handling** — Most actions return typed **`ActionState<T>`** from `src/lib/utils/form-actions.ts`; Lexical document actions use a separate **`CreateEditorDocumentState`** (`ok` / `fieldErrors`) shape
+- **Test Coverage** — Forms tested with `data-testid` attributes (never text content), ensuring reliable test stability across **next-intl** copy and content changes
+- **Creatable Fields** — Collection routes use **`CollectionWordSelect`**; verb/subtitle flows use **`VerbCombobox`** → **`CreatableCombobox`** with explicit null-clear handling (`opt?.value ?? ''`) for controlled React Hook Form fields
 
 ### Example Architecture
 
 ```typescript
 // Client Component
-import { toast } from '@/lib/toast'; // Sonner wrapper
+import { toast } from '@/lib/shared/toast'; // Sonner wrapper
+import type { ActionState } from '@/lib/utils/form-actions';
 
 // Server Action with safeParse validation
 export async function submitFormAction(
@@ -1064,7 +1090,8 @@ A sophisticated AI tutoring system powered by Tambo SDK, providing personalized 
 ### Key Features
 
 - **Thread-Based Conversations** — Full conversation history preserved across sessions with automatic restoration on page load
-- **Lab-Specific Context** — AI tutor adapts to current learning module (Aspect Master, Reflexive Lab, Preposition Lab, etc.)
+- **Lab-Specific Context** — AI tutor adapts per `labContext` string. Wired today: Aspect Master, Reflexive Lab, Preposition Lab, Motion Lab, Verb Prefixes, Spelling Master, Exam, Declension (per grammatical case), Adjectives/Adverbs collections, Occupations collection. _(Character Lab and Idioms Lab do not yet mount a tutor wrapper.)_
+- **Deferred loading** — User opens tutor via opt-in gate; **`AITutorAssistantTambo`** (`next/dynamic`, `ssr: false`) loads the Tambo SDK bundle on demand
 - **Custom Interactive Components** — AI can render learning-specific UI:
   - `LearningHintCard` — Contextual tips with difficulty levels and examples
   - `ExerciseGenerator` — Interactive quizzes with real Polish content
@@ -1077,21 +1104,21 @@ A sophisticated AI tutoring system powered by Tambo SDK, providing personalized 
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  AITutorAssistant                                           │
-│  ├── TamboProvider (SDK Context)                            │
-│  │   ├── useTamboThread (conversation state)                │
-│  │   └── useTamboThreadInput (message handling)             │
-│  ├── ChatHeader                                             │
-│  │   ├── ThreadSelector (dropdown with archived threads)    │
-│  │   └── ThreadArchiveForm (save with title/subtitle)       │
-│  ├── MessageList                                            │
-│  │   ├── MessageItem (user/assistant messages)              │
-│  │   ├── MarkdownRenderer (formatted responses)             │
-│  │   └── LoadingIndicator (streaming state)                 │
-│  ├── ChatInput (textarea with send button)                  │
-│  └── QuickSuggestions (one-click prompts)                   │
+│  Lab wrapper (e.g. aspect-master/AITutorAssistant.tsx)      │
+│  └── AITutorAssistant (gate: sign-in / subscription / open) │
+│      └── AITutorAssistantTambo (dynamic, ssr: false)        │
+│          ├── TamboProvider (SDK context + auth token)         │
+│          │   ├── useTamboThread / useTamboThreadInput         │
+│          ├── ChatHeader                                       │
+│          │   ├── ThreadSelector                               │
+│          │   └── ThreadArchiveForm                            │
+│          ├── MessageList (MessageItem, MarkdownRenderer)      │
+│          ├── ChatInput                                        │
+│          └── QuickSuggestions                                 │
 └─────────────────────────────────────────────────────────────┘
 ```
+
+Registry & config: **`src/components/tambo/config/tambo-config.ts`**. Base shell: **`src/components/tambo/ai-tutor-assistant/`**.
 
 ### Thread Lifecycle
 
@@ -1155,29 +1182,34 @@ const tamboComponents = [
 
 ```sql
 model TamboThread {
-  id          String    @id @default(cuid())
-  userId      String
-  labContext  String    -- "aspect-master", "reflexive-lab", etc.
-  threadId    String    -- Tambo SDK thread identifier
-  title       String?   -- User-provided archive title
-  subtitle    String?   -- Optional description
-  isCurrent   Boolean   @default(true)
-  isArchived  Boolean   @default(false)
-  messageCount Int      @default(0)
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-  archivedAt  DateTime?
+  id           String    @id @default(cuid())
+  userId       String
+  labContext   String    -- "aspect-master", "reflexive-lab", "exam", etc.
+  threadId     String    -- Tambo SDK thread identifier
+  title        String?
+  subtitle     String?
+  isCurrent    Boolean   @default(false)
+  isArchived   Boolean   @default(false)
+  messageCount Int       @default(0)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  archivedAt   DateTime?
+
+  User User @relation(fields: [userId], references: [clerkId], onDelete: Cascade)
 
   @@unique([userId, labContext, threadId])
 }
 ```
 
+_(See `prisma/schema.prisma` for indexes.)_
+
 ### • Testing Strategy
 
-- **122+ tests** covering Tambo components and integration
-- **Component isolation** — Each UI component tested independently with mocked Tambo hooks
-- **Integration tests** — Full AITutorAssistant flow with mocked SDK responses
-- **Server action tests** — Thread CRUD operations with Prisma mocking
+- **267+ tests** under `__tests__/components/tambo/` (hooks co-located there, not a separate `__tests__/hooks/tambo/` tree)
+- **Server action tests** — `__tests__/lib/actions/tambo*.test.ts`
+- **Integration** — `__tests__/tambo-integration.test.tsx`, collection-ai integration suites
+- **Component isolation** — Each UI component tested with mocked Tambo hooks
+- **Docs** — [`docs/tambo/TAMBO_AI_INTEGRATION.md`](./docs/tambo/TAMBO_AI_INTEGRATION.md), [`TAMBO_THREAD_MANAGEMENT.md`](./docs/tambo/TAMBO_THREAD_MANAGEMENT.md)
 
 </details>
 
@@ -1194,21 +1226,22 @@ A production-grade real-time chat system built on Stream Chat SDK with Firebase 
 
 ### Architecture Overview
 
-| **Component**       | **Responsibility**                       | **Pattern**                                      |
-| :------------------ | :--------------------------------------- | :----------------------------------------------- |
-| Stream Chat Client  | Real-time messaging & channel management | Singleton with Clerk authentication              |
-| Firebase Messaging  | Push notification delivery               | FCM with service worker background handling      |
-| Push Template API   | Server-side notification configuration   | Stream Chat Push v3 with Handlebars templates    |
-| Device Registration | FCM token management with Stream         | `addDevice()`/`removeDevice()` with localStorage |
-| Service Worker      | Background notification handling         | Firebase Messaging SW with message listener      |
-| Company Isolation   | Multi-tenant user filtering              | Clerk ID validation with company-scoped queries  |
+| **Component**       | **Responsibility**                            | **Pattern**                                                                                                   |
+| :------------------ | :-------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
+| Stream Chat Client  | Real-time messaging & channel management      | Singleton with Clerk authentication                                                                           |
+| Firebase Messaging  | Push notification delivery                    | FCM with service worker background handling                                                                   |
+| Push Template API   | Admin-only template upsert for Stream Push v3 | `POST /api/push-template` — **`requireAdmin()`**; default template in `src/lib/chat/default-push-template.ts` |
+| Push preferences    | Per-user FCM preference persistence           | `POST /api/push-preference`                                                                                   |
+| Device Registration | FCM token management with Stream              | `addDevice()` / `removeDevice()` via `usePushNotifications` + `PushNotificationsProvider`                     |
+| Service Worker      | Background notification handling              | `public/firebase-messaging-sw.js` (imports `/fcm-push-utils.js`; dedupe + click routing)                      |
+| Company Isolation   | Multi-tenant user filtering                   | Clerk ID validation with company-scoped queries                                                               |
 
 ### • Core Features
 
-- **Multi-Tenant Messaging** — Users can only chat with members of their organization through Clerk ID validation and company-scoped user queries
+- **Multi-Tenant Messaging** — Users can only chat with members of their organization through Clerk ID validation and company-scoped user queries (`CompanyChatPeersProvider`)
 - **Real-Time Updates** — Instant message delivery with typing indicators, read receipts, and presence status via Stream Chat WebSocket
-- **Channel Management** — Create, archive, and restore conversation channels with persistent state across sessions
-- **Per-Channel Muting** — Users can mute specific channels while maintaining global notification settings
+- **Channel Management** — Create, archive, and restore conversation channels with persistent state (`ChannelRestorer`, deep-link via `ChannelIdHandler`)
+- **Global push toggle** — Enable/disable FCM from chat sidebar menubar; preferences persisted via `/api/push-preference`
 - **Responsive Design** — Adaptive sidebar/channel layout with mobile-first breakpoint management
 - **Internationalization** — Polish language support with custom translations via Streami18n
 
@@ -1283,95 +1316,73 @@ Stream Chat Push v3 uses Handlebars-style templates for customizable notificatio
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  ChatPage                                                   │
-│  ├── Chat (Stream Chat Provider)                            │
-│  │   ├── ChannelIdHandler (deep-link support)               │
-│  │   ├── ChannelRestorer (session persistence)              │
-│  │   ├── ChatSidebar                                        │
-│  │   │   ├── ChannelList (filterable channel list)          │
-│  │   │   └── UserSearch (company-scoped user discovery)     │
-│  │   └── ChatChannel                                        │
-│  │       ├── Menubar                                        │
-│  │       │   ├── ThemeToggle                                │
-│  │       │   └── PushSubscriptionToggleButton               │
-│  │       ├── CustomChannelHeader                            │
-│  │       │   └── ChannelNotificationToggle (per-channel)    │
-│  │       ├── MessageList                                    │
-│  │       └── MessageInput                                   │
-│  └── usePushNotifications (FCM hook)                        │
+│  chat/page.tsx (RSC) → ChatPageClient (Clerk gate, SW reg)  │
+│  └── ChatStreamAuthenticated (next/dynamic, ssr: false)     │
+│      ├── CompanyChatPeersProvider                           │
+│      ├── PushNotificationsProvider → usePushNotifications   │
+│      └── <Chat> (stream-chat-react)                         │
+│          ├── ChannelIdHandler                               │
+│          ├── ChannelRestorer                                │
+│          ├── ChatSidebar                                    │
+│          │   ├── Menubar (ThemeToggleButton, push toggle)   │
+│          │   ├── ChannelList                                │
+│          │   └── UsersMenu (company-scoped discovery)       │
+│          └── ChatChannel                                    │
+│              ├── CustomChannelHeader                        │
+│              ├── MessageList                                │
+│              └── MessageComposer / CustomMessageInput       │
 └─────────────────────────────────────────────────────────────┘
 ```
 
+Entry: `src/app/[lang]/(chat)/chat/`. Stream components: `src/components/stream-chat/`.
+
 ### • Security & Multi-Tenancy
 
-| **Security Layer**      | **Implementation**                                        |
-| :---------------------- | :-------------------------------------------------------- |
-| User Authentication     | Clerk-issued tokens validated on both client and server   |
-| Company Isolation       | Clerk ID format validation (`user_[a-zA-Z0-9_]+`)         |
-| Device Token Management | FCM tokens stored locally, registered server-side only    |
-| Push Template Auth      | Server action with `auth()` guard before Stream API calls |
-| Channel Access Control  | Stream Chat channel membership enforced at SDK level      |
+| **Security Layer**      | **Implementation**                                                        |
+| :---------------------- | :------------------------------------------------------------------------ |
+| User Authentication     | Clerk-issued tokens validated on both client and server                   |
+| Company Isolation       | Clerk ID format validation (`user_[a-zA-Z0-9_]+`)                         |
+| Device Token Management | FCM tokens stored locally, registered server-side only                    |
+| Push Template Auth      | **`requireAdmin()`** on `POST /api/push-template` before Stream API calls |
+| Channel Access Control  | Stream Chat channel membership enforced at SDK level                      |
 
 ### • Push Notification Hook
 
-The `usePushNotifications` hook manages the complete FCM lifecycle:
+The `usePushNotifications` hook (`src/components/stream-chat/hooks/usePushNotifications.ts`) manages the FCM lifecycle. It is consumed via **`PushNotificationsProvider`**, not wired directly in the page component:
 
 ```typescript
 interface UsePushNotificationsReturn {
-  isSupported: boolean; // Browser supports notifications & Firebase configured
-  isEnabled: boolean; // User granted permission
-  isLoading: boolean; // Operation in progress
-  error: string | null; // Last error message
+  isSupported: boolean;
+  isEnabled: boolean;
+  isLoading: boolean;
+  error: string | null;
   enablePushNotifications: () => Promise<boolean>;
   disablePushNotifications: () => Promise<boolean>;
 }
 
-// Key responsibilities:
-// 1. Check browser support & Firebase configuration
-// 2. Register Firebase service worker
-// 3. Request notification permission
-// 4. Obtain and cache FCM token
-// 5. Register/unregister device with Stream Chat
-// 6. Auto-register on client reconnection
+// Options: { chatClient, userId } — required for Stream addDevice/removeDevice
 ```
+
+**Key responsibilities:** browser support check → register SW → request permission → obtain FCM token → `client.addDevice(token, 'firebase', userId)` → persist preference via `/api/push-preference` → auto-register on client reconnect.
 
 ### • Service Worker Implementation
 
-The Firebase Messaging service worker handles background notifications:
-
-```javascript
-// firebase-messaging-sw.js
-importScripts('firebase/firebase-app-compat.js');
-importScripts('firebase/firebase-messaging-compat.js');
-
-// Receive config from main app via postMessage
-self.addEventListener('message', (event) => {
-  if (event.data?.type === 'FIREBASE_CONFIG') {
-    firebase.initializeApp(event.data.config);
-    const messaging = firebase.messaging();
-
-    messaging.onBackgroundMessage((payload) => {
-      const { title, body, icon } = payload.notification;
-      self.registration.showNotification(title, { body, icon });
-    });
-  }
-});
-```
+`public/firebase-messaging-sw.js` imports shared helpers from **`/fcm-push-utils.js`**, deduplicates message IDs (60 s window), handles **`notificationclick`** deep links back to `/chat`, and shows notifications for data-only FCM payloads when the app is backgrounded.
 
 </details>
 
 <details style="margin-bottom: 16px;">
-<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🛡️ Testing & Quality</strong> — Jest, Playwright, Artillery, type safety</summary>
+<summary style="cursor: pointer; font-size: 1.1rem;"><strong>🛡️ Testing & Quality</strong> — Jest, Playwright, k6, Artillery, test gold audit, type safety</summary>
 
 PoliLex is validated with a **full testing pipeline** that combines automated tests, static analysis, and load testing.  
 Every change is validated through:
 
-- **Automated unit and integration suites** using **Jest** (**5,792+** tests across **387** suites) and **React Testing Library** for components and business logic — including combobox primitives (`CreatableCombobox`, `VerbCombobox`), flashcards, and Lexical UI (`EmojiMartPicker` load/error paths)
-- **End-to-end regression tests** with **Playwright** for critical user journeys in the browser
-- **Load and performance exercises** with **Artillery** focused on core APIs, server-side operations, and caching behavior
+- **Automated unit and integration suites** using **Jest** (**7,389+** tests across **709** suites) and **React Testing Library** — combobox primitives (`CreatableCombobox`, `VerbCombobox`, `CollectionWordSelect`), flashcards, exam flows, polar webhooks (**652** via `test:polar-webhooks`), and Lexical UI (`EmojiMartPicker` load/error paths)
+- **End-to-end regression tests** with **Playwright** for critical user journeys in the browser (payments, URL contracts, editor, exam, verb families, podcast/video routes)
+- **Load and performance exercises** with **k6** and **Artillery** focused on core APIs, server-side operations, and caching behavior (`npm run load-test:k6:*`, `npm run load-test:artillery:*`)
 - **Strict static typing and schema validation** with **TypeScript (strict mode)**, **Prisma**, **Zod**, and **@t3-oss/env-nextjs** for data, inputs, and configuration
 - **Automated linting and formatting** with **ESLint**, **Prettier**, and import-sorting to enforce consistent, production-grade code quality
-- **CI pipeline** (`.github/workflows/pr-checks.yml`) running lint, type-check, Jest, and `next build` on every PR — the build step is the only place missing `connection()` calls and `'use cache'` violations surface (see PPR section above)
+- **Test gold audit** — manifest-tier enforcement via `npm run test:gold-audit:diff` (PR) and nightly GitHub Actions audit; primary lint/type-check/Jest/build runs locally and on Vercel (see PPR section above)
 
 </details>
 
@@ -1380,9 +1391,13 @@ Every change is validated through:
 
 <div align="center">
 
+[![PoliLex Live](https://img.shields.io/badge/PoliLex-Live%20Demo-red?style=for-the-badge&logo=vercel&logoColor=white)](https://lexical-verb.vercel.app/)
+
 [![Watch Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=1Q7oyvCVanE)
 
 </div>
+
+**Engineering docs:** [`docs/README.md`](./docs/README.md) — index for cache components, next-intl, forms, polar, testing gold standard, and feature audits.
 
 </details>
 
@@ -1407,5 +1422,10 @@ Every change is validated through:
 ---
 
 <div align="center">
-  <sub style="font-size: 14px;">Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications. GITHUB.md last updated 2026-05-20.</sub>
+  <sub style="font-size: 13px;">
+    © 2024–2026 <a href="https://github.com/AlexDjangoX">AlexDjangoX</a>. All rights reserved.<br />
+    PoliLex and this codebase are proprietary — no use, reproduction, or distribution without written permission. See <a href="./LICENSE">LICENSE</a>.
+  </sub>
+  <br /><br />
+  <sub style="font-size: 14px;">Always learning, always building. Currently exploring advanced AI integration and enterprise-scale applications. GITHUB.md last updated 2026-06-23.</sub>
 </div>
